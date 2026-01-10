@@ -467,12 +467,15 @@ body {
     background: transparent;
     border: none;
     border-radius: 6px;
-    text-align: center;
     cursor: pointer;
     transition: var(--transition-fast);
     font-size: 0.8125rem;
     font-weight: 500;
     color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .system-app-tab.active {
@@ -489,19 +492,22 @@ body {
 /* 状态指示器 */
 .system-status-indicator {
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: var(--error-color);
-    margin-right: 0.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.2);
 }
 
 .system-status-indicator.running {
     background: var(--success-color);
+    box-shadow: 0 0 0 2px rgba(52, 199, 89, 0.2);
 }
 
 .system-status-indicator.starting {
     background: var(--warning-color);
+    box-shadow: 0 0 0 2px rgba(255, 149, 0, 0.2);
     animation: blink 1s infinite;
 }
 
