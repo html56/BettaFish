@@ -3,1119 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微舆</title>
-    <link rel="stylesheet" href="/static/modern-style.css?v=2.0">
+    <title>微舆 - AI舆情分析平台</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/modern_style_new.css?v=3.0">
+    <style>
+        /* 自定义样式覆盖 */
+        .system-main-content {
+            height: calc(100vh - 180px - 40px) !important;
+        }
+
+        .system-panel-content {
+            height: calc(100% - 70px) !important;
+        }
+        
+        /* 论坛消息样式 */
+        .forum-message {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: var(--primary-surface);
+            border: 1px solid var(--primary-border);
+            border-radius: 8px;
+        }
+        
+        .forum-message-header {
+            font-weight: 600;
+            color: var(--brand-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .forum-message-content {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* 报告内容样式 */
+        .report-content {
+            padding: 1rem;
+        }
+        
+        .report-content iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid var(--primary-border);
+            border-radius: 8px;
+        }
+        
+        /* 控制台输出样式 */
+        .console-line {
+            margin-bottom: 0.25rem;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            font-size: 0.8125rem;
+            line-height: 1.4;
+        }
+        
+        /* 配置表单样式 */
+        .config-form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .config-form-group-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .config-form-group-subtitle {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .config-form-field {
+            margin-bottom: 1rem;
+        }
+        
+        .config-form-label {
+            display: block;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .config-form-input {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            background: var(--primary-surface);
+            border: 1px solid var(--primary-border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            transition: var(--transition-fast);
+        }
+        
+        .config-form-input:focus {
+            outline: none;
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+        }
+        
+        .config-form-select {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            background: var(--primary-surface);
+            border: 1px solid var(--primary-border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        
-        <div class="search-section">
-            <div class="search-title">微舆 - 致力于打造简洁通用的舆情分析平台</div>
-            <div class="search-row">
-                <button class="config-button" id="openConfigButton">LLM 配置</button>
-                <div class="search-box">
-                    <input type="text" class="search-input" id="searchInput" placeholder="请输入要分析的内容...">
-                    <button class="search-button" id="searchButton">开始</button>
-                    <button class="upload-button" id="uploadButton">
-                        上传模板
-                        <input type="file" id="templateFileInput" accept=".md,.txt" title="上传自定义报告模板(支持 .md 和 .txt 文件)">
-                    </button>
-                </div>
+    <div class="system-container">
+        <!-- 顶部导航栏 -->
+        <header class="system-header">
+            <div class="system-logo">
+                <img src="/static/image/logo_compressed.png" alt="BettaFish Logo" onerror="this.style.display='none'">
+                <h1>微舆</h1>
             </div>
-            <div class="upload-status" id="uploadStatus"></div>
-        </div>
+            <nav class="system-nav">
+                <button class="system-btn" id="openConfigButton">
+                    <span>⚙️</span> 配置
+                </button>
+                <button class="system-btn primary" id="searchButtonTop">
+                    <span>🚀</span> 开始分析
+                </button>
+            </nav>
+        </header>
 
-        
-        <div class="main-content">
-            
-            <div class="embedded-section">
-                <div class="embedded-header" id="embeddedHeader">嵌入的页面</div>
-                <div class="embedded-content" id="embeddedContent">
-                    
-                    <div class="forum-container" id="forumContainer">
+        <!-- 搜索区域 -->
+        <section class="system-search-section">
+            <div class="system-search-title">
+                <h2>AI舆情分析平台</h2>
+                <p>24小时全自动从多个社媒平台深度爬取舆情数据，提供专业的情感分析和智能报告生成</p>
+            </div>
+
+            <!-- 卡片化搜索控件 -->
+            <div class="search-card" role="search" aria-label="搜索舆情">
+                <form class="system-search-form search-card-inner" onsubmit="return false;">
+                    <div class="search-left">
+                        <input type="text" class="system-search-input" id="searchInput" placeholder="请输入要分析的话题或关键词..." aria-label="搜索关键词">
+                    </div>
+
+                    <div class="search-separator" aria-hidden="true"></div>
+
+                    <div class="search-center">
+                        <button type="button" class="system-btn primary" id="searchButton" aria-label="开始分析">
+                            <span style="margin-right:6px">🔍</span> 分析
+                        </button>
+                    </div>
+
+                    <div class="search-separator" aria-hidden="true"></div>
+
+                    <div class="search-right">
+                        <label class="upload-button">
+                            <input type="file" id="templateFileInput" accept=".md,.txt" title="上传自定义报告模板">
+                            <span class="upload-label">📄 上传模板</span>
+                        </label>
+                        <div class="upload-status" id="uploadStatus" aria-live="polite" style="display:inline-block; margin-left:0.75rem;"></div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="search-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- 主内容区域 -->
+        <main class="system-main-content">
+            <!-- 左侧面板 - 主要内容 -->
+            <div class="system-left-panel">
+                <div class="system-panel-header">
+                    <h3>📊 分析结果</h3>
+                </div>
+                <div class="system-panel-content" id="embeddedContent">
+                    <!-- 欢迎页面 -->
+                    <div class="system-card" id="welcomeContainer">
+                        <div class="system-welcome-content">
+                            <div class="system-welcome-icon">🚀</div>
+                            <h3 class="system-welcome-title">欢迎使用微舆平台</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 2rem;">专业的AI舆情分析解决方案</p>
+                            <div class="welcome-steps-card" aria-label="使用步骤卡片">
+                                <h4 class="welcome-steps-title">使用步骤</h4>
+                                <ol class="welcome-steps-list" aria-hidden="false">
+                                    <li>点击右上角配置按钮，设置 LLM 参数</li>
+                                    <li>在搜索框输入要分析的话题或关键词</li>
+                                    <li>点击"分析"按钮启动分析流程</li>
+                                    <li>实时查看右侧控制台的分析进度和结果</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 论坛容器 -->
+                    <div class="system-card" id="forumContainer" style="display: none;">
+                        <h4 style="margin-bottom: 1rem; color: var(--brand-primary);">🤖 论坛引擎</h4>
                         <div class="forum-chat-area" id="forumChatArea">
-                            
+                            <!-- 动态添加的Engine对话消息将在这里显示 -->
                         </div>
                     </div>
-                    
-                    
-                    <div class="report-container" id="reportContainer">
+
+                    <!-- 报告容器 -->
+                    <div class="system-card" id="reportContainer" style="display: none;">
+                        <h4 style="margin-bottom: 1rem; color: var(--brand-primary);">📈 分析报告</h4>
                         <div class="report-content" id="reportContent">
-                            
+                            <!-- 报告内容将在这里显示 -->
                         </div>
                     </div>
-                    
-                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666;">
-                        <span>默认只显示第一个页面 - 点击按钮切换页面</span>
+                </div>
+            </div>
+
+            <!-- 右侧面板 - 控制台和引擎状态 -->
+            <div class="system-right-panel">
+                <div class="system-console">
+                    <div class="system-console-header">
+                        <div class="system-console-title">系统控制台</div>
+                        <div class="system-console-controls">
+                            <button class="system-console-control close" title="关闭"></button>
+                            <button class="system-console-control minimize" title="最小化"></button>
+                            <button class="system-console-control maximize" title="最大化"></button>
+                        </div>
+                    </div>
+
+                    <div class="system-panel-content" style="padding: 1rem;">
+                        <!-- 引擎切换器 -->
+                        <div class="system-app-switcher">
+                            <button class="system-app-tab app-button active" data-app="insight">
+                                <div class="system-status-indicator" id="status-insight"></div>
+                                Insight Agent
+                            </button>
+                            <button class="system-app-tab app-button" data-app="media">
+                                <div class="system-status-indicator" id="status-media"></div>
+                                Media Agent
+                            </button>
+                            <button class="system-app-tab app-button" data-app="query">
+                                <div class="system-status-indicator" id="status-query"></div>
+                                Query Agent
+                            </button>
+                            <button class="system-app-tab app-button" data-app="forum">
+                                <div class="system-status-indicator running" id="status-forum"></div>
+                                Forum Host
+                            </button>
+                            <button class="system-app-tab app-button locked" data-app="report" title="需等待其余三个Agent工作完毕">
+                                <div class="system-status-indicator" id="status-report"></div>
+                                Report Agent
+                            </button>
+                        </div>
+
+                        <!-- 控制台输出 -->
+                        <div class="console-divider" aria-hidden="true"></div>
+                        <div class="system-console-output" id="consoleOutput">
+                            <div class="console-line" style="color: var(--brand-primary);">[系统] 初始化完成，等待用户操作...</div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </main>
 
-            
-            <div class="console-section">
-                
-                <div class="app-switcher">
-                    <button class="app-button active" data-app="insight">
-                        <span class="status-indicator" id="status-insight"></span>
-                        Insight Engine
-                    </button>
-                    <button class="app-button" data-app="media">
-                        <span class="status-indicator" id="status-media"></span>
-                        Media Engine
-                    </button>
-                    <button class="app-button" data-app="query">
-                        <span class="status-indicator" id="status-query"></span>
-                        Query Engine
-                    </button>
-                    <button class="app-button" data-app="forum">
-                        <span class="status-indicator running" id="status-forum"></span>
-                        Forum Engine
-                    </button>
-                    <button class="app-button locked" data-app="report" title="需等待其余三个Agent工作完毕">
-                        <span class="status-indicator" id="status-report"></span>
-                        Report Engine
-                    </button>
-                </div>
-
-                
-                <div class="console-output" id="consoleOutput">
-                    <div class="console-line">[系统] 等待连接...</div>
-                </div>
+        <!-- 系统状态栏 -->
+        <footer class="system-status-bar">
+            <div class="system-status-left">
+                <span id="systemStatus">系统就绪</span>
+                <span id="lastUpdateTime">--:--:--</span>
             </div>
-        </div>
-
-        
-        <div class="status-bar">
-            <span id="connectionStatus">连接中...</span>
-            <span id="systemTime"></span>
-        </div>
+            <div class="system-status-right">
+                <span>微舆 v1.1.2</span>
+                <span id="connectionStatus">● 已连接</span>
+            </div>
+        </footer>
     </div>
 
+    <!-- 配置模态框 -->
     <div class="config-modal-overlay" id="configModal">
-        <div class="config-modal">
-            <div class="config-modal-header">
-                <div class="config-modal-title">LLM 配置 - 与.env文件双向同步</div>
-                <div class="config-modal-actions">
-                    <button class="config-secondary-button" id="refreshConfigButton">刷新</button>
-                    <button class="config-close-button" id="closeConfigModal" aria-label="关闭配置窗口">×</button>
+        <div class="config-modal-inner">
+            <div class="config-modal">
+                <div class="config-modal-header">
+                    <div class="config-modal-title">LLM 配置 - 与.env文件双向同步</div>
+                    <div class="config-modal-actions">
+                        <button class="config-secondary-button" id="refreshConfigButton">🔄 刷新</button>
+                        <button class="config-close-button" id="closeConfigModal" aria-label="关闭配置窗口">×</button>
+                    </div>
                 </div>
-            </div>
-            <div class="config-modal-body" id="configFormContainer">
-                
-            </div>
-            <div class="config-modal-footer">
-                <div class="config-status-message" id="configStatusMessage"></div>
-                <div class="config-modal-footer-actions">
-                    <button class="config-save-button" id="saveConfigButton">保存</button>
-                    <button class="config-start-button" id="startSystemButton">保存并启动系统</button>
+                <div class="config-modal-body" id="configFormContainer">
+                    <!-- 配置表单将在这里动态生成 -->
+                </div>
+                <div class="config-modal-footer">
+                    <div class="config-status-message" id="configStatusMessage"></div>
+                    <div class="config-modal-footer-actions">
+                        <button class="config-save-button" id="saveConfigButton">💾 保存</button>
+                        <button class="config-start-button" id="startSystemButton">🚀 保存并启动系统</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    
-    <div class="message" id="message"></div>
+    <!-- 消息提示 -->
+    <div id="message" class="message" style="display: none;"></div>
 
     <script>
         // 全局变量
