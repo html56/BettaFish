@@ -8,11 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/modern_style_new.css?v=3.0">
+    <link rel="stylesheet" href="/static/modern_style_new.css?v=3.1">
     <style>
         /* 自定义样式覆盖 */
         .system-main-content {
             height: calc(100vh - 180px - 40px) !important;
+        }
+
+        /* 强制设置左右面板比例 */
+        .system-left-panel {
+            flex: 2.5 !important;
+        }
+
+        .system-right-panel {
+            flex: 1 !important;
         }
 
         .system-panel-content {
@@ -604,8 +613,18 @@
 
         function closeConfigModal(force = false) {
             if (!force && configModalLocked && !systemStarted) {
-                setConfigStatus('请先完成配置并启动系统', 'error');
-                showMessage('请先完成配置并启动系统', 'error');
+                // 检查系统是否实际已启动
+                fetch('/api/system/status')
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.started) {
+                            // 系统已启动,强制关闭弹窗
+                            closeConfigModal(true);
+                        } else {
+                            setConfigStatus('请先完成配置并启动系统', 'error');
+                            showMessage('请先完成配置并启动系统', 'error');
+                        }
+                    });
                 return;
             }
 
