@@ -339,7 +339,7 @@ body {
 
 /* 左侧面板 */
 .system-left-panel {
-    flex: 2;
+    flex: 2.5;
     background: var(--primary-surface);
     border: 1px solid var(--primary-border);
     border-radius: 12px;
