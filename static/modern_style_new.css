@@ -224,13 +224,13 @@ body {
     background: var(--primary-surface);
     border: 1px solid var(--primary-border);
     border-radius: 12px;
-    padding: 8px 10px;
+    padding: 10px 16px;
     box-shadow: 0 6px 18px rgba(15, 30, 60, 0.04);
 }
 .search-card-inner {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
 }
 .search-left {
     flex: 1 1 auto;
@@ -249,23 +249,25 @@ body {
     justify-content: flex-end;
 }
 .search-separator {
-    width: 1px;
-    height: 42px;
-    background: var(--primary-border);
-    border-radius: 2px;
-    opacity: 0.9;
+    display: none;
 }
 .upload-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: 1px solid var(--primary-border);
+    border: none;
     padding: 6px 10px;
     border-radius: 8px;
     cursor: pointer;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-size: 0.92rem;
+    transition: var(--transition-fast);
+}
+
+.upload-button:hover {
+    background: var(--primary-bg);
+    color: var(--text-primary);
 }
 .upload-button input[type="file"] {
     display: none;
@@ -284,8 +286,8 @@ body {
 /* Adjust placeholder / input styling inside search card */
 .search-card .system-search-input {
     border-radius: 8px;
-    padding: 0.6rem 0.85rem;
-    height: 40px;
+    padding: 0.65rem 0.85rem;
+    height: 44px;
     box-shadow: none;
     font-size: 0.95rem;
     border: none;
@@ -303,10 +305,10 @@ body {
 
 /* Reduce primary search button size to match input height */
 .search-card .system-btn.primary {
-    padding: 6px 12px;
+    padding: 8px 16px;
     border-radius: 10px;
     font-size: 0.95rem;
-    height: 40px;
+    height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
