@@ -1288,3 +1288,47 @@ body.modal-open {
     display: block;
     overflow: auto;
 }
+/* 消息提示样式 */
+.message {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    max-width: 500px;
+    text-align: center;
+}
+
+.message.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.message.success {
+    background-color: #34c759;
+    color: white;
+}
+
+.message.error {
+    background-color: #ff3b30;
+    color: white;
+}
+
+.message.info {
+    background-color: #007aff;
+    color: white;
+}
+
+.message.warning {
+    background-color: #ff9500;
+    color: white;
+}
