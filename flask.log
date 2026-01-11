@@ -1,20 +1,20 @@
 nohup: ignoring input
-2026-01-10 18:36:31.698 | INFO     | __main__:<module>:36 - ReportEngine接口已注册
-2026-01-10 18:36:31.699 | INFO     | __main__:init_forum_log:311 - ForumEngine: forum.log 已初始化
-2026-01-10 18:36:31.703 | INFO     | __main__:<module>:1035 - 等待配置确认，系统将在前端指令后启动组件...
-2026-01-10 18:36:31.704 | INFO     | __main__:<module>:1036 - Flask服务器已启动，访问地址: http://0.0.0.0:5000
-2026-01-10 18:37:25.116 | INFO     | MindSpider.main:__init__:44 - MindSpider AI爬虫项目
-2026-01-10 18:37:25.117 | INFO     | MindSpider.main:__init__:45 - 项目路径: /home/ubuntu/BettaFish/MindSpider
-2026-01-10 18:37:25.117 | INFO     | MindSpider.main:initialize_database:141 - 初始化数据库...
-2026-01-10 18:37:26.938 | INFO     | MindSpider.main:initialize_database:158 - 数据库初始化成功
-2026-01-10 18:37:26.938 | INFO     | __main__:initialize_system_components:229 - 数据库初始化成功
-2026-01-10 18:37:26.940 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-10 18:37:26.940 | INFO     | ForumEngine.monitor:stop_monitoring:727 - ForumEngine: 论坛未运行
-2026-01-10 18:37:26.940 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-10 18:37:26.956 | INFO     | __main__:start_forum_engine:323 - ForumEngine: 启动论坛...
-2026-01-10 18:37:26.956 | INFO     | ForumEngine.monitor:monitor_logs:586 - ForumEngine: 论坛创建中...
-2026-01-10 18:37:26.956 | INFO     | ForumEngine.monitor:start_monitoring:716 - ForumEngine: 论坛已启动
-2026-01-10 18:37:27.092 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-10 18:37:27.092 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-10 18:37:27.092 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'gpt-4.1-mini', 'model': 'gpt-4.1-mini', 'api_base': 'https://api.openai.com/v1'}
-2026-01-10 18:37:27.092 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-11 07:13:35.056 | INFO     | __main__:<module>:36 - ReportEngine接口已注册
+2026-01-11 07:13:35.116 | INFO     | __main__:init_forum_log:311 - ForumEngine: forum.log 已初始化
+2026-01-11 07:13:35.122 | INFO     | __main__:<module>:1035 - 等待配置确认，系统将在前端指令后启动组件...
+2026-01-11 07:13:35.122 | INFO     | __main__:<module>:1036 - Flask服务器已启动，访问地址: http://0.0.0.0:5000
+2026-01-11 07:14:11.163 | INFO     | MindSpider.main:__init__:44 - MindSpider AI爬虫项目
+2026-01-11 07:14:11.164 | INFO     | MindSpider.main:__init__:45 - 项目路径: /home/ubuntu/BettaFish/MindSpider
+2026-01-11 07:14:11.164 | INFO     | MindSpider.main:initialize_database:141 - 初始化数据库...
+2026-01-11 07:14:13.211 | INFO     | MindSpider.main:initialize_database:158 - 数据库初始化成功
+2026-01-11 07:14:13.211 | INFO     | __main__:initialize_system_components:229 - 数据库初始化成功
+2026-01-11 07:14:13.213 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
+2026-01-11 07:14:13.213 | INFO     | ForumEngine.monitor:stop_monitoring:727 - ForumEngine: 论坛未运行
+2026-01-11 07:14:13.213 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
+2026-01-11 07:14:15.358 | INFO     | __main__:start_forum_engine:323 - ForumEngine: 启动论坛...
+2026-01-11 07:14:15.358 | INFO     | ForumEngine.monitor:monitor_logs:586 - ForumEngine: 论坛创建中...
+2026-01-11 07:14:15.358 | INFO     | ForumEngine.monitor:start_monitoring:716 - ForumEngine: 论坛已启动
+2026-01-11 07:14:15.512 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-11 07:14:15.512 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-11 07:14:15.512 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'gpt-4.1-mini', 'model': 'gpt-4.1-mini', 'api_base': 'https://api.openai.com/v1'}
+2026-01-11 07:14:15.513 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功

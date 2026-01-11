@@ -339,7 +339,7 @@ body {
 
 /* 左侧面板 */
 .system-left-panel {
-    flex: 2.5;
+    flex: 3;
     background: var(--primary-surface);
     border: 1px solid var(--primary-border);
     border-radius: 12px;
@@ -378,7 +378,7 @@ body {
 
 /* 右侧面板 */
 .system-right-panel {
-    flex: 1;
+    flex: 2;
     background: var(--primary-surface);
     border: 1px solid var(--primary-border);
     border-radius: 12px;
@@ -544,11 +544,11 @@ body {
     }
 
     .system-left-panel {
-        flex: 2.5;
+        flex: 3;
     }
 
     .system-right-panel {
-        flex: 1;
+        flex: 2;
     }
 }
 
