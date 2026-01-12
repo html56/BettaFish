@@ -45,6 +45,9 @@ docs/
   - 08_VERSION_HISTORY.md - 版本历史
   - 10_PROJECT_SUMMARY.md - 项目总结
 
+- **说明文档** (2026-01-11)
+  - 14_ROOT_DOCUMENTS.md - 根目录文档说明
+
 ### 2. 技术文档 (待补充)
 **目录**: `technical/` (规划中)  
 **说明**: 技术架构、API 文档、数据库设计等
@@ -67,17 +70,18 @@ docs/
 | **界面设计** | 06_NEW_DESIGN_SHOWCASE, 11_UI_REDESIGN_NOTE, 12_UI_BEAUTIFICATION_REPORT, 13_SCREENSHOTS_DESC |
 | **功能优化** | 07_STATUS_INDICATOR_FIX, 09_LAYOUT_RATIO_UPDATE |
 | **项目总结** | 08_VERSION_HISTORY, 10_PROJECT_SUMMARY |
+| **文档说明** | 14_ROOT_DOCUMENTS |
 
 ### 按时间查找
 
 | 日期 | 文档数量 | 主要内容 |
 |------|---------|---------|
 | **2026-01-10** | 12 个 | 项目部署、UI 设计、功能修复 |
-| **2026-01-11** | 2 个 | 布局优化、项目总结 |
+| **2026-01-11** | 3 个 | 布局优化、项目总结、文档说明 |
 
 ## 📊 文档统计
 
-- **历史文档总数**: 14 个
+- **历史文档总数**: 15 个
 - **文档总大小**: ~124 KB
 - **覆盖时间**: 2026-01-10 至 2026-01-11
 - **主要语言**: 简体中文
