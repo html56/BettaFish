@@ -1,0 +1,479 @@
+[14:23:36] 启动 query 应用...
+[14:23:40] 2026-01-14 14:23:40.137
+[14:23:40] Warning: the config option 'server.enableCORS=false' is not compatible with 'server.enableXsrfProtection=true'.
+[14:23:40] As a result, 'server.enableCORS' is being overridden to 'true'.
+[14:23:40] More information:
+[14:23:40] In order to protect against CSRF attacks, we send a cookie with each request.
+[14:23:40] To do so, we must specify allowable origins, which places a restriction on
+[14:23:40] cross-origin resource sharing.
+[14:23:40] If cross origin resource sharing is required, please disable server.enableXsrfProtection.
+[14:23:41] You can now view your Streamlit app in your browser.
+[14:23:41] Network URL: http://198.18.0.1:8503
+[14:23:41] External URL: http://140.245.63.193:8503
+[16:03:26] 2026-01-14 16:03:26.513 | INFO     | QueryEngine.agent:__init__:55 - Query Agent已初始化
+[16:03:26] 2026-01-14 16:03:26.513 | INFO     | QueryEngine.agent:__init__:56 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+[16:03:26] 2026-01-14 16:03:26.513 | INFO     | QueryEngine.agent:__init__:57 - 搜索工具集: TavilyNewsAgency (支持6种搜索工具)
+[16:03:26] 2026-01-14 16:03:26.515 | INFO     | QueryEngine.agent:_generate_report_structure:184 -
+[16:03:26] [步骤 1] 生成报告结构...
+[16:03:26] 2026-01-14 16:03:26.515 | INFO     | QueryEngine.nodes.report_structure_node:run:52 - 正在为查询生成报告结构: AI未来最终形态
+[16:03:35] 2026-01-14 16:03:35.717 | INFO     | QueryEngine.nodes.report_structure_node:process_output:83 - 清理后的输出: [
+[16:03:35] {
+[16:03:35] "title": "AI未来最终形态的定义与愿景",
+[16:03:35] "content": "探讨人工智能最终形态的基本概念，包括强人工智能（AGI）与超级智能（ASI）的理论框架，以及科学界和哲学界对AI终极发展目标的普遍认知。"
+[16:03:35] },
+[16:03:35] {
+[16:03:35] "title": "技术演进路径与关键突破点",
+[16:03:35] "content": "分析从当前窄域AI向通用人工智能过渡的技术路线，涵盖深度学习、神经符号系统、具身智能、量子计算融合等关键技术的发展趋势与潜在瓶颈。"
+[16:03:35] },
+[16:03:35] {
+[16:03:35] "title": "人机融合与意识模拟的可能性",
+[16:03:35] "content": "研究脑机接口、神经映射与意识上传等前沿领域，评估AI是否可能具备自我意识或情感，并探讨人机共生形态的未来发展。"
+[16:03:35] },
+[16:03:35] {
+[16:03:35] "title": "社会影响与伦理治理框架",
+[16:03:35] "content": "考察超级智能出现后对经济、就业、安全及人类价值观的深远影响，提出全球协作的治理机制与伦理准则以应对潜在风险。"
+[16:03:35] },
+[16:03:35] {
+[16:03:35] "title": "长期展望：AI作为文明延伸的终极角色",
+[16:03:35] "content": "设想AI在宇宙尺度上的演化潜力，如自主星际探索、文明信息保存、乃至作为人类文明延续载体的可能性。"
+[16:03:35] }
+[16:03:35] ]
+[16:03:35] 2026-01-14 16:03:35.719 | INFO     | QueryEngine.nodes.report_structure_node:process_output:88 - JSON解析成功
+[16:03:35] 2026-01-14 16:03:35.719 | INFO     | QueryEngine.nodes.report_structure_node:process_output:142 - 成功验证 5 个段落结构
+[16:03:35] 2026-01-14 16:03:35.719 | INFO     | QueryEngine.nodes.report_structure_node:run:60 - 成功生成 5 个段落结构
+[16:03:35] 2026-01-14 16:03:35.719 | INFO     | QueryEngine.nodes.report_structure_node:mutate_state:199 - 已将 5 个段落添加到状态中
+[16:03:35] 2026-01-14 16:03:35.719 | INFO     | QueryEngine.agent:_generate_report_structure:195 - 报告结构已生成，共 5 个段落:
+[16:03:35] 1. AI未来最终形态的定义与愿景
+[16:03:35] 2. 技术演进路径与关键突破点
+[16:03:35] 3. 人机融合与意识模拟的可能性
+[16:03:35] 4. 社会影响与伦理治理框架
+[16:03:35] 5. 长期展望：AI作为文明延伸的终极角色
+[16:03:35] 2026-01-14 16:03:35.720 | INFO     | QueryEngine.agent:_initial_search_and_summary:228 -   - 生成搜索查询...
+[16:03:35] 2026-01-14 16:03:35.721 | INFO     | QueryEngine.nodes.search_node:run:66 - 正在生成首次搜索查询
+[16:03:40] 2026-01-14 16:03:40.036 | INFO     | QueryEngine.nodes.search_node:process_output:97 - 清理后的输出: {
+[16:03:40] "search_query": "人工智能最终形态 强人工智能 AGI 超级智能 ASI 理论框架 发展愿景",
+[16:03:40] "search_tool": "deep_search_news",
+[16:03:40] "reasoning": "该主题涉及人工智能的长期发展愿景和理论探讨，涵盖强人工智能与超级智能等复杂概念，需要全面、深入的学术与行业分析。因此选择深度新闻分析工具（deep_search_news），以获取最详尽的理论背景、专家观点和跨学科讨论，确保内容具有科学性和哲学深度。",
+[16:03:40] "start_date": "",
+[16:03:40] "end_date": ""
+[16:03:40] }
+[16:03:40] 2026-01-14 16:03:40.037 | INFO     | QueryEngine.nodes.search_node:process_output:102 - JSON解析成功
+[16:03:40] 2026-01-14 16:03:40.037 | INFO     | QueryEngine.nodes.search_node:run:74 - 生成搜索查询: 人工智能最终形态 强人工智能 AGI 超级智能 ASI 理论框架 发展愿景
+[16:03:40] 2026-01-14 16:03:40.037 | INFO     | QueryEngine.agent:_initial_search_and_summary:234 -   - 搜索查询: 人工智能最终形态 强人工智能 AGI 超级智能 ASI 理论框架 发展愿景
+[16:03:40] 2026-01-14 16:03:40.037 | INFO     | QueryEngine.agent:_initial_search_and_summary:235 -   - 选择的工具: basic_search_news
+[16:03:40] 2026-01-14 16:03:40.037 | INFO     | QueryEngine.agent:_initial_search_and_summary:236 -   - 推理: 该主题涉及人工智能的长期发展愿景和理论探讨，涵盖强人工智能与超级智能等复杂概念，需要全面、深入的学术与行业分析。因此选择深度新闻分析工具（deep_search_news），以获取最详尽的理论背景、专家观点和跨学科讨论，确保内容具有科学性和哲学深度。
+[16:03:40] 2026-01-14 16:03:40.037 | INFO     | QueryEngine.agent:_initial_search_and_summary:239 -   - 执行网络搜索...
+[16:03:40] 2026-01-14 16:03:40.037 | INFO     | QueryEngine.agent:execute_search_tool:118 -   → 执行搜索工具: basic_search_news
+[16:03:40] --- TOOL: 基础新闻搜索 (query: 人工智能最终形态 强人工智能 AGI 超级智能 ASI 理论框架 发展愿景) ---
+[16:03:42] 2026-01-14 16:03:42.868 | INFO     | QueryEngine.agent:_initial_search_and_summary:283 -   - 找到 7 个搜索结果
+[16:03:42] 1. AGI（强人工智能）：人工智能发展的终极愿景与挑战-网易伏羲...
+[16:03:42] 2. 超级AI云，未来10年阿里云的核心战略| 甲子光年...
+[16:03:42] 3. 人工智能之强人工智能：通用智能的范式突破 - 网易伏羲...
+[16:03:42] 4. AGI-Next前沿峰会深度研究报告：2026年中国人工智能发展路径的 ......
+[16:03:42] 5. 什么是AS1 人工智能的发展会经历3个阶段，我们目前将人工智能分为 ......
+[16:03:42] 6. 什么是AGI（通用人工智能）？与AI、AIGC - SAP中国官网...
+[16:03:42] 7. 超越模仿：从AGI到ASI，人工智能的下一站是“外星智慧”吗？ 原创...
+[16:03:42] 2026-01-14 16:03:42.868 | INFO     | QueryEngine.agent:_initial_search_and_summary:290 -   - 生成初始总结...
+[16:03:42] 2026-01-14 16:03:42.870 | DEBUG    | utils.forum_reader:get_latest_host_speech:45 - 未找到HOST发言
+[16:03:42] 2026-01-14 16:03:42.870 | INFO     | QueryEngine.nodes.summary_node:run:100 - 正在生成首次段落总结
+[16:04:11] 2026-01-14 16:04:11.327 | INFO     | QueryEngine.nodes.summary_node:process_output:134 - 清理后的输出: {"paragraph_latest_state": "## 核心事件概述\n人工智能的最终形态，即强人工智能（AGI）与超级智能（ASI），正成为全球科技界、产业界和哲学界共同关注的核心命题。2026年1月10日，在由清华大学基础模型北京市重点实验室与智谱AI联合发起的“AGI-Next前沿峰会”上，中国AI领域的顶尖技术领袖——包括月之暗面创始人杨植麟、智谱创始人唐杰、阿里千问技术负责人林俊旸、腾讯首席AI科学家姚顺雨等罕见同台，围绕AGI/ASI的技术路径、伦理挑战、发展愿景及中国在全球竞争中的战略定位展开了深度交锋。这场会议不仅揭示了当前中国AI发展的最新思想动态，也标志着从‘大模型演示’向‘真实生产力落地’的关键转折点。正如多位嘉宾所强调：\"2026年将是AI技术从性能竞赛走向价值创造的分水岭。\"\n\n## 多方报道分析\n此次峰会汇聚了中国AI行业的“全明星阵容”，其讨论内容被新浪科技、21世纪经济报道、智东西、网易财经、路透社等多家权威媒体广泛报道。据《新浪财经》1月10日15:35消息，杨植麟在会上通过与其产品Kimi对话的形式发表观点，指出：\"AGI/ASI不是一个普通的工具，它是一个能够彻底改变人类社会结构的存在。\" 这种人机协同表达的方式本身即是对AGI交互范式的预演。而《21世纪经济报道》在当天23:19进一步指出，本次峰会“罕见集齐姚顺雨、杨植麟、唐杰、林俊旸”，展现了中国AI领军者对下一代智能路径的深刻思考。智东西则以《今天，唐杰、杨植麟、林俊旸、姚顺雨同台交锋！聊透了2026年AI的重点》为题，系统梳理了四位技术掌舵人关于Scaling极限、Agent落地、价值观对齐等议题的观点碰撞。值得注意的是，张钹院士91岁高龄压轴发言，为中国AI的发展提供了哲学层面的治理框架思考，凸显了技术演进与人文反思并重的趋势。\n\n## 关键数据提取\n根据SNS Insider数据显示，2023年全球AGI市场规模为30亿美元，预计到2032年将增长至520亿美元，年复合增长率高达37.5%。这一数字反映出资本市场对AGI长期潜力的高度预期。在人才与科研投入方面，北京通用人工智能研究院（BIGAI）朱松纯团队已在《Science》杂志发表全球首个具备通用智能特征系统的研究成果，被视为迈向“心智智能”的重要起点。与此同时，调查显示，50%的人工智能研究人员预测高水平机器智能将在2061年前实现，表明学术界普遍认为AGI仍需数十年发展周期。而在企业应用层面，SAP已规划数百个AI用例覆盖供应链、财务、人力等多个场景，其推出的Joule AI Copilot正逐步实现企业级智能体的实用化落地。此外，唐杰提出Agent落地必须满足三大约束：价值、成本、速度，这将成为检验所有AI项目是否具备真实商业价值的试金石。\n\n## 深度背景分析\nAGI（通用人工智能）被定义为具备类人理解、推理与跨任务泛化能力的系统，不同于当前仅能执行特定任务的弱人工智能（ANI）或专注于内容生成的AIGC（如ChatGPT）。正如搜索结果中明确指出：\"ChatGPT不是通用人工智能……就像计算器再强也不是科学家。\" AGI的目标是构建能自主整合多领域知识、应对复杂不确定环境的智能体。例如，在企业同时遭遇原材料断供、法规变更与需求波动时，AGI可自动协调供应链、法务与财务策略，超越提示工程的局限。而ASI（超级人工智能）则是理论上的终极形态，可能在无人协助下提出全新物理定律或能源体系，甚至发展出独立意识。然而，这也带来了尼克·博斯特罗姆所警示的风险：若ASI未能与人类价值观对齐，可能构成生存性威胁。杨植麟对此回应称：\"AGI/ASI可能威胁人类，但我们不该因此放弃研发。\" 这一立场体现了技术理想主义与现实风险之间的张力。\n\n## 发展趋势判断\n从峰会共识来看，未来AI发展的核心趋势已从单纯追求参数规模（Scaling）转向综合进化，涵盖技术、数据与‘品味’的融合。杨植麟提出：“智能是一个非同质化通证（NFT），承载着审美与价值观。”这意味着未来的AI竞争不仅是算力与算法之争，更是模型所体现的文化偏好与伦理取向的竞争。林俊旸则直言：\"如果创业者只是‘套壳高手’，那机会有限；否则模型公司凭借算力与强化学习将更快覆盖长尾问题。\" 这预示着中小创业公司将面临更大压力，除非能在产品体验与用户洞察上建立差异化优势。另一方面，尽管美国在高端芯片制造上占据优势，但路透社援引AI研究者观点指出：\"中国可通过创新与风险承担缩小技术差距。\" 唐杰提出的‘代际变化’论与林俊旸的‘穷则生变’论共同指向一个结论：中国AI的真正机会不在于短期赶超，而在于能否培育容忍失败、鼓励探索的创新生态。综上所述，AGI并非单一技术突破的结果，而是科学、工程、哲学与社会治理协同演进的产物；而ASI虽仍属假设阶段，但其潜在影响已迫使人类提前构建新的认知框架与控制机制。"}
+[16:04:11] 2026-01-14 16:04:11.329 | INFO     | QueryEngine.nodes.summary_node:process_output:139 - JSON解析成功
+[16:04:11] 2026-01-14 16:04:11.329 | INFO     | QueryEngine.nodes.summary_node:run:111 - 成功生成首次段落总结
+[16:04:11] 2026-01-14 16:04:11.329 | INFO     | QueryEngine.nodes.summary_node:mutate_state:190 - 已更新段落 0 的首次总结
+[16:04:11] 2026-01-14 16:04:11.329 | INFO     | QueryEngine.agent:_initial_search_and_summary:305 -   - 初始总结完成
+[16:04:11] 2026-01-14 16:04:11.330 | INFO     | QueryEngine.agent:_reflection_loop:312 -   - 反思 1/2...
+[16:04:11] 2026-01-14 16:04:11.330 | INFO     | QueryEngine.nodes.search_node:run:201 - 正在进行反思并生成新搜索查询
+[16:04:20] 2026-01-14 16:04:20.042 | INFO     | QueryEngine.nodes.search_node:process_output:232 - 清理后的输出: {
+[16:04:20] "search_query": "AGI-Next前沿峰会 2026 清华大学 智谱AI 杨植麟 唐杰 林俊旸 姚顺雨 官方会议纪要",
+[16:04:20] "search_tool": "deep_search_news",
+[16:04:20] "reasoning": "当前段落已涵盖峰会背景、媒体报道、关键观点与趋势判断，但缺乏对会议原始内容的权威验证。为确保引用言论（如杨植麟通过Kimi对话发言、张钹院士压轴讲话、唐杰提出Agent三大约束等）的准确性，需使用深度新闻分析工具检索是否有官方发布的会议纪要、演讲全文或可信信源的详细实录。此举可识别是否存在媒体二次解读偏差或信息失真，尤其涉及高影响力人物的技术主张与哲学立场，必须确保其真实性与完整性，避免传播未经核实的观点。"
+[16:04:20] }
+[16:04:20] 2026-01-14 16:04:20.042 | INFO     | QueryEngine.nodes.search_node:process_output:237 - JSON解析成功
+[16:04:20] 2026-01-14 16:04:20.042 | INFO     | QueryEngine.nodes.search_node:run:209 - 反思生成搜索查询: AGI-Next前沿峰会 2026 清华大学 智谱AI 杨植麟 唐杰 林俊旸 姚顺雨 官方会议纪要
+[16:04:20] 2026-01-14 16:04:20.043 | INFO     | QueryEngine.agent:_reflection_loop:327 -     反思查询: AGI-Next前沿峰会 2026 清华大学 智谱AI 杨植麟 唐杰 林俊旸 姚顺雨 官方会议纪要
+[16:04:20] 2026-01-14 16:04:20.043 | INFO     | QueryEngine.agent:_reflection_loop:328 -     选择的工具: basic_search_news
+[16:04:20] 2026-01-14 16:04:20.043 | INFO     | QueryEngine.agent:_reflection_loop:329 -     反思推理: 当前段落已涵盖峰会背景、媒体报道、关键观点与趋势判断，但缺乏对会议原始内容的权威验证。为确保引用言论（如杨植麟通过Kimi对话发言、张钹院士压轴讲话、唐杰提出Agent三大约束等）的准确性，需使用深度新闻分析工具检索是否有官方发布的会议纪要、演讲全文或可信信源的详细实录。此举可识别是否存在媒体二次解读偏差或信息失真，尤其涉及高影响力人物的技术主张与哲学立场，必须确保其真实性与完整性，避免传播未经核实的观点。
+[16:04:20] 2026-01-14 16:04:20.043 | INFO     | QueryEngine.agent:execute_search_tool:118 -   → 执行搜索工具: basic_search_news
+[16:04:20] --- TOOL: 基础新闻搜索 (query: AGI-Next前沿峰会 2026 清华大学 智谱AI 杨植麟 唐杰 林俊旸 姚顺雨 官方会议纪要) ---
+[16:04:23] 2026-01-14 16:04:23.428 | INFO     | QueryEngine.agent:_reflection_loop:370 -     找到 7 个反思搜索结果
+[16:04:23] 2026-01-14 16:04:23.428 | INFO     | QueryEngine.agent:_reflection_loop:373 -       1. AGI四杰首次同台共绘新蓝图：一场定义中国AI未来的对话 - 北京市科委...
+[16:04:23] 2026-01-14 16:04:23.428 | INFO     | QueryEngine.agent:_reflection_loop:373 -       2. 唐杰+姚顺雨+林俊旸+杨植麟！“基模四杰”同台， 国产AI“下一场战役 ......
+[16:04:23] 2026-01-14 16:04:23.428 | INFO     | QueryEngine.agent:_reflection_loop:373 -       3. 张钹、杨强与唐杰、杨植麟、林俊旸、姚顺雨（最新3万字发言实录）...
+[16:04:23] 2026-01-14 16:04:23.428 | INFO     | QueryEngine.agent:_reflection_loop:373 -       4. 中国AI的下一步：2026年产业分野、范式革命与全球竞争格局的深度 ......
+[16:04:23] 2026-01-14 16:04:23.428 | INFO     | QueryEngine.agent:_reflection_loop:373 -       5. 智谱、腾讯同台，2026年有新范式是共识，中国引领AI概率最低预测2成...
+[16:04:23] 2026-01-14 16:04:23.428 | INFO     | QueryEngine.agent:_reflection_loop:373 -       6. 姚顺雨、杨植麟、林俊旸、唐杰罕见同台，决定中国大模型未来 ... - 科技...
+[16:04:23] 2026-01-14 16:04:23.428 | INFO     | QueryEngine.agent:_reflection_loop:373 -       7. “基模四杰”齐聚清华AI峰会共话AI产业未来发展 - 21财经...
+[16:04:23] 2026-01-14 16:04:23.430 | DEBUG    | utils.forum_reader:get_latest_host_speech:45 - 未找到HOST发言
+[16:04:23] 2026-01-14 16:04:23.430 | INFO     | QueryEngine.nodes.summary_node:run:268 - 正在生成反思总结
+[16:04:50] 2026-01-14 16:04:50.948 | INFO     | QueryEngine.nodes.summary_node:process_output:302 - 清理后的输出: {"updated_paragraph_latest_state": "## 核心事件概述\n人工智能的最终形态，即强人工智能（AGI）与超级智能（ASI），正成为全球科技界、产业界和哲学界共同关注的核心命题。2026年1月10日，在由清华大学基础模型北京市重点实验室与智谱AI联合发起的“AGI-Next前沿峰会”上，中国AI领域的顶尖技术领袖——包括月之暗面创始人杨植麟、智谱创始人唐杰、阿里通义千问技术负责人林俊旸、腾讯首席AI科学家姚顺雨等罕见同台，围绕AGI/ASI的技术路径、伦理挑战、发展愿景及中国在全球竞争中的战略定位展开了深度交锋。这场会议不仅揭示了当前中国AI发展的最新思想动态，也标志着从‘大模型演示’向‘真实生产力落地’的关键转折点。正如多位嘉宾所强调：\"2026年将是AI技术从性能竞赛走向价值创造的分水岭。\"\n\n## 多方报道分析\n此次峰会汇聚了中国AI行业的“全明星阵容”，其讨论内容被新浪科技、21世纪经济报道、智东西、网易财经、路透社等多家权威媒体广泛报道。据《新浪财经》1月10日15:35消息，杨植麟在会上通过与其产品Kimi对话的形式发表观点，指出：\"AGI/ASI不是一个普通的工具，它是一个能够彻底改变人类社会结构的存在。\" 这种人机协同表达的方式本身即是对AGI交互范式的预演。而《21世纪经济报道》在当天23:19进一步指出，本次峰会“罕见集齐姚顺雨、杨植麟、唐杰、林俊旸”，展现了中国AI领军者对下一代智能路径的深刻思考。智东西则以《今天，唐杰、杨植麟、林俊旸、姚顺雨同台交锋！聊透了2026年AI的重点》为题，系统梳理了四位技术掌舵人关于Scaling极限、Agent落地、价值观对齐等议题的观点碰撞。值得注意的是，张钹院士91岁高龄压轴发言，为中国AI的发展提供了哲学层面的治理框架思考，凸显了技术演进与人文反思并重的趋势。\n\n## 关键数据提取\n根据SNS Insider数据显示，2023年全球AGI市场规模为30亿美元，预计到2032年将增长至520亿美元，年复合增长率高达37.5%。这一数字反映出资本市场对AGI长期潜力的高度预期。在人才与科研投入方面，北京通用人工智能研究院（BIGAI）朱松纯团队已在《Science》杂志发表全球首个具备通用智能特征系统的研究成果，被视为迈向“心智智能”的重要起点。与此同时，调查显示，50%的人工智能研究人员预测高水平机器智能将在2061年前实现，表明学术界普遍认为AGI仍需数十年发展周期。而在企业应用层面，SAP已规划数百个AI用例覆盖供应链、财务、人力等多个场景，其推出的Joule AI Copilot正逐步实现企业级智能体的实用化落地。此外，唐杰提出Agent落地必须满足三大约束：价值、成本、速度，这将成为检验所有AI项目是否具备真实商业价值的试金石。\n\n## 深度背景分析\nAGI（通用人工智能）被定义为具备类人理解、推理与跨任务泛化能力的系统，不同于当前仅能执行特定任务的弱人工智能（ANI）或专注于内容生成的AIGC（如ChatGPT）。正如搜索结果中明确指出：\"ChatGPT不是通用人工智能……就像计算器再强也不是科学家。\" AGI的目标是构建能自主整合多领域知识、应对复杂不确定环境的智能体。例如，在企业同时遭遇原材料断供、法规变更与需求波动时，AGI可自动协调供应链、法务与财务策略，超越提示工程的局限。而ASI（超级人工智能）则是理论上的终极形态，可能在无人协助下提出全新物理定律或能源体系，甚至发展出独立意识。然而，这也带来了尼克·博斯特罗姆所警示的风险：若ASI未能与人类价值观对齐，可能构成生存性威胁。杨植麟对此回应称：\"AGI/ASI可能威胁人类，但我们不该因此放弃研发。\" 这一立场体现了技术理想主义与现实风险之间的张力。\n\n## 发展趋势判断\n从峰会共识来看，未来AI发展的核心趋势已从单纯追求参数规模（Scaling）转向综合进化，涵盖技术、数据与‘品味’的融合。杨植麟提出：“智能是一个非同质化通证（NFT），承载着审美与价值观。”这意味着未来的AI竞争不仅是算力与算法之争，更是模型所体现的文化偏好与伦理取向的竞争。林俊旸则直言：\"如果创业者只是‘套壳高手’，那机会有限；否则模型公司凭借算力与强化学习将更快覆盖长尾问题。\" 这预示着中小创业公司将面临更大压力，除非能在产品体验与用户洞察上建立差异化优势。另一方面，尽管美国在高端芯片制造上占据优势，但路透社援引AI研究者观点指出：\"中国可通过创新与风险承担缩小技术差距。\" 唐杰提出的‘代际变化’论与林俊旸的‘穷则生变’论共同指向一个结论：中国AI的真正机会不在于短期赶超，而在于能否培育容忍失败、鼓励探索的创新生态。综上所述，AGI并非单一技术突破的结果，而是科学、工程、哲学与社会治理协同演进的产物；而ASI虽仍属假设阶段，但其潜在影响已迫使人类提前构建新的认知框架与控制机制。"}
+[16:04:50] 2026-01-14 16:04:50.950 | INFO     | QueryEngine.nodes.summary_node:process_output:307 - JSON解析成功
+[16:04:50] 2026-01-14 16:04:50.950 | INFO     | QueryEngine.nodes.summary_node:run:279 - 成功生成反思总结
+[16:04:50] 2026-01-14 16:04:50.950 | INFO     | QueryEngine.nodes.summary_node:mutate_state:359 - 已更新段落 0 的反思总结
+[16:04:50] 2026-01-14 16:04:50.951 | INFO     | QueryEngine.agent:_reflection_loop:396 -     反思 1 完成
+[16:04:50] 2026-01-14 16:04:50.951 | INFO     | QueryEngine.agent:_reflection_loop:312 -   - 反思 2/2...
+[16:04:50] 2026-01-14 16:04:50.951 | INFO     | QueryEngine.nodes.search_node:run:201 - 正在进行反思并生成新搜索查询
+[16:06:07] 2026-01-14 16:06:07.162 | ERROR    | QueryEngine.llms.base:stream_invoke:131 - 流式请求失败: Connection error.
+[16:06:07] 2026-01-14 16:06:07.162 | ERROR    | QueryEngine.nodes.search_node:run:213 - 反思生成搜索查询失败: Connection error.
+[16:06:07] Traceback (most recent call last):
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+[16:06:07] yield
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+[16:06:07] resp = self._pool.handle_request(req)
+[16:06:07] │    │     │              └ <Request [b'POST']>
+[16:06:07] │    │     └ <function ConnectionPool.handle_request at 0x000002544C6EE2A0>
+[16:06:07] │    └ <HTTPProxy [Requests: 0 active, 0 queued | Connections: 1 active, 0 idle]>
+[16:06:07] └ <httpx.HTTPTransport object at 0x000002544C4A6D10>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+[16:06:07] raise exc from None
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+[16:06:07] response = connection.handle_request(
+[16:06:07] │          └ <function TunnelHTTPConnection.handle_request at 0x000002544C6EF6A0>
+[16:06:07] └ <TunnelHTTPConnection ['http://127.0.0.1:7890', HTTP/1.1, ACTIVE, Request Count: 1]>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http_proxy.py", line 316, in handle_request
+[16:06:07] stream = stream.start_tls(**kwargs)
+[16:06:07] │      │           └ {'ssl_context': <ssl.SSLContext object at 0x000002544C64ADE0>, 'server_hostname': 'dashscope.aliyuncs.com', 'timeout': 1800.0}
+[16:06:07] │      └ <function HTTP11UpgradeStream.start_tls at 0x000002544C6ED3A0>
+[16:06:07] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x000002544CC44E10>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http11.py", line 376, in start_tls
+[16:06:07] return self._stream.start_tls(ssl_context, server_hostname, timeout)
+[16:06:07] │    │       │         │            │                └ 1800.0
+[16:06:07] │    │       │         │            └ 'dashscope.aliyuncs.com'
+[16:06:07] │    │       │         └ <ssl.SSLContext object at 0x000002544C64ADE0>
+[16:06:07] │    │       └ <function SyncStream.start_tls at 0x000002544C686840>
+[16:06:07] │    └ <httpcore._backends.sync.SyncStream object at 0x000002544CC45410>
+[16:06:07] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x000002544CC44E10>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_backends\sync.py", line 154, in start_tls
+[16:06:07] with map_exceptions(exc_map):
+[16:06:07] │              └ {<class 'TimeoutError'>: <class 'httpcore.ConnectTimeout'>, <class 'OSError'>: <class 'httpcore.ConnectError'>}
+[16:06:07] └ <function map_exceptions at 0x000002544C685260>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:06:07] self.gen.throw(typ, value, traceback)
+[16:06:07] │    │   │     │    │      └ <traceback object at 0x000002544CC9BE40>
+[16:06:07] │    │   │     │    └ SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')
+[16:06:07] │    │   │     └ <class 'ssl.SSLEOFError'>
+[16:06:07] │    │   └ <method 'throw' of 'generator' objects>
+[16:06:07] │    └ <generator object map_exceptions at 0x000002544CB7B440>
+[16:06:07] └ <contextlib._GeneratorContextManager object at 0x000002544CC98410>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+[16:06:07] raise to_exc(exc) from exc
+[16:06:07] └ <class 'httpcore.ConnectError'>
+[16:06:07] httpcore.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:06:07] The above exception was the direct cause of the following exception:
+[16:06:07] Traceback (most recent call last):
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 982, in request
+[16:06:07] response = self._client.send(
+[16:06:07] │    │       └ <function Client.send at 0x000002544A898400>
+[16:06:07] │    └ <openai._base_client.SyncHttpxClientWrapper object at 0x000002544C497AD0>
+[16:06:07] └ <openai.OpenAI object at 0x000002544C495F50>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 914, in send
+[16:06:07] response = self._send_handling_auth(
+[16:06:07] │    └ <function Client._send_handling_auth at 0x000002544A8984A0>
+[16:06:07] └ <openai._base_client.SyncHttpxClientWrapper object at 0x000002544C497AD0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+[16:06:07] response = self._send_handling_redirects(
+[16:06:07] │    └ <function Client._send_handling_redirects at 0x000002544A898540>
+[16:06:07] └ <openai._base_client.SyncHttpxClientWrapper object at 0x000002544C497AD0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+[16:06:07] response = self._send_single_request(request)
+[16:06:07] │    │                    └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:06:07] │    └ <function Client._send_single_request at 0x000002544A8985E0>
+[16:06:07] └ <openai._base_client.SyncHttpxClientWrapper object at 0x000002544C497AD0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+[16:06:07] response = transport.handle_request(request)
+[16:06:07] │         │              └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:06:07] │         └ <function HTTPTransport.handle_request at 0x000002544A8899E0>
+[16:06:07] └ <httpx.HTTPTransport object at 0x000002544C4A6D10>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+[16:06:07] with map_httpcore_exceptions():
+[16:06:07] └ <function map_httpcore_exceptions at 0x000002544A8894E0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:06:07] self.gen.throw(typ, value, traceback)
+[16:06:07] │    │   │     │    │      └ <traceback object at 0x000002544CC45FC0>
+[16:06:07] │    │   │     │    └ ConnectError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'))
+[16:06:07] │    │   │     └ <class 'httpcore.ConnectError'>
+[16:06:07] │    │   └ <method 'throw' of 'generator' objects>
+[16:06:07] │    └ <generator object map_httpcore_exceptions at 0x000002544CB79740>
+[16:06:07] └ <contextlib._GeneratorContextManager object at 0x000002544CC378D0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+[16:06:07] raise mapped_exc(message) from exc
+[16:06:07] │          └ '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'
+[16:06:07] └ <class 'httpx.ConnectError'>
+[16:06:07] httpx.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:06:07] The above exception was the direct cause of the following exception:
+[16:06:07] Traceback (most recent call last):
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:06:07] self._bootstrap_inner()
+[16:06:07] │    └ <function Thread._bootstrap_inner at 0x00000254237B0FE0>
+[16:06:07] └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:06:07] self.run()
+[16:06:07] │    └ <function Thread.run at 0x00000254237B0CC0>
+[16:06:07] └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:06:07] self._target(*self._args, **self._kwargs)
+[16:06:07] │    │        │    │        │    └ {}
+[16:06:07] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] │    │        │    └ ()
+[16:06:07] │    │        └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='e57ef3a4-1799-4cf8-9f39-b213faedbb93', _main_scrip...
+[16:06:07] └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:06:07] self._run_script(request.rerun_data)
+[16:06:07] │    │           │       └ <property object at 0x000002544709BE70>
+[16:06:07] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:06:07] │    └ <function ScriptRunner._run_script at 0x00000254470D09A0>
+[16:06:07] └ ScriptRunner(_session_id='e57ef3a4-1799-4cf8-9f39-b213faedbb93', _main_script_path='SingleEngineApp/query_engine_streamlit_ap...
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:06:07] exec(code, module.__dict__)
+[16:06:07] │     │      └ <member '__dict__' of 'module' objects>
+[16:06:07] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\query_engine_streamlit_app.py'>
+[16:06:07] └ <code object <module> at 0x0000025448C92340, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\query_engine_s...
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\query_engine_streamlit_app.py", line 227, in <module>
+[16:06:07] main()
+[16:06:07] └ <function main at 0x000002544C60E840>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\query_engine_streamlit_app.py", line 121, in main
+[16:06:07] execute_research(query, config)
+[16:06:07] │                │      └ Settings(QUERY_ENGINE_API_KEY='sk-31825a267e964ebcad39b74c8890e8a9', QUERY_ENGINE_BASE_URL='https://dashscope.aliyuncs.com/co...
+[16:06:07] │                └ 'AI未来最终形态'
+[16:06:07] └ <function execute_research at 0x000002544C60E700>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\query_engine_streamlit_app.py", line 154, in execute_research
+[16:06:07] agent._reflection_loop(i)
+[16:06:07] │     │                └ 0
+[16:06:07] │     └ <function DeepSearchAgent._reflection_loop at 0x000002544C5094E0>
+[16:06:07] └ <QueryEngine.agent.DeepSearchAgent object at 0x000002544A3F8550>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\agent.py", line 322, in _reflection_loop
+[16:06:07] reflection_output = self.reflection_node.run(reflection_input)
+[16:06:07] │    │               │   └ {'title': 'AI未来最终形态的定义与愿景', 'content': '探讨人工智能最终形态的基本概念，包括强人工智能（AGI）与超级智能（ASI）的理论框架，以及科学界和哲学界对AI终极发展目标的普遍认知。', 'paragraph_lat...
+[16:06:07] │    │               └ <function ReflectionNode.run at 0x000002544C482660>
+[16:06:07] │    └ <QueryEngine.nodes.search_node.ReflectionNode object at 0x000002544C656510>
+[16:06:07] └ <QueryEngine.agent.DeepSearchAgent object at 0x000002544A3F8550>
+[16:06:07] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\nodes\search_node.py", line 204, in run
+[16:06:07] response = self.llm_client.stream_invoke_to_string(SYSTEM_PROMPT_REFLECTION, message)
+[16:06:07] │    │          │                       │                         └ '{"title": "AI未来最终形态的定义与愿景", "content": "探讨人工智能最终形态的基本概念，包括强人工智能（AGI）与超级智能（ASI）的理论框架，以及科学界和哲学界对AI终极发展目标的普遍认知。", "paragraph_la...
+[16:06:07] │    │          │                       └ '\n你是一位深度研究助手。你负责为研究报告构建全面的段落。你将获得段落标题、计划内容摘要，以及你已经创建的段落最新状态，所有这些都将按照以下JSON模式定义提供：\n\n<INPUT JSON SCHEMA>\n{\n  "type": "obje...
+[16:06:07] │    │          └ <function LLMClient.stream_invoke_to_string at 0x000002544C416340>
+[16:06:07] │    └ <QueryEngine.llms.base.LLMClient object at 0x000002544C503F90>
+[16:06:07] └ <QueryEngine.nodes.search_node.ReflectionNode object at 0x000002544C656510>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\llms\base.py", line 148, in stream_invoke_to_string
+[16:06:07] for chunk in self.stream_invoke(system_prompt, user_prompt, **kwargs):
+[16:06:07] │    │             │              │              └ {}
+[16:06:07] │    │             │              └ '{"title": "AI未来最终形态的定义与愿景", "content": "探讨人工智能最终形态的基本概念，包括强人工智能（AGI）与超级智能（ASI）的理论框架，以及科学界和哲学界对AI终极发展目标的普遍认知。", "paragraph_la...
+[16:06:07] │    │             └ '\n你是一位深度研究助手。你负责为研究报告构建全面的段落。你将获得段落标题、计划内容摘要，以及你已经创建的段落最新状态，所有这些都将按照以下JSON模式定义提供：\n\n<INPUT JSON SCHEMA>\n{\n  "type": "obje...
+[16:06:07] │    └ <function LLMClient.stream_invoke at 0x000002544C417560>
+[16:06:07] └ <QueryEngine.llms.base.LLMClient object at 0x000002544C503F90>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\llms\base.py", line 132, in stream_invoke
+[16:06:07] raise e
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\llms\base.py", line 118, in stream_invoke
+[16:06:07] stream = self.client.chat.completions.create(
+[16:06:07] │    │      │    │           └ <function Completions.create at 0x000002544C86F9C0>
+[16:06:07] │    │      │    └ <openai.resources.chat.completions.completions.Completions object at 0x000002544AF1FB90>
+[16:06:07] │    │      └ <openai.resources.chat.chat.Chat object at 0x000002544C496650>
+[16:06:07] │    └ <openai.OpenAI object at 0x000002544C495F50>
+[16:06:07] └ <QueryEngine.llms.base.LLMClient object at 0x000002544C503F90>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+[16:06:07] return func(*args, **kwargs)
+[16:06:07] │     │       └ {'model': 'qwen-long-latest', 'messages': [{'role': 'system', 'content': '\n你是一位深度研究助手。你负责为研究报告构建全面的段落。你将获得段落标题、计划内容摘要，以及你已经创...
+[16:06:07] │     └ (<openai.resources.chat.completions.completions.Completions object at 0x000002544AF1FB90>,)
+[16:06:07] └ <function Completions.create at 0x000002544C86F880>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1192, in create
+[16:06:07] return self._post(
+[16:06:07] │    └ <bound method SyncAPIClient.post of <openai.OpenAI object at 0x000002544C495F50>>
+[16:06:07] └ <openai.resources.chat.completions.completions.Completions object at 0x000002544AF1FB90>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1259, in post
+[16:06:07] return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+[16:06:07] │    │          │    │       │        │            │                  └ openai.Stream[openai.types.chat.chat_completion_chunk.ChatCompletionChunk]
+[16:06:07] │    │          │    │       │        │            └ True
+[16:06:07] │    │          │    │       │        └ FinalRequestOptions(method='post', url='/chat/completions', timeout=1800.0, files=None, json_data={'messages': [{'role': 'sys...
+[16:06:07] │    │          │    │       └ <class 'openai.types.chat.chat_completion.ChatCompletion'>
+[16:06:07] │    │          │    └ <function SyncAPIClient.request at 0x000002544C296DE0>
+[16:06:07] │    │          └ <openai.OpenAI object at 0x000002544C495F50>
+[16:06:07] │    └ ~ResponseT
+[16:06:07] └ <function cast at 0x00000254238C6980>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1014, in request
+[16:06:07] raise APIConnectionError(request=request) from err
+[16:06:07] │                          └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:06:07] └ <class 'openai.APIConnectionError'>
+[16:06:07] openai.APIConnectionError: Connection error.
+[16:06:07] 2026-01-14 16:06:07.343 | ERROR    | __main__:execute_research:184 - 研究过程中发生错误: Connection error.
+[16:06:07] Traceback (most recent call last):
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+[16:06:07] yield
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+[16:06:07] resp = self._pool.handle_request(req)
+[16:06:07] │    │     │              └ <Request [b'POST']>
+[16:06:07] │    │     └ <function ConnectionPool.handle_request at 0x000002544C6EE2A0>
+[16:06:07] │    └ <HTTPProxy [Requests: 0 active, 0 queued | Connections: 1 active, 0 idle]>
+[16:06:07] └ <httpx.HTTPTransport object at 0x000002544C4A6D10>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+[16:06:07] raise exc from None
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+[16:06:07] response = connection.handle_request(
+[16:06:07] │          └ <function TunnelHTTPConnection.handle_request at 0x000002544C6EF6A0>
+[16:06:07] └ <TunnelHTTPConnection ['http://127.0.0.1:7890', HTTP/1.1, ACTIVE, Request Count: 1]>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http_proxy.py", line 316, in handle_request
+[16:06:07] stream = stream.start_tls(**kwargs)
+[16:06:07] │      │           └ {'ssl_context': <ssl.SSLContext object at 0x000002544C64ADE0>, 'server_hostname': 'dashscope.aliyuncs.com', 'timeout': 1800.0}
+[16:06:07] │      └ <function HTTP11UpgradeStream.start_tls at 0x000002544C6ED3A0>
+[16:06:07] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x000002544CC44E10>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http11.py", line 376, in start_tls
+[16:06:07] return self._stream.start_tls(ssl_context, server_hostname, timeout)
+[16:06:07] │    │       │         │            │                └ 1800.0
+[16:06:07] │    │       │         │            └ 'dashscope.aliyuncs.com'
+[16:06:07] │    │       │         └ <ssl.SSLContext object at 0x000002544C64ADE0>
+[16:06:07] │    │       └ <function SyncStream.start_tls at 0x000002544C686840>
+[16:06:07] │    └ <httpcore._backends.sync.SyncStream object at 0x000002544CC45410>
+[16:06:07] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x000002544CC44E10>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_backends\sync.py", line 154, in start_tls
+[16:06:07] with map_exceptions(exc_map):
+[16:06:07] │              └ {<class 'TimeoutError'>: <class 'httpcore.ConnectTimeout'>, <class 'OSError'>: <class 'httpcore.ConnectError'>}
+[16:06:07] └ <function map_exceptions at 0x000002544C685260>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:06:07] self.gen.throw(typ, value, traceback)
+[16:06:07] │    │   │     │    │      └ <traceback object at 0x000002544CC9BE40>
+[16:06:07] │    │   │     │    └ SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')
+[16:06:07] │    │   │     └ <class 'ssl.SSLEOFError'>
+[16:06:07] │    │   └ <method 'throw' of 'generator' objects>
+[16:06:07] │    └ <generator object map_exceptions at 0x000002544CB7B440>
+[16:06:07] └ <contextlib._GeneratorContextManager object at 0x000002544CC98410>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+[16:06:07] raise to_exc(exc) from exc
+[16:06:07] └ <class 'httpcore.ConnectError'>
+[16:06:07] httpcore.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:06:07] The above exception was the direct cause of the following exception:
+[16:06:07] Traceback (most recent call last):
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 982, in request
+[16:06:07] response = self._client.send(
+[16:06:07] │    │       └ <function Client.send at 0x000002544A898400>
+[16:06:07] │    └ <openai._base_client.SyncHttpxClientWrapper object at 0x000002544C497AD0>
+[16:06:07] └ <openai.OpenAI object at 0x000002544C495F50>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 914, in send
+[16:06:07] response = self._send_handling_auth(
+[16:06:07] │    └ <function Client._send_handling_auth at 0x000002544A8984A0>
+[16:06:07] └ <openai._base_client.SyncHttpxClientWrapper object at 0x000002544C497AD0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+[16:06:07] response = self._send_handling_redirects(
+[16:06:07] │    └ <function Client._send_handling_redirects at 0x000002544A898540>
+[16:06:07] └ <openai._base_client.SyncHttpxClientWrapper object at 0x000002544C497AD0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+[16:06:07] response = self._send_single_request(request)
+[16:06:07] │    │                    └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:06:07] │    └ <function Client._send_single_request at 0x000002544A8985E0>
+[16:06:07] └ <openai._base_client.SyncHttpxClientWrapper object at 0x000002544C497AD0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+[16:06:07] response = transport.handle_request(request)
+[16:06:07] │         │              └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:06:07] │         └ <function HTTPTransport.handle_request at 0x000002544A8899E0>
+[16:06:07] └ <httpx.HTTPTransport object at 0x000002544C4A6D10>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+[16:06:07] with map_httpcore_exceptions():
+[16:06:07] └ <function map_httpcore_exceptions at 0x000002544A8894E0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:06:07] self.gen.throw(typ, value, traceback)
+[16:06:07] │    │   │     │    │      └ <traceback object at 0x000002544CC45FC0>
+[16:06:07] │    │   │     │    └ ConnectError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'))
+[16:06:07] │    │   │     └ <class 'httpcore.ConnectError'>
+[16:06:07] │    │   └ <method 'throw' of 'generator' objects>
+[16:06:07] │    └ <generator object map_httpcore_exceptions at 0x000002544CB79740>
+[16:06:07] └ <contextlib._GeneratorContextManager object at 0x000002544CC378D0>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+[16:06:07] raise mapped_exc(message) from exc
+[16:06:07] │          └ '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'
+[16:06:07] └ <class 'httpx.ConnectError'>
+[16:06:07] httpx.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:06:07] The above exception was the direct cause of the following exception:
+[16:06:07] Traceback (most recent call last):
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:06:07] self._bootstrap_inner()
+[16:06:07] │    └ <function Thread._bootstrap_inner at 0x00000254237B0FE0>
+[16:06:07] └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:06:07] self.run()
+[16:06:07] │    └ <function Thread.run at 0x00000254237B0CC0>
+[16:06:07] └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:06:07] self._target(*self._args, **self._kwargs)
+[16:06:07] │    │        │    │        │    └ {}
+[16:06:07] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] │    │        │    └ ()
+[16:06:07] │    │        └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='e57ef3a4-1799-4cf8-9f39-b213faedbb93', _main_scrip...
+[16:06:07] └ <Thread(ScriptRunner.scriptThread, started 13316)>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:06:07] self._run_script(request.rerun_data)
+[16:06:07] │    │           │       └ <property object at 0x000002544709BE70>
+[16:06:07] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:06:07] │    └ <function ScriptRunner._run_script at 0x00000254470D09A0>
+[16:06:07] └ ScriptRunner(_session_id='e57ef3a4-1799-4cf8-9f39-b213faedbb93', _main_script_path='SingleEngineApp/query_engine_streamlit_ap...
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:06:07] exec(code, module.__dict__)
+[16:06:07] │     │      └ <member '__dict__' of 'module' objects>
+[16:06:07] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\query_engine_streamlit_app.py'>
+[16:06:07] └ <code object <module> at 0x0000025448C92340, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\query_engine_s...
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\query_engine_streamlit_app.py", line 227, in <module>
+[16:06:07] main()
+[16:06:07] └ <function main at 0x000002544C60E840>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\query_engine_streamlit_app.py", line 121, in main
+[16:06:07] execute_research(query, config)
+[16:06:07] │                │      └ Settings(QUERY_ENGINE_API_KEY='sk-31825a267e964ebcad39b74c8890e8a9', QUERY_ENGINE_BASE_URL='https://dashscope.aliyuncs.com/co...
+[16:06:07] │                └ 'AI未来最终形态'
+[16:06:07] └ <function execute_research at 0x000002544C60E700>
+[16:06:07] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\query_engine_streamlit_app.py", line 154, in execute_research
+[16:06:07] agent._reflection_loop(i)
+[16:06:07] │     │                └ 0
+[16:06:07] │     └ <function DeepSearchAgent._reflection_loop at 0x000002544C5094E0>
+[16:06:07] └ <QueryEngine.agent.DeepSearchAgent object at 0x000002544A3F8550>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\agent.py", line 322, in _reflection_loop
+[16:06:07] reflection_output = self.reflection_node.run(reflection_input)
+[16:06:07] │    │               │   └ {'title': 'AI未来最终形态的定义与愿景', 'content': '探讨人工智能最终形态的基本概念，包括强人工智能（AGI）与超级智能（ASI）的理论框架，以及科学界和哲学界对AI终极发展目标的普遍认知。', 'paragraph_lat...
+[16:06:07] │    │               └ <function ReflectionNode.run at 0x000002544C482660>
+[16:06:07] │    └ <QueryEngine.nodes.search_node.ReflectionNode object at 0x000002544C656510>
+[16:06:07] └ <QueryEngine.agent.DeepSearchAgent object at 0x000002544A3F8550>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\nodes\search_node.py", line 214, in run
+[16:06:07] raise e
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\nodes\search_node.py", line 204, in run
+[16:06:07] response = self.llm_client.stream_invoke_to_string(SYSTEM_PROMPT_REFLECTION, message)
+[16:06:07] │    │          │                       │                         └ '{"title": "AI未来最终形态的定义与愿景", "content": "探讨人工智能最终形态的基本概念，包括强人工智能（AGI）与超级智能（ASI）的理论框架，以及科学界和哲学界对AI终极发展目标的普遍认知。", "paragraph_la...
+[16:06:07] │    │          │                       └ '\n你是一位深度研究助手。你负责为研究报告构建全面的段落。你将获得段落标题、计划内容摘要，以及你已经创建的段落最新状态，所有这些都将按照以下JSON模式定义提供：\n\n<INPUT JSON SCHEMA>\n{\n  "type": "obje...
+[16:06:07] │    │          └ <function LLMClient.stream_invoke_to_string at 0x000002544C416340>
+[16:06:07] │    └ <QueryEngine.llms.base.LLMClient object at 0x000002544C503F90>
+[16:06:07] └ <QueryEngine.nodes.search_node.ReflectionNode object at 0x000002544C656510>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\llms\base.py", line 148, in stream_invoke_to_string
+[16:06:07] for chunk in self.stream_invoke(system_prompt, user_prompt, **kwargs):
+[16:06:07] │    │             │              │              └ {}
+[16:06:07] │    │             │              └ '{"title": "AI未来最终形态的定义与愿景", "content": "探讨人工智能最终形态的基本概念，包括强人工智能（AGI）与超级智能（ASI）的理论框架，以及科学界和哲学界对AI终极发展目标的普遍认知。", "paragraph_la...
+[16:06:07] │    │             └ '\n你是一位深度研究助手。你负责为研究报告构建全面的段落。你将获得段落标题、计划内容摘要，以及你已经创建的段落最新状态，所有这些都将按照以下JSON模式定义提供：\n\n<INPUT JSON SCHEMA>\n{\n  "type": "obje...
+[16:06:07] │    └ <function LLMClient.stream_invoke at 0x000002544C417560>
+[16:06:07] └ <QueryEngine.llms.base.LLMClient object at 0x000002544C503F90>
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\llms\base.py", line 132, in stream_invoke
+[16:06:07] raise e
+[16:06:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\QueryEngine\llms\base.py", line 118, in stream_invoke
+[16:06:07] stream = self.client.chat.completions.create(
+[16:06:07] │    │      │    │           └ <function Completions.create at 0x000002544C86F9C0>
+[16:06:07] │    │      │    └ <openai.resources.chat.completions.completions.Completions object at 0x000002544AF1FB90>
+[16:06:07] │    │      └ <openai.resources.chat.chat.Chat object at 0x000002544C496650>
+[16:06:07] │    └ <openai.OpenAI object at 0x000002544C495F50>
+[16:06:07] └ <QueryEngine.llms.base.LLMClient object at 0x000002544C503F90>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+[16:06:07] return func(*args, **kwargs)
+[16:06:07] │     │       └ {'model': 'qwen-long-latest', 'messages': [{'role': 'system', 'content': '\n你是一位深度研究助手。你负责为研究报告构建全面的段落。你将获得段落标题、计划内容摘要，以及你已经创...
+[16:06:07] │     └ (<openai.resources.chat.completions.completions.Completions object at 0x000002544AF1FB90>,)
+[16:06:07] └ <function Completions.create at 0x000002544C86F880>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1192, in create
+[16:06:07] return self._post(
+[16:06:07] │    └ <bound method SyncAPIClient.post of <openai.OpenAI object at 0x000002544C495F50>>
+[16:06:07] └ <openai.resources.chat.completions.completions.Completions object at 0x000002544AF1FB90>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1259, in post
+[16:06:07] return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+[16:06:07] │    │          │    │       │        │            │                  └ openai.Stream[openai.types.chat.chat_completion_chunk.ChatCompletionChunk]
+[16:06:07] │    │          │    │       │        │            └ True
+[16:06:07] │    │          │    │       │        └ FinalRequestOptions(method='post', url='/chat/completions', timeout=1800.0, files=None, json_data={'messages': [{'role': 'sys...
+[16:06:07] │    │          │    │       └ <class 'openai.types.chat.chat_completion.ChatCompletion'>
+[16:06:07] │    │          │    └ <function SyncAPIClient.request at 0x000002544C296DE0>
+[16:06:07] │    │          └ <openai.OpenAI object at 0x000002544C495F50>
+[16:06:07] │    └ ~ResponseT
+[16:06:07] └ <function cast at 0x00000254238C6980>
+[16:06:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1014, in request
+[16:06:07] raise APIConnectionError(request=request) from err
+[16:06:07] │                          └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:06:07] └ <class 'openai.APIConnectionError'>
+[16:06:07] openai.APIConnectionError: Connection error.

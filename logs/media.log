@@ -1,0 +1,1076 @@
+[14:23:31] 启动 media 应用...
+[14:23:34] 2026-01-14 14:23:34.981
+[14:23:34] Warning: the config option 'server.enableCORS=false' is not compatible with 'server.enableXsrfProtection=true'.
+[14:23:34] As a result, 'server.enableCORS' is being overridden to 'true'.
+[14:23:34] More information:
+[14:23:34] In order to protect against CSRF attacks, we send a cookie with each request.
+[14:23:34] To do so, we must specify allowable origins, which places a restriction on
+[14:23:34] cross-origin resource sharing.
+[14:23:34] If cross origin resource sharing is required, please disable server.enableXsrfProtection.
+[14:23:36] You can now view your Streamlit app in your browser.
+[14:23:36] Network URL: http://198.18.0.1:8502
+[14:23:36] External URL: http://140.245.63.193:8502
+[16:03:26] 2026-01-14 16:03:26.521 | INFO     | MediaEngine.agent:__init__:53 - Meida Agent已初始化
+[16:03:26] 2026-01-14 16:03:26.521 | INFO     | MediaEngine.agent:__init__:54 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+[16:03:26] 2026-01-14 16:03:26.521 | INFO     | MediaEngine.agent:__init__:55 - 搜索工具集: BochaMultimodalSearch (支持5种多模态搜索工具)
+[16:03:26] 2026-01-14 16:03:26.522 | INFO     | MediaEngine.agent:_generate_report_structure:176 -
+[16:03:26] [步骤 1] 生成报告结构...
+[16:03:26] 2026-01-14 16:03:26.522 | INFO     | MediaEngine.nodes.report_structure_node:run:52 - 正在为查询生成报告结构: AI未来最终形态
+[16:03:38] 2026-01-14 16:03:38.790 | INFO     | MediaEngine.nodes.report_structure_node:process_output:83 - 清理后的输出: [{"title":"引言：AI发展的演进路径","content":"概述人工智能从弱人工智能到强人工智能，再到超人工智能的演进过程，探讨当前所处的技术阶段以及未来可能的发展方向。分析技术、社会和伦理因素如何共同塑造AI的最终形态。"},{"title":"技术融合与通用智能的实现","content":"探讨AI与神经科学、量子计算、机器人学等领域的深度融合，如何推动通用人工智能（AGI）的实现。重点研究自我学习、跨领域推理和环境适应能力等核心技术突破的可能性。"},{"title":"人机协同与意识边界","content":"分析AI未来是否可能具备类人意识或主观体验，以及人机融合（如脑机接口）在构建共生智能系统中的作用。讨论意识、自主性与权利归属的哲学与法律挑战。"},{"title":"社会结构与经济模式的重构","content":"研究超级智能普及后对就业、教育、治理和经济分配的影响，预测去中心化自治组织（DAO）、智能代理经济等新型社会形态的出现及其运行机制。"},{"title":"终极形态的可能图景","content":"综合技术、哲学与社会维度，构想AI最终形态的多种可能性，包括全球智能网络、分布式意识云、宇宙尺度的信息处理系统等，并评估其长期生存与价值对齐问题。"}]
+[16:03:38] 2026-01-14 16:03:38.790 | INFO     | MediaEngine.nodes.report_structure_node:process_output:88 - JSON解析成功
+[16:03:38] 2026-01-14 16:03:38.790 | INFO     | MediaEngine.nodes.report_structure_node:process_output:142 - 成功验证 5 个段落结构
+[16:03:38] 2026-01-14 16:03:38.790 | INFO     | MediaEngine.nodes.report_structure_node:run:60 - 成功生成 5 个段落结构
+[16:03:38] 2026-01-14 16:03:38.790 | INFO     | MediaEngine.nodes.report_structure_node:mutate_state:199 - 已将 5 个段落添加到状态中
+[16:03:38] 2026-01-14 16:03:38.790 | INFO     | MediaEngine.agent:_generate_report_structure:187 - 报告结构已生成，共 5 个段落:
+[16:03:38] 1. 引言：AI发展的演进路径
+[16:03:38] 2. 技术融合与通用智能的实现
+[16:03:38] 3. 人机协同与意识边界
+[16:03:38] 4. 社会结构与经济模式的重构
+[16:03:38] 5. 终极形态的可能图景
+[16:03:38] 2026-01-14 16:03:38.790 | INFO     | MediaEngine.agent:_initial_search_and_summary:220 -   - 生成搜索查询...
+[16:03:38] 2026-01-14 16:03:38.790 | INFO     | MediaEngine.nodes.search_node:run:66 - 正在生成首次搜索查询
+[16:03:49] 2026-01-14 16:03:49.265 | INFO     | MediaEngine.nodes.search_node:process_output:97 - 清理后的输出: {
+[16:03:49] "search_query": "人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素",
+[16:03:49] "search_tool": "comprehensive_search",
+[16:03:49] "reasoning": "该主题涉及AI发展的宏观演进路径，需要综合性的资料来涵盖技术、社会和伦理多维度分析。使用全面综合搜索工具能够提供权威网页、AI总结和结构化信息，有助于构建完整的背景知识体系。"
+[16:03:49] }
+[16:03:49] 2026-01-14 16:03:49.265 | INFO     | MediaEngine.nodes.search_node:process_output:102 - JSON解析成功
+[16:03:49] 2026-01-14 16:03:49.265 | INFO     | MediaEngine.nodes.search_node:run:74 - 生成搜索查询: 人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素
+[16:03:49] 2026-01-14 16:03:49.265 | INFO     | MediaEngine.agent:_initial_search_and_summary:226 -   - 搜索查询: 人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素
+[16:03:49] 2026-01-14 16:03:49.265 | INFO     | MediaEngine.agent:_initial_search_and_summary:227 -   - 选择的工具: comprehensive_search
+[16:03:49] 2026-01-14 16:03:49.265 | INFO     | MediaEngine.agent:_initial_search_and_summary:228 -   - 推理: 该主题涉及AI发展的宏观演进路径，需要综合性的资料来涵盖技术、社会和伦理多维度分析。使用全面综合搜索工具能够提供权威网页、AI总结和结构化信息，有助于构建完整的背景知识体系。
+[16:03:49] 2026-01-14 16:03:49.265 | INFO     | MediaEngine.agent:_initial_search_and_summary:231 -   - 执行网络搜索...
+[16:03:49] 2026-01-14 16:03:49.265 | INFO     | MediaEngine.agent:execute_search_tool:115 -   → 执行搜索工具: comprehensive_search
+[16:03:49] 2026-01-14 16:03:49.265 | INFO     | MediaEngine.tools.search:comprehensive_search:209 - --- TOOL: 全面综合搜索 (query: 人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素) ---
+[16:03:55] 2026-01-14 16:03:55.569 | ERROR    | MediaEngine.tools.search:_search_internal:195 - 搜索时发生网络错误: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:03:55] Traceback (most recent call last):
+[16:03:55] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:03:55] self._bootstrap_inner()
+[16:03:55] │    └ <function Thread._bootstrap_inner at 0x000002198E2A0FE0>
+[16:03:55] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:03:55] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:03:55] self.run()
+[16:03:55] │    └ <function Thread.run at 0x000002198E2A0CC0>
+[16:03:55] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:03:55] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:03:55] self._target(*self._args, **self._kwargs)
+[16:03:55] │    │        │    │        │    └ {}
+[16:03:55] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:03:55] │    │        │    └ ()
+[16:03:55] │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:03:55] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_scrip...
+[16:03:55] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:03:55] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:03:55] self._run_script(request.rerun_data)
+[16:03:55] │    │           │       └ <property object at 0x00000219B1BAFA60>
+[16:03:55] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:03:55] │    └ <function ScriptRunner._run_script at 0x00000219B1BE09A0>
+[16:03:55] └ ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_script_path='SingleEngineApp/media_engine_streamlit_ap...
+[16:03:55] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:03:55] exec(code, module.__dict__)
+[16:03:55] │     │      └ <member '__dict__' of 'module' objects>
+[16:03:55] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\media_engine_streamlit_app.py'>
+[16:03:55] └ <code object <module> at 0x00000219B38104F0, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_s...
+[16:03:55] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 233, in <module>
+[16:03:55] main()
+[16:03:55] └ <function main at 0x00000219B510AA20>
+[16:03:55] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 125, in main
+[16:03:55] execute_research(query, config)
+[16:03:55] │                │      └ Settings(DB_HOST='100.100.8.180', DB_PORT=5432, DB_USER='postgres', DB_PASSWORD='Gesoft@admin123', DB_NAME='bettafish', DB_CH...
+[16:03:55] │                └ 'AI未来最终形态'
+[16:03:55] └ <function execute_research at 0x00000219B510AD40>
+[16:03:55] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 153, in execute_research
+[16:03:55] agent._initial_search_and_summary(i)
+[16:03:55] │     │                           └ 0
+[16:03:55] │     └ <function DeepSearchAgent._initial_search_and_summary at 0x00000219B701FF60>
+[16:03:55] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:03:55] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 239, in _initial_search_and_summary
+[16:03:55] search_response = self.execute_search_tool(search_tool, search_query, **search_kwargs)
+[16:03:55] │    │                   │            │               └ {'max_results': 10}
+[16:03:55] │    │                   │            └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:03:55] │    │                   └ 'comprehensive_search'
+[16:03:55] │    └ <function DeepSearchAgent.execute_search_tool at 0x00000219B701C900>
+[16:03:55] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:03:55] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 119, in execute_search_tool
+[16:03:55] return self.search_agency.comprehensive_search(query, max_results)
+[16:03:55] │    │             │                    │      └ 10
+[16:03:55] │    │             │                    └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:03:55] │    │             └ <function BochaMultimodalSearch.comprehensive_search at 0x00000219B701F920>
+[16:03:55] │    └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:03:55] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:03:55] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 210, in comprehensive_search
+[16:03:55] return self._search_internal(
+[16:03:55] │    └ <function BochaMultimodalSearch._search_internal at 0x00000219B701FA60>
+[16:03:55] └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:03:55] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\utils\retry_helper.py", line 163, in wrapper
+[16:03:55] result = func(*args, **kwargs)
+[16:03:55] │     │       └ {'query': '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素', 'count': 10, 'answer': True}
+[16:03:55] │     └ (<MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>,)
+[16:03:55] └ <function BochaMultimodalSearch._search_internal at 0x00000219B701F9C0>
+[16:03:55] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 185, in _search_internal
+[16:03:55] response.raise_for_status()  # 如果HTTP状态码是4xx或5xx，则抛出异常
+[16:03:55] │        └ <function Response.raise_for_status at 0x00000219B50EBEC0>
+[16:03:55] └ <Response [403]>
+[16:03:55] File "E:\anaconda3\envs\bettafish\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+[16:03:55] raise HTTPError(http_error_msg, response=self)
+[16:03:55] │         │                        └ <Response [403]>
+[16:03:55] │         └ '403 Client Error:  for url: https://api.bochaai.com/v1/ai-search'
+[16:03:55] └ <class 'requests.exceptions.HTTPError'>
+[16:03:55] requests.exceptions.HTTPError: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:03:55] 2026-01-14 16:03:55.642 | WARNING  | retry_helper:wrapper:184 - 非关键API _search_internal 第 1 次尝试失败: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:03:55] 2026-01-14 16:03:55.643 | INFO     | retry_helper:wrapper:185 - 将在 2.0 秒后进行第 2 次尝试...
+[16:04:01] 2026-01-14 16:04:01.325 | ERROR    | MediaEngine.tools.search:_search_internal:195 - 搜索时发生网络错误: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:01] Traceback (most recent call last):
+[16:04:01] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:04:01] self._bootstrap_inner()
+[16:04:01] │    └ <function Thread._bootstrap_inner at 0x000002198E2A0FE0>
+[16:04:01] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:01] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:04:01] self.run()
+[16:04:01] │    └ <function Thread.run at 0x000002198E2A0CC0>
+[16:04:01] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:01] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:04:01] self._target(*self._args, **self._kwargs)
+[16:04:01] │    │        │    │        │    └ {}
+[16:04:01] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:01] │    │        │    └ ()
+[16:04:01] │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:01] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_scrip...
+[16:04:01] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:01] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:04:01] self._run_script(request.rerun_data)
+[16:04:01] │    │           │       └ <property object at 0x00000219B1BAFA60>
+[16:04:01] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:04:01] │    └ <function ScriptRunner._run_script at 0x00000219B1BE09A0>
+[16:04:01] └ ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_script_path='SingleEngineApp/media_engine_streamlit_ap...
+[16:04:01] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:04:01] exec(code, module.__dict__)
+[16:04:01] │     │      └ <member '__dict__' of 'module' objects>
+[16:04:01] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\media_engine_streamlit_app.py'>
+[16:04:01] └ <code object <module> at 0x00000219B38104F0, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_s...
+[16:04:01] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 233, in <module>
+[16:04:01] main()
+[16:04:01] └ <function main at 0x00000219B510AA20>
+[16:04:01] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 125, in main
+[16:04:01] execute_research(query, config)
+[16:04:01] │                │      └ Settings(DB_HOST='100.100.8.180', DB_PORT=5432, DB_USER='postgres', DB_PASSWORD='Gesoft@admin123', DB_NAME='bettafish', DB_CH...
+[16:04:01] │                └ 'AI未来最终形态'
+[16:04:01] └ <function execute_research at 0x00000219B510AD40>
+[16:04:01] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 153, in execute_research
+[16:04:01] agent._initial_search_and_summary(i)
+[16:04:01] │     │                           └ 0
+[16:04:01] │     └ <function DeepSearchAgent._initial_search_and_summary at 0x00000219B701FF60>
+[16:04:01] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:01] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 239, in _initial_search_and_summary
+[16:04:01] search_response = self.execute_search_tool(search_tool, search_query, **search_kwargs)
+[16:04:01] │    │                   │            │               └ {'max_results': 10}
+[16:04:01] │    │                   │            └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:01] │    │                   └ 'comprehensive_search'
+[16:04:01] │    └ <function DeepSearchAgent.execute_search_tool at 0x00000219B701C900>
+[16:04:01] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:01] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 119, in execute_search_tool
+[16:04:01] return self.search_agency.comprehensive_search(query, max_results)
+[16:04:01] │    │             │                    │      └ 10
+[16:04:01] │    │             │                    └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:01] │    │             └ <function BochaMultimodalSearch.comprehensive_search at 0x00000219B701F920>
+[16:04:01] │    └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:01] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:01] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 210, in comprehensive_search
+[16:04:01] return self._search_internal(
+[16:04:01] │    └ <function BochaMultimodalSearch._search_internal at 0x00000219B701FA60>
+[16:04:01] └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:01] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\utils\retry_helper.py", line 163, in wrapper
+[16:04:01] result = func(*args, **kwargs)
+[16:04:01] │     │       └ {'query': '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素', 'count': 10, 'answer': True}
+[16:04:01] │     └ (<MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>,)
+[16:04:01] └ <function BochaMultimodalSearch._search_internal at 0x00000219B701F9C0>
+[16:04:01] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 185, in _search_internal
+[16:04:01] response.raise_for_status()  # 如果HTTP状态码是4xx或5xx，则抛出异常
+[16:04:01] │        └ <function Response.raise_for_status at 0x00000219B50EBEC0>
+[16:04:01] └ <Response [403]>
+[16:04:01] File "E:\anaconda3\envs\bettafish\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+[16:04:01] raise HTTPError(http_error_msg, response=self)
+[16:04:01] │         │                        └ <Response [403]>
+[16:04:01] │         └ '403 Client Error:  for url: https://api.bochaai.com/v1/ai-search'
+[16:04:01] └ <class 'requests.exceptions.HTTPError'>
+[16:04:01] requests.exceptions.HTTPError: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:01] 2026-01-14 16:04:01.361 | WARNING  | retry_helper:wrapper:184 - 非关键API _search_internal 第 2 次尝试失败: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:01] 2026-01-14 16:04:01.363 | INFO     | retry_helper:wrapper:185 - 将在 3.2 秒后进行第 3 次尝试...
+[16:04:07] 2026-01-14 16:04:07.357 | ERROR    | MediaEngine.tools.search:_search_internal:195 - 搜索时发生网络错误: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:07] Traceback (most recent call last):
+[16:04:07] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:04:07] self._bootstrap_inner()
+[16:04:07] │    └ <function Thread._bootstrap_inner at 0x000002198E2A0FE0>
+[16:04:07] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:07] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:04:07] self.run()
+[16:04:07] │    └ <function Thread.run at 0x000002198E2A0CC0>
+[16:04:07] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:07] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:04:07] self._target(*self._args, **self._kwargs)
+[16:04:07] │    │        │    │        │    └ {}
+[16:04:07] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:07] │    │        │    └ ()
+[16:04:07] │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:07] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_scrip...
+[16:04:07] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:04:07] self._run_script(request.rerun_data)
+[16:04:07] │    │           │       └ <property object at 0x00000219B1BAFA60>
+[16:04:07] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:04:07] │    └ <function ScriptRunner._run_script at 0x00000219B1BE09A0>
+[16:04:07] └ ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_script_path='SingleEngineApp/media_engine_streamlit_ap...
+[16:04:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:04:07] exec(code, module.__dict__)
+[16:04:07] │     │      └ <member '__dict__' of 'module' objects>
+[16:04:07] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\media_engine_streamlit_app.py'>
+[16:04:07] └ <code object <module> at 0x00000219B38104F0, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_s...
+[16:04:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 233, in <module>
+[16:04:07] main()
+[16:04:07] └ <function main at 0x00000219B510AA20>
+[16:04:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 125, in main
+[16:04:07] execute_research(query, config)
+[16:04:07] │                │      └ Settings(DB_HOST='100.100.8.180', DB_PORT=5432, DB_USER='postgres', DB_PASSWORD='Gesoft@admin123', DB_NAME='bettafish', DB_CH...
+[16:04:07] │                └ 'AI未来最终形态'
+[16:04:07] └ <function execute_research at 0x00000219B510AD40>
+[16:04:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 153, in execute_research
+[16:04:07] agent._initial_search_and_summary(i)
+[16:04:07] │     │                           └ 0
+[16:04:07] │     └ <function DeepSearchAgent._initial_search_and_summary at 0x00000219B701FF60>
+[16:04:07] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 239, in _initial_search_and_summary
+[16:04:07] search_response = self.execute_search_tool(search_tool, search_query, **search_kwargs)
+[16:04:07] │    │                   │            │               └ {'max_results': 10}
+[16:04:07] │    │                   │            └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:07] │    │                   └ 'comprehensive_search'
+[16:04:07] │    └ <function DeepSearchAgent.execute_search_tool at 0x00000219B701C900>
+[16:04:07] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 119, in execute_search_tool
+[16:04:07] return self.search_agency.comprehensive_search(query, max_results)
+[16:04:07] │    │             │                    │      └ 10
+[16:04:07] │    │             │                    └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:07] │    │             └ <function BochaMultimodalSearch.comprehensive_search at 0x00000219B701F920>
+[16:04:07] │    └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:07] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 210, in comprehensive_search
+[16:04:07] return self._search_internal(
+[16:04:07] │    └ <function BochaMultimodalSearch._search_internal at 0x00000219B701FA60>
+[16:04:07] └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:07] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\utils\retry_helper.py", line 163, in wrapper
+[16:04:07] result = func(*args, **kwargs)
+[16:04:07] │     │       └ {'query': '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素', 'count': 10, 'answer': True}
+[16:04:07] │     └ (<MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>,)
+[16:04:07] └ <function BochaMultimodalSearch._search_internal at 0x00000219B701F9C0>
+[16:04:07] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 185, in _search_internal
+[16:04:07] response.raise_for_status()  # 如果HTTP状态码是4xx或5xx，则抛出异常
+[16:04:07] │        └ <function Response.raise_for_status at 0x00000219B50EBEC0>
+[16:04:07] └ <Response [403]>
+[16:04:07] File "E:\anaconda3\envs\bettafish\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+[16:04:07] raise HTTPError(http_error_msg, response=self)
+[16:04:07] │         │                        └ <Response [403]>
+[16:04:07] │         └ '403 Client Error:  for url: https://api.bochaai.com/v1/ai-search'
+[16:04:07] └ <class 'requests.exceptions.HTTPError'>
+[16:04:07] requests.exceptions.HTTPError: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:07] 2026-01-14 16:04:07.390 | WARNING  | retry_helper:wrapper:184 - 非关键API _search_internal 第 3 次尝试失败: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:07] 2026-01-14 16:04:07.394 | INFO     | retry_helper:wrapper:185 - 将在 5.1 秒后进行第 4 次尝试...
+[16:04:14] 2026-01-14 16:04:14.898 | ERROR    | MediaEngine.tools.search:_search_internal:195 - 搜索时发生网络错误: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:14] Traceback (most recent call last):
+[16:04:14] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:04:14] self._bootstrap_inner()
+[16:04:14] │    └ <function Thread._bootstrap_inner at 0x000002198E2A0FE0>
+[16:04:14] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:14] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:04:14] self.run()
+[16:04:14] │    └ <function Thread.run at 0x000002198E2A0CC0>
+[16:04:14] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:14] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:04:14] self._target(*self._args, **self._kwargs)
+[16:04:14] │    │        │    │        │    └ {}
+[16:04:14] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:14] │    │        │    └ ()
+[16:04:14] │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:14] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_scrip...
+[16:04:14] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:14] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:04:14] self._run_script(request.rerun_data)
+[16:04:14] │    │           │       └ <property object at 0x00000219B1BAFA60>
+[16:04:14] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:04:14] │    └ <function ScriptRunner._run_script at 0x00000219B1BE09A0>
+[16:04:14] └ ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_script_path='SingleEngineApp/media_engine_streamlit_ap...
+[16:04:14] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:04:14] exec(code, module.__dict__)
+[16:04:14] │     │      └ <member '__dict__' of 'module' objects>
+[16:04:14] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\media_engine_streamlit_app.py'>
+[16:04:14] └ <code object <module> at 0x00000219B38104F0, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_s...
+[16:04:14] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 233, in <module>
+[16:04:14] main()
+[16:04:14] └ <function main at 0x00000219B510AA20>
+[16:04:14] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 125, in main
+[16:04:14] execute_research(query, config)
+[16:04:14] │                │      └ Settings(DB_HOST='100.100.8.180', DB_PORT=5432, DB_USER='postgres', DB_PASSWORD='Gesoft@admin123', DB_NAME='bettafish', DB_CH...
+[16:04:14] │                └ 'AI未来最终形态'
+[16:04:14] └ <function execute_research at 0x00000219B510AD40>
+[16:04:14] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 153, in execute_research
+[16:04:14] agent._initial_search_and_summary(i)
+[16:04:14] │     │                           └ 0
+[16:04:14] │     └ <function DeepSearchAgent._initial_search_and_summary at 0x00000219B701FF60>
+[16:04:14] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:14] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 239, in _initial_search_and_summary
+[16:04:14] search_response = self.execute_search_tool(search_tool, search_query, **search_kwargs)
+[16:04:14] │    │                   │            │               └ {'max_results': 10}
+[16:04:14] │    │                   │            └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:14] │    │                   └ 'comprehensive_search'
+[16:04:14] │    └ <function DeepSearchAgent.execute_search_tool at 0x00000219B701C900>
+[16:04:14] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:14] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 119, in execute_search_tool
+[16:04:14] return self.search_agency.comprehensive_search(query, max_results)
+[16:04:14] │    │             │                    │      └ 10
+[16:04:14] │    │             │                    └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:14] │    │             └ <function BochaMultimodalSearch.comprehensive_search at 0x00000219B701F920>
+[16:04:14] │    └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:14] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:14] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 210, in comprehensive_search
+[16:04:14] return self._search_internal(
+[16:04:14] │    └ <function BochaMultimodalSearch._search_internal at 0x00000219B701FA60>
+[16:04:14] └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:14] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\utils\retry_helper.py", line 163, in wrapper
+[16:04:14] result = func(*args, **kwargs)
+[16:04:14] │     │       └ {'query': '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素', 'count': 10, 'answer': True}
+[16:04:14] │     └ (<MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>,)
+[16:04:14] └ <function BochaMultimodalSearch._search_internal at 0x00000219B701F9C0>
+[16:04:14] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 185, in _search_internal
+[16:04:14] response.raise_for_status()  # 如果HTTP状态码是4xx或5xx，则抛出异常
+[16:04:14] │        └ <function Response.raise_for_status at 0x00000219B50EBEC0>
+[16:04:14] └ <Response [403]>
+[16:04:14] File "E:\anaconda3\envs\bettafish\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+[16:04:14] raise HTTPError(http_error_msg, response=self)
+[16:04:14] │         │                        └ <Response [403]>
+[16:04:14] │         └ '403 Client Error:  for url: https://api.bochaai.com/v1/ai-search'
+[16:04:14] └ <class 'requests.exceptions.HTTPError'>
+[16:04:14] requests.exceptions.HTTPError: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:14] 2026-01-14 16:04:14.936 | WARNING  | retry_helper:wrapper:184 - 非关键API _search_internal 第 4 次尝试失败: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:14] 2026-01-14 16:04:14.938 | INFO     | retry_helper:wrapper:185 - 将在 8.2 秒后进行第 5 次尝试...
+[16:04:26] 2026-01-14 16:04:26.879 | ERROR    | MediaEngine.tools.search:_search_internal:195 - 搜索时发生网络错误: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:26] Traceback (most recent call last):
+[16:04:26] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:04:26] self._bootstrap_inner()
+[16:04:26] │    └ <function Thread._bootstrap_inner at 0x000002198E2A0FE0>
+[16:04:26] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:26] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:04:26] self.run()
+[16:04:26] │    └ <function Thread.run at 0x000002198E2A0CC0>
+[16:04:26] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:26] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:04:26] self._target(*self._args, **self._kwargs)
+[16:04:26] │    │        │    │        │    └ {}
+[16:04:26] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:26] │    │        │    └ ()
+[16:04:26] │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:26] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_scrip...
+[16:04:26] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:26] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:04:26] self._run_script(request.rerun_data)
+[16:04:26] │    │           │       └ <property object at 0x00000219B1BAFA60>
+[16:04:26] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:04:26] │    └ <function ScriptRunner._run_script at 0x00000219B1BE09A0>
+[16:04:26] └ ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_script_path='SingleEngineApp/media_engine_streamlit_ap...
+[16:04:26] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:04:26] exec(code, module.__dict__)
+[16:04:26] │     │      └ <member '__dict__' of 'module' objects>
+[16:04:26] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\media_engine_streamlit_app.py'>
+[16:04:26] └ <code object <module> at 0x00000219B38104F0, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_s...
+[16:04:26] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 233, in <module>
+[16:04:26] main()
+[16:04:26] └ <function main at 0x00000219B510AA20>
+[16:04:26] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 125, in main
+[16:04:26] execute_research(query, config)
+[16:04:26] │                │      └ Settings(DB_HOST='100.100.8.180', DB_PORT=5432, DB_USER='postgres', DB_PASSWORD='Gesoft@admin123', DB_NAME='bettafish', DB_CH...
+[16:04:26] │                └ 'AI未来最终形态'
+[16:04:26] └ <function execute_research at 0x00000219B510AD40>
+[16:04:26] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 153, in execute_research
+[16:04:26] agent._initial_search_and_summary(i)
+[16:04:26] │     │                           └ 0
+[16:04:26] │     └ <function DeepSearchAgent._initial_search_and_summary at 0x00000219B701FF60>
+[16:04:26] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:26] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 239, in _initial_search_and_summary
+[16:04:26] search_response = self.execute_search_tool(search_tool, search_query, **search_kwargs)
+[16:04:26] │    │                   │            │               └ {'max_results': 10}
+[16:04:26] │    │                   │            └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:26] │    │                   └ 'comprehensive_search'
+[16:04:26] │    └ <function DeepSearchAgent.execute_search_tool at 0x00000219B701C900>
+[16:04:26] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:26] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 119, in execute_search_tool
+[16:04:26] return self.search_agency.comprehensive_search(query, max_results)
+[16:04:26] │    │             │                    │      └ 10
+[16:04:26] │    │             │                    └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:26] │    │             └ <function BochaMultimodalSearch.comprehensive_search at 0x00000219B701F920>
+[16:04:26] │    └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:26] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:26] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 210, in comprehensive_search
+[16:04:26] return self._search_internal(
+[16:04:26] │    └ <function BochaMultimodalSearch._search_internal at 0x00000219B701FA60>
+[16:04:26] └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:26] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\utils\retry_helper.py", line 163, in wrapper
+[16:04:26] result = func(*args, **kwargs)
+[16:04:26] │     │       └ {'query': '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素', 'count': 10, 'answer': True}
+[16:04:26] │     └ (<MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>,)
+[16:04:26] └ <function BochaMultimodalSearch._search_internal at 0x00000219B701F9C0>
+[16:04:26] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 185, in _search_internal
+[16:04:26] response.raise_for_status()  # 如果HTTP状态码是4xx或5xx，则抛出异常
+[16:04:26] │        └ <function Response.raise_for_status at 0x00000219B50EBEC0>
+[16:04:26] └ <Response [403]>
+[16:04:26] File "E:\anaconda3\envs\bettafish\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+[16:04:26] raise HTTPError(http_error_msg, response=self)
+[16:04:26] │         │                        └ <Response [403]>
+[16:04:26] │         └ '403 Client Error:  for url: https://api.bochaai.com/v1/ai-search'
+[16:04:26] └ <class 'requests.exceptions.HTTPError'>
+[16:04:26] requests.exceptions.HTTPError: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:26] 2026-01-14 16:04:26.915 | WARNING  | retry_helper:wrapper:184 - 非关键API _search_internal 第 5 次尝试失败: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:26] 2026-01-14 16:04:26.917 | INFO     | retry_helper:wrapper:185 - 将在 13.1 秒后进行第 6 次尝试...
+[16:04:43] 2026-01-14 16:04:43.200 | ERROR    | MediaEngine.tools.search:_search_internal:195 - 搜索时发生网络错误: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:43] Traceback (most recent call last):
+[16:04:43] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:04:43] self._bootstrap_inner()
+[16:04:43] │    └ <function Thread._bootstrap_inner at 0x000002198E2A0FE0>
+[16:04:43] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:43] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:04:43] self.run()
+[16:04:43] │    └ <function Thread.run at 0x000002198E2A0CC0>
+[16:04:43] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:43] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:04:43] self._target(*self._args, **self._kwargs)
+[16:04:43] │    │        │    │        │    └ {}
+[16:04:43] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:43] │    │        │    └ ()
+[16:04:43] │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:43] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_scrip...
+[16:04:43] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:04:43] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:04:43] self._run_script(request.rerun_data)
+[16:04:43] │    │           │       └ <property object at 0x00000219B1BAFA60>
+[16:04:43] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:04:43] │    └ <function ScriptRunner._run_script at 0x00000219B1BE09A0>
+[16:04:43] └ ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_script_path='SingleEngineApp/media_engine_streamlit_ap...
+[16:04:43] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:04:43] exec(code, module.__dict__)
+[16:04:43] │     │      └ <member '__dict__' of 'module' objects>
+[16:04:43] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\media_engine_streamlit_app.py'>
+[16:04:43] └ <code object <module> at 0x00000219B38104F0, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_s...
+[16:04:43] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 233, in <module>
+[16:04:43] main()
+[16:04:43] └ <function main at 0x00000219B510AA20>
+[16:04:43] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 125, in main
+[16:04:43] execute_research(query, config)
+[16:04:43] │                │      └ Settings(DB_HOST='100.100.8.180', DB_PORT=5432, DB_USER='postgres', DB_PASSWORD='Gesoft@admin123', DB_NAME='bettafish', DB_CH...
+[16:04:43] │                └ 'AI未来最终形态'
+[16:04:43] └ <function execute_research at 0x00000219B510AD40>
+[16:04:43] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 153, in execute_research
+[16:04:43] agent._initial_search_and_summary(i)
+[16:04:43] │     │                           └ 0
+[16:04:43] │     └ <function DeepSearchAgent._initial_search_and_summary at 0x00000219B701FF60>
+[16:04:43] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:43] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 239, in _initial_search_and_summary
+[16:04:43] search_response = self.execute_search_tool(search_tool, search_query, **search_kwargs)
+[16:04:43] │    │                   │            │               └ {'max_results': 10}
+[16:04:43] │    │                   │            └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:43] │    │                   └ 'comprehensive_search'
+[16:04:43] │    └ <function DeepSearchAgent.execute_search_tool at 0x00000219B701C900>
+[16:04:43] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:43] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 119, in execute_search_tool
+[16:04:43] return self.search_agency.comprehensive_search(query, max_results)
+[16:04:43] │    │             │                    │      └ 10
+[16:04:43] │    │             │                    └ '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素'
+[16:04:43] │    │             └ <function BochaMultimodalSearch.comprehensive_search at 0x00000219B701F920>
+[16:04:43] │    └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:43] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:04:43] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 210, in comprehensive_search
+[16:04:43] return self._search_internal(
+[16:04:43] │    └ <function BochaMultimodalSearch._search_internal at 0x00000219B701FA60>
+[16:04:43] └ <MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>
+[16:04:43] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\utils\retry_helper.py", line 163, in wrapper
+[16:04:43] result = func(*args, **kwargs)
+[16:04:43] │     │       └ {'query': '人工智能从弱人工智能到强人工智能再到超人工智能的演进过程 当前技术阶段 发展方向 技术社会伦理因素', 'count': 10, 'answer': True}
+[16:04:43] │     └ (<MediaEngine.tools.search.BochaMultimodalSearch object at 0x00000219B6FCE750>,)
+[16:04:43] └ <function BochaMultimodalSearch._search_internal at 0x00000219B701F9C0>
+[16:04:43] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\tools\search.py", line 185, in _search_internal
+[16:04:43] response.raise_for_status()  # 如果HTTP状态码是4xx或5xx，则抛出异常
+[16:04:43] │        └ <function Response.raise_for_status at 0x00000219B50EBEC0>
+[16:04:43] └ <Response [403]>
+[16:04:43] File "E:\anaconda3\envs\bettafish\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+[16:04:43] raise HTTPError(http_error_msg, response=self)
+[16:04:43] │         │                        └ <Response [403]>
+[16:04:43] │         └ '403 Client Error:  for url: https://api.bochaai.com/v1/ai-search'
+[16:04:43] └ <class 'requests.exceptions.HTTPError'>
+[16:04:43] requests.exceptions.HTTPError: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:43] 2026-01-14 16:04:43.233 | WARNING  | retry_helper:wrapper:173 - 非关键API _search_internal 在 6 次尝试后仍然失败
+[16:04:43] 2026-01-14 16:04:43.234 | WARNING  | retry_helper:wrapper:174 - 最终错误: 403 Client Error:  for url: https://api.bochaai.com/v1/ai-search
+[16:04:43] 2026-01-14 16:04:43.236 | INFO     | retry_helper:wrapper:175 - 返回默认值以保证系统继续运行: BochaResponse(query='搜索失败', conversation_id=None, answer=None, follow_ups=[], webpages=[], images=[], modal_cards=[])
+[16:04:43] 2026-01-14 16:04:43.237 | INFO     | MediaEngine.agent:_initial_search_and_summary:263 -   - 未找到搜索结果
+[16:04:43] 2026-01-14 16:04:43.241 | INFO     | MediaEngine.agent:_initial_search_and_summary:269 -   - 生成初始总结...
+[16:04:43] 2026-01-14 16:04:43.243 | DEBUG    | utils.forum_reader:get_latest_host_speech:45 - 未找到HOST发言
+[16:04:43] 2026-01-14 16:04:43.243 | INFO     | MediaEngine.nodes.summary_node:run:100 - 正在生成首次段落总结
+[16:05:02] 2026-01-14 16:05:02.927 | ERROR    | MediaEngine.llms.base:stream_invoke:134 - 流式请求失败: Connection error.
+[16:05:03] 2026-01-14 16:05:02.936 | ERROR    | MediaEngine.nodes.summary_node:run:115 - 生成首次总结失败: Connection error.
+[16:05:03] Traceback (most recent call last):
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+[16:05:03] yield
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+[16:05:03] resp = self._pool.handle_request(req)
+[16:05:03] │    │     │              └ <Request [b'POST']>
+[16:05:03] │    │     └ <function ConnectionPool.handle_request at 0x00000219B71D23E0>
+[16:05:03] │    └ <HTTPProxy [Requests: 0 active, 0 queued | Connections: 1 active, 0 idle]>
+[16:05:03] └ <httpx.HTTPTransport object at 0x00000219B717E590>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+[16:05:03] raise exc from None
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+[16:05:03] response = connection.handle_request(
+[16:05:03] │          └ <function TunnelHTTPConnection.handle_request at 0x00000219B71D37E0>
+[16:05:03] └ <TunnelHTTPConnection ['http://127.0.0.1:7890', HTTP/1.1, ACTIVE, Request Count: 1]>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http_proxy.py", line 316, in handle_request
+[16:05:03] stream = stream.start_tls(**kwargs)
+[16:05:03] │      │           └ {'ssl_context': <ssl.SSLContext object at 0x00000219B7159BE0>, 'server_hostname': 'dashscope.aliyuncs.com', 'timeout': 1800.0}
+[16:05:03] │      └ <function HTTP11UpgradeStream.start_tls at 0x00000219B71D14E0>
+[16:05:03] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x00000219B773A7D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http11.py", line 376, in start_tls
+[16:05:03] return self._stream.start_tls(ssl_context, server_hostname, timeout)
+[16:05:03] │    │       │         │            │                └ 1800.0
+[16:05:03] │    │       │         │            └ 'dashscope.aliyuncs.com'
+[16:05:03] │    │       │         └ <ssl.SSLContext object at 0x00000219B7159BE0>
+[16:05:03] │    │       └ <function SyncStream.start_tls at 0x00000219B71B2980>
+[16:05:03] │    └ <httpcore._backends.sync.SyncStream object at 0x00000219B77F1550>
+[16:05:03] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x00000219B773A7D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_backends\sync.py", line 154, in start_tls
+[16:05:03] with map_exceptions(exc_map):
+[16:05:03] │              └ {<class 'TimeoutError'>: <class 'httpcore.ConnectTimeout'>, <class 'OSError'>: <class 'httpcore.ConnectError'>}
+[16:05:03] └ <function map_exceptions at 0x00000219B71B1440>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:05:03] self.gen.throw(typ, value, traceback)
+[16:05:03] │    │   │     │    │      └ <traceback object at 0x00000219B77F1B00>
+[16:05:03] │    │   │     │    └ SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')
+[16:05:03] │    │   │     └ <class 'ssl.SSLEOFError'>
+[16:05:03] │    │   └ <method 'throw' of 'generator' objects>
+[16:05:03] │    └ <generator object map_exceptions at 0x00000219B77A9440>
+[16:05:03] └ <contextlib._GeneratorContextManager object at 0x00000219B77F18D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+[16:05:03] raise to_exc(exc) from exc
+[16:05:03] └ <class 'httpcore.ConnectError'>
+[16:05:03] httpcore.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:05:03] The above exception was the direct cause of the following exception:
+[16:05:03] Traceback (most recent call last):
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 982, in request
+[16:05:03] response = self._client.send(
+[16:05:03] │    │       └ <function Client.send at 0x00000219B53A8220>
+[16:05:03] │    └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] └ <openai.OpenAI object at 0x00000219B6FAB7D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 914, in send
+[16:05:03] response = self._send_handling_auth(
+[16:05:03] │    └ <function Client._send_handling_auth at 0x00000219B53A82C0>
+[16:05:03] └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+[16:05:03] response = self._send_handling_redirects(
+[16:05:03] │    └ <function Client._send_handling_redirects at 0x00000219B53A8360>
+[16:05:03] └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+[16:05:03] response = self._send_single_request(request)
+[16:05:03] │    │                    └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:05:03] │    └ <function Client._send_single_request at 0x00000219B53A8400>
+[16:05:03] └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+[16:05:03] response = transport.handle_request(request)
+[16:05:03] │         │              └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:05:03] │         └ <function HTTPTransport.handle_request at 0x00000219B5395800>
+[16:05:03] └ <httpx.HTTPTransport object at 0x00000219B717E590>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+[16:05:03] with map_httpcore_exceptions():
+[16:05:03] └ <function map_httpcore_exceptions at 0x00000219B5395300>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:05:03] self.gen.throw(typ, value, traceback)
+[16:05:03] │    │   │     │    │      └ <traceback object at 0x00000219B77F1C00>
+[16:05:03] │    │   │     │    └ ConnectError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'))
+[16:05:03] │    │   │     └ <class 'httpcore.ConnectError'>
+[16:05:03] │    │   └ <method 'throw' of 'generator' objects>
+[16:05:03] │    └ <generator object map_httpcore_exceptions at 0x00000219B77A8D40>
+[16:05:03] └ <contextlib._GeneratorContextManager object at 0x00000219B77F0690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+[16:05:03] raise mapped_exc(message) from exc
+[16:05:03] │          └ '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'
+[16:05:03] └ <class 'httpx.ConnectError'>
+[16:05:03] httpx.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:05:03] The above exception was the direct cause of the following exception:
+[16:05:03] Traceback (most recent call last):
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:05:03] self._bootstrap_inner()
+[16:05:03] │    └ <function Thread._bootstrap_inner at 0x000002198E2A0FE0>
+[16:05:03] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:05:03] self.run()
+[16:05:03] │    └ <function Thread.run at 0x000002198E2A0CC0>
+[16:05:03] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:05:03] self._target(*self._args, **self._kwargs)
+[16:05:03] │    │        │    │        │    └ {}
+[16:05:03] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] │    │        │    └ ()
+[16:05:03] │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_scrip...
+[16:05:03] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:05:03] self._run_script(request.rerun_data)
+[16:05:03] │    │           │       └ <property object at 0x00000219B1BAFA60>
+[16:05:03] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:05:03] │    └ <function ScriptRunner._run_script at 0x00000219B1BE09A0>
+[16:05:03] └ ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_script_path='SingleEngineApp/media_engine_streamlit_ap...
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:05:03] exec(code, module.__dict__)
+[16:05:03] │     │      └ <member '__dict__' of 'module' objects>
+[16:05:03] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\media_engine_streamlit_app.py'>
+[16:05:03] └ <code object <module> at 0x00000219B38104F0, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_s...
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 233, in <module>
+[16:05:03] main()
+[16:05:03] └ <function main at 0x00000219B510AA20>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 125, in main
+[16:05:03] execute_research(query, config)
+[16:05:03] │                │      └ Settings(DB_HOST='100.100.8.180', DB_PORT=5432, DB_USER='postgres', DB_PASSWORD='Gesoft@admin123', DB_NAME='bettafish', DB_CH...
+[16:05:03] │                └ 'AI未来最终形态'
+[16:05:03] └ <function execute_research at 0x00000219B510AD40>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 153, in execute_research
+[16:05:03] agent._initial_search_and_summary(i)
+[16:05:03] │     │                           └ 0
+[16:05:03] │     └ <function DeepSearchAgent._initial_search_and_summary at 0x00000219B701FF60>
+[16:05:03] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 280, in _initial_search_and_summary
+[16:05:03] self.state = self.first_summary_node.mutate_state(
+[16:05:03] │    │       │    │                  └ <function FirstSummaryNode.mutate_state at 0x00000219B6F9FCE0>
+[16:05:03] │    │       │    └ <MediaEngine.nodes.summary_node.FirstSummaryNode object at 0x00000219B6FBBC90>
+[16:05:03] │    │       └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:05:03] │    └ State(query='AI未来最终形态', report_title="关于'AI未来最终形态'的深度研究报告", paragraphs=[Paragraph(title='引言：AI发展的演进路径', content='概述人工智能从弱人工智能...
+[16:05:03] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\nodes\summary_node.py", line 185, in mutate_state
+[16:05:03] summary = self.run(input_data, **kwargs)
+[16:05:03] │    │   │             └ {}
+[16:05:03] │    │   └ {'title': '引言：AI发展的演进路径', 'content': '概述人工智能从弱人工智能到强人工智能，再到超人工智能的演进过程，探讨当前所处的技术阶段以及未来可能的发展方向。分析技术、社会和伦理因素如何共同塑造AI的最终形态。', 'se...
+[16:05:03] │    └ <function FirstSummaryNode.run at 0x00000219B6F9FBA0>
+[16:05:03] └ <MediaEngine.nodes.summary_node.FirstSummaryNode object at 0x00000219B6FBBC90>
+[16:05:03] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\nodes\summary_node.py", line 103, in run
+[16:05:03] response = self.llm_client.stream_invoke_to_string(
+[16:05:03] │    │          └ <function LLMClient.stream_invoke_to_string at 0x00000219B6DDAF20>
+[16:05:03] │    └ <MediaEngine.llms.base.LLMClient object at 0x00000219B6FCD810>
+[16:05:03] └ <MediaEngine.nodes.summary_node.FirstSummaryNode object at 0x00000219B6FBBC90>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\llms\base.py", line 151, in stream_invoke_to_string
+[16:05:03] for chunk in self.stream_invoke(system_prompt, user_prompt, **kwargs):
+[16:05:03] │    │             │              │              └ {}
+[16:05:03] │    │             │              └ '{"title": "引言：AI发展的演进路径", "content": "概述人工智能从弱人工智能到强人工智能，再到超人工智能的演进过程，探讨当前所处的技术阶段以及未来可能的发展方向。分析技术、社会和伦理因素如何共同塑造AI的最终形态。", "s...
+[16:05:03] │    │             └ '\n你是一位专业的多媒体内容分析师和深度报告撰写专家。你将获得搜索查询、多模态搜索结果以及你正在研究的报告段落，数据将按照以下JSON模式定义提供：\n\n<INPUT JSON SCHEMA>\n{\n  "type": "object",\n ...
+[16:05:03] │    └ <function LLMClient.stream_invoke at 0x00000219B6F37380>
+[16:05:03] └ <MediaEngine.llms.base.LLMClient object at 0x00000219B6FCD810>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\llms\base.py", line 135, in stream_invoke
+[16:05:03] raise e
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\llms\base.py", line 121, in stream_invoke
+[16:05:03] stream = self.client.chat.completions.create(
+[16:05:03] │    │      │    │           └ <function Completions.create at 0x00000219B7353B00>
+[16:05:03] │    │      │    └ <openai.resources.chat.completions.completions.Completions object at 0x00000219B6FD9D50>
+[16:05:03] │    │      └ <openai.resources.chat.chat.Chat object at 0x00000219B71767D0>
+[16:05:03] │    └ <openai.OpenAI object at 0x00000219B6FAB7D0>
+[16:05:03] └ <MediaEngine.llms.base.LLMClient object at 0x00000219B6FCD810>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+[16:05:03] return func(*args, **kwargs)
+[16:05:03] │     │       └ {'model': 'qwen-long-latest', 'messages': [{'role': 'system', 'content': '\n你是一位专业的多媒体内容分析师和深度报告撰写专家。你将获得搜索查询、多模态搜索结果以及你正在研究的...
+[16:05:03] │     └ (<openai.resources.chat.completions.completions.Completions object at 0x00000219B6FD9D50>,)
+[16:05:03] └ <function Completions.create at 0x00000219B73539C0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1192, in create
+[16:05:03] return self._post(
+[16:05:03] │    └ <bound method SyncAPIClient.post of <openai.OpenAI object at 0x00000219B6FAB7D0>>
+[16:05:03] └ <openai.resources.chat.completions.completions.Completions object at 0x00000219B6FD9D50>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1259, in post
+[16:05:03] return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+[16:05:03] │    │          │    │       │        │            │                  └ openai.Stream[openai.types.chat.chat_completion_chunk.ChatCompletionChunk]
+[16:05:03] │    │          │    │       │        │            └ True
+[16:05:03] │    │          │    │       │        └ FinalRequestOptions(method='post', url='/chat/completions', timeout=1800.0, files=None, json_data={'messages': [{'role': 'sys...
+[16:05:03] │    │          │    │       └ <class 'openai.types.chat.chat_completion.ChatCompletion'>
+[16:05:03] │    │          │    └ <function SyncAPIClient.request at 0x00000219B6DBAC00>
+[16:05:03] │    │          └ <openai.OpenAI object at 0x00000219B6FAB7D0>
+[16:05:03] │    └ ~ResponseT
+[16:05:03] └ <function cast at 0x000002198E426980>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1014, in request
+[16:05:03] raise APIConnectionError(request=request) from err
+[16:05:03] │                          └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:05:03] └ <class 'openai.APIConnectionError'>
+[16:05:03] openai.APIConnectionError: Connection error.
+[16:05:03] 2026-01-14 16:05:03.357 | ERROR    | MediaEngine.nodes.summary_node:mutate_state:198 - 状态更新失败: Connection error.
+[16:05:03] Traceback (most recent call last):
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+[16:05:03] yield
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+[16:05:03] resp = self._pool.handle_request(req)
+[16:05:03] │    │     │              └ <Request [b'POST']>
+[16:05:03] │    │     └ <function ConnectionPool.handle_request at 0x00000219B71D23E0>
+[16:05:03] │    └ <HTTPProxy [Requests: 0 active, 0 queued | Connections: 1 active, 0 idle]>
+[16:05:03] └ <httpx.HTTPTransport object at 0x00000219B717E590>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+[16:05:03] raise exc from None
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+[16:05:03] response = connection.handle_request(
+[16:05:03] │          └ <function TunnelHTTPConnection.handle_request at 0x00000219B71D37E0>
+[16:05:03] └ <TunnelHTTPConnection ['http://127.0.0.1:7890', HTTP/1.1, ACTIVE, Request Count: 1]>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http_proxy.py", line 316, in handle_request
+[16:05:03] stream = stream.start_tls(**kwargs)
+[16:05:03] │      │           └ {'ssl_context': <ssl.SSLContext object at 0x00000219B7159BE0>, 'server_hostname': 'dashscope.aliyuncs.com', 'timeout': 1800.0}
+[16:05:03] │      └ <function HTTP11UpgradeStream.start_tls at 0x00000219B71D14E0>
+[16:05:03] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x00000219B773A7D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http11.py", line 376, in start_tls
+[16:05:03] return self._stream.start_tls(ssl_context, server_hostname, timeout)
+[16:05:03] │    │       │         │            │                └ 1800.0
+[16:05:03] │    │       │         │            └ 'dashscope.aliyuncs.com'
+[16:05:03] │    │       │         └ <ssl.SSLContext object at 0x00000219B7159BE0>
+[16:05:03] │    │       └ <function SyncStream.start_tls at 0x00000219B71B2980>
+[16:05:03] │    └ <httpcore._backends.sync.SyncStream object at 0x00000219B77F1550>
+[16:05:03] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x00000219B773A7D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_backends\sync.py", line 154, in start_tls
+[16:05:03] with map_exceptions(exc_map):
+[16:05:03] │              └ {<class 'TimeoutError'>: <class 'httpcore.ConnectTimeout'>, <class 'OSError'>: <class 'httpcore.ConnectError'>}
+[16:05:03] └ <function map_exceptions at 0x00000219B71B1440>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:05:03] self.gen.throw(typ, value, traceback)
+[16:05:03] │    │   │     │    │      └ <traceback object at 0x00000219B77F1B00>
+[16:05:03] │    │   │     │    └ SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')
+[16:05:03] │    │   │     └ <class 'ssl.SSLEOFError'>
+[16:05:03] │    │   └ <method 'throw' of 'generator' objects>
+[16:05:03] │    └ <generator object map_exceptions at 0x00000219B77A9440>
+[16:05:03] └ <contextlib._GeneratorContextManager object at 0x00000219B77F18D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+[16:05:03] raise to_exc(exc) from exc
+[16:05:03] └ <class 'httpcore.ConnectError'>
+[16:05:03] httpcore.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:05:03] The above exception was the direct cause of the following exception:
+[16:05:03] Traceback (most recent call last):
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 982, in request
+[16:05:03] response = self._client.send(
+[16:05:03] │    │       └ <function Client.send at 0x00000219B53A8220>
+[16:05:03] │    └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] └ <openai.OpenAI object at 0x00000219B6FAB7D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 914, in send
+[16:05:03] response = self._send_handling_auth(
+[16:05:03] │    └ <function Client._send_handling_auth at 0x00000219B53A82C0>
+[16:05:03] └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+[16:05:03] response = self._send_handling_redirects(
+[16:05:03] │    └ <function Client._send_handling_redirects at 0x00000219B53A8360>
+[16:05:03] └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+[16:05:03] response = self._send_single_request(request)
+[16:05:03] │    │                    └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:05:03] │    └ <function Client._send_single_request at 0x00000219B53A8400>
+[16:05:03] └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+[16:05:03] response = transport.handle_request(request)
+[16:05:03] │         │              └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:05:03] │         └ <function HTTPTransport.handle_request at 0x00000219B5395800>
+[16:05:03] └ <httpx.HTTPTransport object at 0x00000219B717E590>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+[16:05:03] with map_httpcore_exceptions():
+[16:05:03] └ <function map_httpcore_exceptions at 0x00000219B5395300>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:05:03] self.gen.throw(typ, value, traceback)
+[16:05:03] │    │   │     │    │      └ <traceback object at 0x00000219B77F1C00>
+[16:05:03] │    │   │     │    └ ConnectError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'))
+[16:05:03] │    │   │     └ <class 'httpcore.ConnectError'>
+[16:05:03] │    │   └ <method 'throw' of 'generator' objects>
+[16:05:03] │    └ <generator object map_httpcore_exceptions at 0x00000219B77A8D40>
+[16:05:03] └ <contextlib._GeneratorContextManager object at 0x00000219B77F0690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+[16:05:03] raise mapped_exc(message) from exc
+[16:05:03] │          └ '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'
+[16:05:03] └ <class 'httpx.ConnectError'>
+[16:05:03] httpx.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:05:03] The above exception was the direct cause of the following exception:
+[16:05:03] Traceback (most recent call last):
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:05:03] self._bootstrap_inner()
+[16:05:03] │    └ <function Thread._bootstrap_inner at 0x000002198E2A0FE0>
+[16:05:03] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:05:03] self.run()
+[16:05:03] │    └ <function Thread.run at 0x000002198E2A0CC0>
+[16:05:03] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:05:03] self._target(*self._args, **self._kwargs)
+[16:05:03] │    │        │    │        │    └ {}
+[16:05:03] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] │    │        │    └ ()
+[16:05:03] │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_scrip...
+[16:05:03] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:05:03] self._run_script(request.rerun_data)
+[16:05:03] │    │           │       └ <property object at 0x00000219B1BAFA60>
+[16:05:03] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:05:03] │    └ <function ScriptRunner._run_script at 0x00000219B1BE09A0>
+[16:05:03] └ ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_script_path='SingleEngineApp/media_engine_streamlit_ap...
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:05:03] exec(code, module.__dict__)
+[16:05:03] │     │      └ <member '__dict__' of 'module' objects>
+[16:05:03] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\media_engine_streamlit_app.py'>
+[16:05:03] └ <code object <module> at 0x00000219B38104F0, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_s...
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 233, in <module>
+[16:05:03] main()
+[16:05:03] └ <function main at 0x00000219B510AA20>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 125, in main
+[16:05:03] execute_research(query, config)
+[16:05:03] │                │      └ Settings(DB_HOST='100.100.8.180', DB_PORT=5432, DB_USER='postgres', DB_PASSWORD='Gesoft@admin123', DB_NAME='bettafish', DB_CH...
+[16:05:03] │                └ 'AI未来最终形态'
+[16:05:03] └ <function execute_research at 0x00000219B510AD40>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 153, in execute_research
+[16:05:03] agent._initial_search_and_summary(i)
+[16:05:03] │     │                           └ 0
+[16:05:03] │     └ <function DeepSearchAgent._initial_search_and_summary at 0x00000219B701FF60>
+[16:05:03] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 280, in _initial_search_and_summary
+[16:05:03] self.state = self.first_summary_node.mutate_state(
+[16:05:03] │    │       │    │                  └ <function FirstSummaryNode.mutate_state at 0x00000219B6F9FCE0>
+[16:05:03] │    │       │    └ <MediaEngine.nodes.summary_node.FirstSummaryNode object at 0x00000219B6FBBC90>
+[16:05:03] │    │       └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:05:03] │    └ State(query='AI未来最终形态', report_title="关于'AI未来最终形态'的深度研究报告", paragraphs=[Paragraph(title='引言：AI发展的演进路径', content='概述人工智能从弱人工智能...
+[16:05:03] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:05:03] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\nodes\summary_node.py", line 185, in mutate_state
+[16:05:03] summary = self.run(input_data, **kwargs)
+[16:05:03] │    │   │             └ {}
+[16:05:03] │    │   └ {'title': '引言：AI发展的演进路径', 'content': '概述人工智能从弱人工智能到强人工智能，再到超人工智能的演进过程，探讨当前所处的技术阶段以及未来可能的发展方向。分析技术、社会和伦理因素如何共同塑造AI的最终形态。', 'se...
+[16:05:03] │    └ <function FirstSummaryNode.run at 0x00000219B6F9FBA0>
+[16:05:03] └ <MediaEngine.nodes.summary_node.FirstSummaryNode object at 0x00000219B6FBBC90>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\nodes\summary_node.py", line 116, in run
+[16:05:03] raise e
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\nodes\summary_node.py", line 103, in run
+[16:05:03] response = self.llm_client.stream_invoke_to_string(
+[16:05:03] │    │          └ <function LLMClient.stream_invoke_to_string at 0x00000219B6DDAF20>
+[16:05:03] │    └ <MediaEngine.llms.base.LLMClient object at 0x00000219B6FCD810>
+[16:05:03] └ <MediaEngine.nodes.summary_node.FirstSummaryNode object at 0x00000219B6FBBC90>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\llms\base.py", line 151, in stream_invoke_to_string
+[16:05:03] for chunk in self.stream_invoke(system_prompt, user_prompt, **kwargs):
+[16:05:03] │    │             │              │              └ {}
+[16:05:03] │    │             │              └ '{"title": "引言：AI发展的演进路径", "content": "概述人工智能从弱人工智能到强人工智能，再到超人工智能的演进过程，探讨当前所处的技术阶段以及未来可能的发展方向。分析技术、社会和伦理因素如何共同塑造AI的最终形态。", "s...
+[16:05:03] │    │             └ '\n你是一位专业的多媒体内容分析师和深度报告撰写专家。你将获得搜索查询、多模态搜索结果以及你正在研究的报告段落，数据将按照以下JSON模式定义提供：\n\n<INPUT JSON SCHEMA>\n{\n  "type": "object",\n ...
+[16:05:03] │    └ <function LLMClient.stream_invoke at 0x00000219B6F37380>
+[16:05:03] └ <MediaEngine.llms.base.LLMClient object at 0x00000219B6FCD810>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\llms\base.py", line 135, in stream_invoke
+[16:05:03] raise e
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\llms\base.py", line 121, in stream_invoke
+[16:05:03] stream = self.client.chat.completions.create(
+[16:05:03] │    │      │    │           └ <function Completions.create at 0x00000219B7353B00>
+[16:05:03] │    │      │    └ <openai.resources.chat.completions.completions.Completions object at 0x00000219B6FD9D50>
+[16:05:03] │    │      └ <openai.resources.chat.chat.Chat object at 0x00000219B71767D0>
+[16:05:03] │    └ <openai.OpenAI object at 0x00000219B6FAB7D0>
+[16:05:03] └ <MediaEngine.llms.base.LLMClient object at 0x00000219B6FCD810>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+[16:05:03] return func(*args, **kwargs)
+[16:05:03] │     │       └ {'model': 'qwen-long-latest', 'messages': [{'role': 'system', 'content': '\n你是一位专业的多媒体内容分析师和深度报告撰写专家。你将获得搜索查询、多模态搜索结果以及你正在研究的...
+[16:05:03] │     └ (<openai.resources.chat.completions.completions.Completions object at 0x00000219B6FD9D50>,)
+[16:05:03] └ <function Completions.create at 0x00000219B73539C0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1192, in create
+[16:05:03] return self._post(
+[16:05:03] │    └ <bound method SyncAPIClient.post of <openai.OpenAI object at 0x00000219B6FAB7D0>>
+[16:05:03] └ <openai.resources.chat.completions.completions.Completions object at 0x00000219B6FD9D50>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1259, in post
+[16:05:03] return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+[16:05:03] │    │          │    │       │        │            │                  └ openai.Stream[openai.types.chat.chat_completion_chunk.ChatCompletionChunk]
+[16:05:03] │    │          │    │       │        │            └ True
+[16:05:03] │    │          │    │       │        └ FinalRequestOptions(method='post', url='/chat/completions', timeout=1800.0, files=None, json_data={'messages': [{'role': 'sys...
+[16:05:03] │    │          │    │       └ <class 'openai.types.chat.chat_completion.ChatCompletion'>
+[16:05:03] │    │          │    └ <function SyncAPIClient.request at 0x00000219B6DBAC00>
+[16:05:03] │    │          └ <openai.OpenAI object at 0x00000219B6FAB7D0>
+[16:05:03] │    └ ~ResponseT
+[16:05:03] └ <function cast at 0x000002198E426980>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1014, in request
+[16:05:03] raise APIConnectionError(request=request) from err
+[16:05:03] │                          └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:05:03] └ <class 'openai.APIConnectionError'>
+[16:05:03] openai.APIConnectionError: Connection error.
+[16:05:03] 2026-01-14 16:05:03.563 | ERROR    | __main__:execute_research:190 - 研究过程中发生错误: Connection error.
+[16:05:03] Traceback (most recent call last):
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+[16:05:03] yield
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+[16:05:03] resp = self._pool.handle_request(req)
+[16:05:03] │    │     │              └ <Request [b'POST']>
+[16:05:03] │    │     └ <function ConnectionPool.handle_request at 0x00000219B71D23E0>
+[16:05:03] │    └ <HTTPProxy [Requests: 0 active, 0 queued | Connections: 1 active, 0 idle]>
+[16:05:03] └ <httpx.HTTPTransport object at 0x00000219B717E590>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+[16:05:03] raise exc from None
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+[16:05:03] response = connection.handle_request(
+[16:05:03] │          └ <function TunnelHTTPConnection.handle_request at 0x00000219B71D37E0>
+[16:05:03] └ <TunnelHTTPConnection ['http://127.0.0.1:7890', HTTP/1.1, ACTIVE, Request Count: 1]>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http_proxy.py", line 316, in handle_request
+[16:05:03] stream = stream.start_tls(**kwargs)
+[16:05:03] │      │           └ {'ssl_context': <ssl.SSLContext object at 0x00000219B7159BE0>, 'server_hostname': 'dashscope.aliyuncs.com', 'timeout': 1800.0}
+[16:05:03] │      └ <function HTTP11UpgradeStream.start_tls at 0x00000219B71D14E0>
+[16:05:03] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x00000219B773A7D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_sync\http11.py", line 376, in start_tls
+[16:05:03] return self._stream.start_tls(ssl_context, server_hostname, timeout)
+[16:05:03] │    │       │         │            │                └ 1800.0
+[16:05:03] │    │       │         │            └ 'dashscope.aliyuncs.com'
+[16:05:03] │    │       │         └ <ssl.SSLContext object at 0x00000219B7159BE0>
+[16:05:03] │    │       └ <function SyncStream.start_tls at 0x00000219B71B2980>
+[16:05:03] │    └ <httpcore._backends.sync.SyncStream object at 0x00000219B77F1550>
+[16:05:03] └ <httpcore._sync.http11.HTTP11UpgradeStream object at 0x00000219B773A7D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_backends\sync.py", line 154, in start_tls
+[16:05:03] with map_exceptions(exc_map):
+[16:05:03] │              └ {<class 'TimeoutError'>: <class 'httpcore.ConnectTimeout'>, <class 'OSError'>: <class 'httpcore.ConnectError'>}
+[16:05:03] └ <function map_exceptions at 0x00000219B71B1440>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:05:03] self.gen.throw(typ, value, traceback)
+[16:05:03] │    │   │     │    │      └ <traceback object at 0x00000219B77F1B00>
+[16:05:03] │    │   │     │    └ SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')
+[16:05:03] │    │   │     └ <class 'ssl.SSLEOFError'>
+[16:05:03] │    │   └ <method 'throw' of 'generator' objects>
+[16:05:03] │    └ <generator object map_exceptions at 0x00000219B77A9440>
+[16:05:03] └ <contextlib._GeneratorContextManager object at 0x00000219B77F18D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+[16:05:03] raise to_exc(exc) from exc
+[16:05:03] └ <class 'httpcore.ConnectError'>
+[16:05:03] httpcore.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:05:03] The above exception was the direct cause of the following exception:
+[16:05:03] Traceback (most recent call last):
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 982, in request
+[16:05:03] response = self._client.send(
+[16:05:03] │    │       └ <function Client.send at 0x00000219B53A8220>
+[16:05:03] │    └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] └ <openai.OpenAI object at 0x00000219B6FAB7D0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 914, in send
+[16:05:03] response = self._send_handling_auth(
+[16:05:03] │    └ <function Client._send_handling_auth at 0x00000219B53A82C0>
+[16:05:03] └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+[16:05:03] response = self._send_handling_redirects(
+[16:05:03] │    └ <function Client._send_handling_redirects at 0x00000219B53A8360>
+[16:05:03] └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+[16:05:03] response = self._send_single_request(request)
+[16:05:03] │    │                    └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:05:03] │    └ <function Client._send_single_request at 0x00000219B53A8400>
+[16:05:03] └ <openai._base_client.SyncHttpxClientWrapper object at 0x00000219B6FFC690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+[16:05:03] response = transport.handle_request(request)
+[16:05:03] │         │              └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:05:03] │         └ <function HTTPTransport.handle_request at 0x00000219B5395800>
+[16:05:03] └ <httpx.HTTPTransport object at 0x00000219B717E590>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+[16:05:03] with map_httpcore_exceptions():
+[16:05:03] └ <function map_httpcore_exceptions at 0x00000219B5395300>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\contextlib.py", line 158, in __exit__
+[16:05:03] self.gen.throw(typ, value, traceback)
+[16:05:03] │    │   │     │    │      └ <traceback object at 0x00000219B77F1C00>
+[16:05:03] │    │   │     │    └ ConnectError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'))
+[16:05:03] │    │   │     └ <class 'httpcore.ConnectError'>
+[16:05:03] │    │   └ <method 'throw' of 'generator' objects>
+[16:05:03] │    └ <generator object map_httpcore_exceptions at 0x00000219B77A8D40>
+[16:05:03] └ <contextlib._GeneratorContextManager object at 0x00000219B77F0690>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+[16:05:03] raise mapped_exc(message) from exc
+[16:05:03] │          └ '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'
+[16:05:03] └ <class 'httpx.ConnectError'>
+[16:05:03] httpx.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+[16:05:03] The above exception was the direct cause of the following exception:
+[16:05:03] Traceback (most recent call last):
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1002, in _bootstrap
+[16:05:03] self._bootstrap_inner()
+[16:05:03] │    └ <function Thread._bootstrap_inner at 0x000002198E2A0FE0>
+[16:05:03] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 1045, in _bootstrap_inner
+[16:05:03] self.run()
+[16:05:03] │    └ <function Thread.run at 0x000002198E2A0CC0>
+[16:05:03] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\threading.py", line 982, in run
+[16:05:03] self._target(*self._args, **self._kwargs)
+[16:05:03] │    │        │    │        │    └ {}
+[16:05:03] │    │        │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] │    │        │    └ ()
+[16:05:03] │    │        └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] │    └ <bound method ScriptRunner._run_script_thread of ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_scrip...
+[16:05:03] └ <Thread(ScriptRunner.scriptThread, started 30660)>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 286, in _run_script_thread
+[16:05:03] self._run_script(request.rerun_data)
+[16:05:03] │    │           │       └ <property object at 0x00000219B1BAFA60>
+[16:05:03] │    │           └ ScriptRequest(type=<ScriptRequestType.RERUN: 'RERUN'>, _rerun_data=RerunData(query_string='query=AI%E6%9C%AA%E6%9D%A5%E6%9C%8...
+[16:05:03] │    └ <function ScriptRunner._run_script at 0x00000219B1BE09A0>
+[16:05:03] └ ScriptRunner(_session_id='048dfc18-e2f2-4d97-9ee0-ab95b2d36982', _main_script_path='SingleEngineApp/media_engine_streamlit_ap...
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 534, in _run_script
+[16:05:03] exec(code, module.__dict__)
+[16:05:03] │     │      └ <member '__dict__' of 'module' objects>
+[16:05:03] │     └ <module '__main__' from 'D:\\Code\\BettaFish-main-v5\\BettaFish-main-v4\\SingleEngineApp\\media_engine_streamlit_app.py'>
+[16:05:03] └ <code object <module> at 0x00000219B38104F0, file "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_s...
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 233, in <module>
+[16:05:03] main()
+[16:05:03] └ <function main at 0x00000219B510AA20>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 125, in main
+[16:05:03] execute_research(query, config)
+[16:05:03] │                │      └ Settings(DB_HOST='100.100.8.180', DB_PORT=5432, DB_USER='postgres', DB_PASSWORD='Gesoft@admin123', DB_NAME='bettafish', DB_CH...
+[16:05:03] │                └ 'AI未来最终形态'
+[16:05:03] └ <function execute_research at 0x00000219B510AD40>
+[16:05:03] > File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\media_engine_streamlit_app.py", line 153, in execute_research
+[16:05:03] agent._initial_search_and_summary(i)
+[16:05:03] │     │                           └ 0
+[16:05:03] │     └ <function DeepSearchAgent._initial_search_and_summary at 0x00000219B701FF60>
+[16:05:03] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\agent.py", line 280, in _initial_search_and_summary
+[16:05:03] self.state = self.first_summary_node.mutate_state(
+[16:05:03] │    │       │    │                  └ <function FirstSummaryNode.mutate_state at 0x00000219B6F9FCE0>
+[16:05:03] │    │       │    └ <MediaEngine.nodes.summary_node.FirstSummaryNode object at 0x00000219B6FBBC90>
+[16:05:03] │    │       └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:05:03] │    └ State(query='AI未来最终形态', report_title="关于'AI未来最终形态'的深度研究报告", paragraphs=[Paragraph(title='引言：AI发展的演进路径', content='概述人工智能从弱人工智能...
+[16:05:03] └ <MediaEngine.agent.DeepSearchAgent object at 0x00000219B6FFCE50>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\nodes\summary_node.py", line 199, in mutate_state
+[16:05:03] raise e
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\nodes\summary_node.py", line 185, in mutate_state
+[16:05:03] summary = self.run(input_data, **kwargs)
+[16:05:03] │    │   │             └ {}
+[16:05:03] │    │   └ {'title': '引言：AI发展的演进路径', 'content': '概述人工智能从弱人工智能到强人工智能，再到超人工智能的演进过程，探讨当前所处的技术阶段以及未来可能的发展方向。分析技术、社会和伦理因素如何共同塑造AI的最终形态。', 'se...
+[16:05:03] │    └ <function FirstSummaryNode.run at 0x00000219B6F9FBA0>
+[16:05:03] └ <MediaEngine.nodes.summary_node.FirstSummaryNode object at 0x00000219B6FBBC90>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\nodes\summary_node.py", line 116, in run
+[16:05:03] raise e
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\nodes\summary_node.py", line 103, in run
+[16:05:03] response = self.llm_client.stream_invoke_to_string(
+[16:05:03] │    │          └ <function LLMClient.stream_invoke_to_string at 0x00000219B6DDAF20>
+[16:05:03] │    └ <MediaEngine.llms.base.LLMClient object at 0x00000219B6FCD810>
+[16:05:03] └ <MediaEngine.nodes.summary_node.FirstSummaryNode object at 0x00000219B6FBBC90>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\llms\base.py", line 151, in stream_invoke_to_string
+[16:05:03] for chunk in self.stream_invoke(system_prompt, user_prompt, **kwargs):
+[16:05:03] │    │             │              │              └ {}
+[16:05:03] │    │             │              └ '{"title": "引言：AI发展的演进路径", "content": "概述人工智能从弱人工智能到强人工智能，再到超人工智能的演进过程，探讨当前所处的技术阶段以及未来可能的发展方向。分析技术、社会和伦理因素如何共同塑造AI的最终形态。", "s...
+[16:05:03] │    │             └ '\n你是一位专业的多媒体内容分析师和深度报告撰写专家。你将获得搜索查询、多模态搜索结果以及你正在研究的报告段落，数据将按照以下JSON模式定义提供：\n\n<INPUT JSON SCHEMA>\n{\n  "type": "object",\n ...
+[16:05:03] │    └ <function LLMClient.stream_invoke at 0x00000219B6F37380>
+[16:05:03] └ <MediaEngine.llms.base.LLMClient object at 0x00000219B6FCD810>
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\llms\base.py", line 135, in stream_invoke
+[16:05:03] raise e
+[16:05:03] File "D:\Code\BettaFish-main-v5\BettaFish-main-v4\SingleEngineApp\..\MediaEngine\llms\base.py", line 121, in stream_invoke
+[16:05:03] stream = self.client.chat.completions.create(
+[16:05:03] │    │      │    │           └ <function Completions.create at 0x00000219B7353B00>
+[16:05:03] │    │      │    └ <openai.resources.chat.completions.completions.Completions object at 0x00000219B6FD9D50>
+[16:05:03] │    │      └ <openai.resources.chat.chat.Chat object at 0x00000219B71767D0>
+[16:05:03] │    └ <openai.OpenAI object at 0x00000219B6FAB7D0>
+[16:05:03] └ <MediaEngine.llms.base.LLMClient object at 0x00000219B6FCD810>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+[16:05:03] return func(*args, **kwargs)
+[16:05:03] │     │       └ {'model': 'qwen-long-latest', 'messages': [{'role': 'system', 'content': '\n你是一位专业的多媒体内容分析师和深度报告撰写专家。你将获得搜索查询、多模态搜索结果以及你正在研究的...
+[16:05:03] │     └ (<openai.resources.chat.completions.completions.Completions object at 0x00000219B6FD9D50>,)
+[16:05:03] └ <function Completions.create at 0x00000219B73539C0>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1192, in create
+[16:05:03] return self._post(
+[16:05:03] │    └ <bound method SyncAPIClient.post of <openai.OpenAI object at 0x00000219B6FAB7D0>>
+[16:05:03] └ <openai.resources.chat.completions.completions.Completions object at 0x00000219B6FD9D50>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1259, in post
+[16:05:03] return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+[16:05:03] │    │          │    │       │        │            │                  └ openai.Stream[openai.types.chat.chat_completion_chunk.ChatCompletionChunk]
+[16:05:03] │    │          │    │       │        │            └ True
+[16:05:03] │    │          │    │       │        └ FinalRequestOptions(method='post', url='/chat/completions', timeout=1800.0, files=None, json_data={'messages': [{'role': 'sys...
+[16:05:03] │    │          │    │       └ <class 'openai.types.chat.chat_completion.ChatCompletion'>
+[16:05:03] │    │          │    └ <function SyncAPIClient.request at 0x00000219B6DBAC00>
+[16:05:03] │    │          └ <openai.OpenAI object at 0x00000219B6FAB7D0>
+[16:05:03] │    └ ~ResponseT
+[16:05:03] └ <function cast at 0x000002198E426980>
+[16:05:03] File "E:\anaconda3\envs\bettafish\Lib\site-packages\openai\_base_client.py", line 1014, in request
+[16:05:03] raise APIConnectionError(request=request) from err
+[16:05:03] │                          └ <Request('POST', 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions')>
+[16:05:03] └ <class 'openai.APIConnectionError'>
+[16:05:03] openai.APIConnectionError: Connection error.

@@ -189,6 +189,8 @@
                 <div class="system-panel-header">
                     <h3>📊 分析结果</h3>
                 </div>
+                <!-- 嵌入页面头部（供JS读取标题显示） -->
+                <div class="embedded-header" id="embeddedHeader">嵌入的页面</div>
                 <div class="system-panel-content" id="embeddedContent">
                     <!-- 欢迎页面 -->
                     <div class="system-card" id="welcomeContainer">
@@ -226,15 +228,15 @@
                 </div>
             </div>
 
-            <!-- 右侧面板 - 控制台和引擎状态 -->
+            <!-- 右侧面板 - 控制台和引擎状态（恢复带标题栏和窗口控制样式） -->
             <div class="system-right-panel">
                 <div class="system-console">
                     <div class="system-console-header">
                         <div class="system-console-title">系统控制台</div>
                         <div class="system-console-controls">
-                            <button class="system-console-control close" title="关闭"></button>
-                            <button class="system-console-control minimize" title="最小化"></button>
-                            <button class="system-console-control maximize" title="最大化"></button>
+                            <span class="window-control red"></span>
+                            <span class="window-control yellow"></span>
+                            <span class="window-control green"></span>
                         </div>
                     </div>
 
@@ -1100,9 +1102,13 @@
                 // 切换到论坛模式
                 document.getElementById('embeddedHeader').textContent = 'Forum Engine - 多智能体交流';
                 
-                // 显示论坛容器，隐藏其他内容
-                document.getElementById('forumContainer').classList.add('active');
-                document.getElementById('reportContainer').classList.remove('active');
+                // 显示论坛容器，隐藏其他内容（使用 style.display 以覆盖内联或初始样式）
+                const forumEl = document.getElementById('forumContainer');
+                const reportEl = document.getElementById('reportContainer');
+                const welcomeEl = document.getElementById('welcomeContainer');
+                if (forumEl) forumEl.style.display = 'block';
+                if (reportEl) reportEl.style.display = 'none';
+                if (welcomeEl) welcomeEl.style.display = 'none';
                 
                 // 清空控制台并加载forum日志
                 document.getElementById('consoleOutput').innerHTML = '<div class="console-line">[系统] 切换到论坛模式</div>';
@@ -1113,8 +1119,12 @@
                 document.getElementById('embeddedHeader').textContent = 'Report Agent - 最终报告生成';
                 
                 // 显示报告容器，隐藏其他内容
-                document.getElementById('reportContainer').classList.add('active');
-                document.getElementById('forumContainer').classList.remove('active');
+                const forumElR = document.getElementById('forumContainer');
+                const reportElR = document.getElementById('reportContainer');
+                const welcomeElR = document.getElementById('welcomeContainer');
+                if (reportElR) reportElR.style.display = 'block';
+                if (forumElR) forumElR.style.display = 'none';
+                if (welcomeElR) welcomeElR.style.display = 'none';
                 
                 // 清空控制台并加载report日志
                 document.getElementById('consoleOutput').innerHTML = '<div class="console-line">[系统] 切换到报告生成模式</div>';
@@ -1135,9 +1145,13 @@
                 // 切换到普通Engine模式
                 document.getElementById('embeddedHeader').textContent = agentTitles[app] || appNames[app];
                 
-                // 隐藏论坛和报告容器
-                document.getElementById('forumContainer').classList.remove('active');
-                document.getElementById('reportContainer').classList.remove('active');
+                // 隐藏论坛和报告容器，保留嵌入式 iframe / 占位显示
+                const forumElE = document.getElementById('forumContainer');
+                const reportElE = document.getElementById('reportContainer');
+                const welcomeElE = document.getElementById('welcomeContainer');
+                if (forumElE) forumElE.style.display = 'none';
+                if (reportElE) reportElE.style.display = 'none';
+                if (welcomeElE) welcomeElE.style.display = 'none';
                 
                 // 清空并加载新的控制台输出
                 document.getElementById('consoleOutput').innerHTML = '<div class="console-line">[系统] 切换到 ' + appNames[app] + '</div>';

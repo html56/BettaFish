@@ -384,6 +384,9 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
+    /* Ensure right panel sits above left content when necessary */
+    position: relative;
+    z-index: 30;
 }
 
 /* 系统控制台 */
@@ -789,14 +792,18 @@ body {
 
 /* Welcome steps card centered below the title */
 .welcome-steps-card {
-    max-width: 520px;
-    margin: 18px auto 0;
-    background: var(--primary-surface);
-    border: 1px solid var(--primary-border);
-    border-radius: 10px;
-    padding: 12px 16px;
-    box-shadow: var(--shadow-sm);
-    text-align: left;
+    /* Hidden by default per user request to avoid covering other panels */
+    display: none !important;
+    /* Keep original properties here as a reference if re-enabled later:
+       max-width: 460px;
+       margin: 18px auto 0;
+       background: var(--primary-surface);
+       border: 1px solid var(--primary-border);
+       border-radius: 10px;
+       padding: 12px 16px;
+       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+       text-align: left;
+    */
 }
 .welcome-steps-title {
     margin: 0 0 8px 0;
@@ -813,6 +820,15 @@ body {
 }
 .welcome-steps-list li {
     margin-bottom: 6px;
+}
+
+/* Permanently hide the welcome container per user request */
+#welcomeContainer {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* 系统状态栏 */
