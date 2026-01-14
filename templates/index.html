@@ -15,6 +15,121 @@
             height: calc(100vh - 180px - 40px) !important;
         }
 
+        /* 搜索区域极致美化 - Apple 风格极简设计 */
+        .system-search-section {
+            padding: 3.5rem 1.5rem !important;
+            background: #ffffff !important;
+            position: relative;
+        }
+
+        .search-card {
+            max-width: 800px !important;
+            padding: 6px !important;
+            background: #f5f5f7 !important;
+            border-radius: 20px !important;
+            border: 1px solid #d2d2d7 !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .search-card:focus-within {
+            background: #ffffff !important;
+            border-color: #0071e3 !important;
+            box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1) !important;
+        }
+
+        .search-card-inner {
+            display: flex !important;
+            align-items: center !important;
+            width: 100% !important;
+            gap: 8px !important;
+        }
+
+        .search-left {
+            flex: 1 !important;
+            padding-left: 16px !important;
+        }
+
+        .system-search-input {
+            width: 100% !important;
+            height: 48px !important;
+            font-size: 1.05rem !important;
+            font-weight: 400 !important;
+            color: #1d1d1f !important;
+            background: transparent !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        .system-search-input::placeholder {
+            color: #86868b !important;
+        }
+
+        .search-actions {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            padding-right: 6px !important;
+        }
+
+        .system-btn.primary#searchButton {
+            height: 40px !important;
+            padding: 0 20px !important;
+            border-radius: 12px !important;
+            font-size: 0.95rem !important;
+            font-weight: 500 !important;
+            background: #0071e3 !important;
+            color: #ffffff !important;
+            border: none !important;
+            transition: all 0.2s ease !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            white-space: nowrap !important;
+        }
+
+        .system-btn.primary#searchButton:hover {
+            background: #0077ed !important;
+            transform: scale(1.02) !important;
+        }
+
+        .upload-button {
+            height: 40px !important;
+            padding: 0 16px !important;
+            background: #ffffff !important;
+            border: 1px solid #d2d2d7 !important;
+            border-radius: 12px !important;
+            font-weight: 500 !important;
+            color: #1d1d1f !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+            white-space: nowrap !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        .upload-button:hover {
+            background: #f5f5f7 !important;
+            border-color: #86868b !important;
+            color: #0071e3 !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .upload-label {
+            font-size: 0.9rem !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 4px !important;
+        }
+
+        .search-divider {
+            display: none !important;
+        }
+
         /* 强制设置左右面板比例为 6:4 */
         .system-left-panel {
             flex: 3 !important;
@@ -139,9 +254,7 @@
                 <button class="system-btn" id="openConfigButton">
                     <span>⚙️</span> 配置
                 </button>
-                <button class="system-btn primary" id="searchButtonTop">
-                    <span>🚀</span> 开始分析
-                </button>
+
             </nav>
         </header>
 
@@ -152,32 +265,26 @@
                 <p>24小时全自动从多个社媒平台深度爬取舆情数据，提供专业的情感分析和智能报告生成</p>
             </div>
 
-            <!-- 卡片化搜索控件 -->
+            <!-- 大胆美化的搜索控件 -->
             <div class="search-card" role="search" aria-label="搜索舆情">
                 <form class="system-search-form search-card-inner" onsubmit="return false;">
                     <div class="search-left">
-                        <input type="text" class="system-search-input" id="searchInput" placeholder="请输入要分析的话题或关键词..." aria-label="搜索关键词">
+                        <input type="text" class="system-search-input" id="searchInput" placeholder="探索全球舆情，输入关键词开启 AI 深度洞察..." aria-label="搜索关键词" autocomplete="off">
                     </div>
 
-                    <div class="search-separator" aria-hidden="true"></div>
-
-                    <div class="search-center">
+                    <div class="search-actions">
                         <button type="button" class="system-btn primary" id="searchButton" aria-label="开始分析">
-                            <span style="margin-right:6px">🔍</span> 分析
+                            <span>🚀</span> 开启分析
                         </button>
-                    </div>
-
-                    <div class="search-separator" aria-hidden="true"></div>
-
-                    <div class="search-right">
+                        
                         <label class="upload-button">
                             <input type="file" id="templateFileInput" accept=".md,.txt" title="上传自定义报告模板">
-                            <span class="upload-label">📄 上传模板</span>
+                            <span class="upload-label"><span>📄</span> 上传模板</span>
                         </label>
-                        <div class="upload-status" id="uploadStatus" aria-live="polite" style="display:inline-block; margin-left:0.75rem;"></div>
                     </div>
                 </form>
             </div>
+            <div class="upload-status" id="uploadStatus" aria-live="polite" style="text-align: center; margin-top: 10px; font-size: 0.85rem; color: var(--text-tertiary);"></div>
 
             <div class="search-divider" aria-hidden="true"></div>
         </section>
@@ -466,6 +573,10 @@
             // 延迟预加载iframe以确保应用启动完成
             setTimeout(() => {
                 preloadIframes();
+                // 页面加载后，如果当前有选中的应用，立即尝试加载一次日志
+                if (currentApp) {
+                    loadConsoleOutput(currentApp);
+                }
             }, 3000);
         });
 
@@ -1019,7 +1130,7 @@
 
             const button = document.getElementById('searchButton');
             button.disabled = true;
-            button.innerHTML = '<span class="loading"></span> 搜索中...';
+            button.innerHTML = '<span class="loading"></span> 分析中...';
 
             // 清除现有报告，重置自动生成标志，为新搜索做准备
             const reportPreview = document.getElementById('reportPreview');
@@ -1057,7 +1168,11 @@
                     totalRunning++;
                     
                     // 构建搜索URL
-                    const searchUrl = `http://${window.location.hostname}:${ports[app]}?query=${encodeURIComponent(query)}&auto_search=true`;
+                    let baseUrl = `http://${window.location.hostname}:${ports[app]}`;
+                    if (window.location.hostname.includes('manus.computer')) {
+                        baseUrl = `https://${ports[app]}-${window.location.hostname.split('-').slice(1).join('-')}`;
+                    }
+                    const searchUrl = `${baseUrl}?query=${encodeURIComponent(query)}&auto_search=true`;
                     console.log(`向 ${app} 发送搜索请求: ${searchUrl}`);
                     
                     // 直接更新主iframe的src来传递搜索参数
@@ -1067,11 +1182,11 @@
             
             if (totalRunning === 0) {
                 button.disabled = false;
-                button.innerHTML = '搜索';
+                button.innerHTML = '<span>🚀</span> 开启分析';
                 showMessage('没有运行中的应用，无法执行搜索', 'error');
             } else {
                 button.disabled = false;
-                button.innerHTML = '搜索';
+                button.innerHTML = '<span>🚀</span> 开启分析';
                 showMessage(`搜索请求已发送到 ${totalRunning} 个应用，页面将刷新以开始研究`, 'success');
             }
         }
@@ -1154,9 +1269,9 @@
                 if (welcomeElE) welcomeElE.style.display = 'none';
                 
                 // 清空并加载新的控制台输出
-                document.getElementById('consoleOutput').innerHTML = '<div class="console-line">[系统] 切换到 ' + appNames[app] + '</div>';
+                document.getElementById('consoleOutput').innerHTML = '<div class="console-line">[系统] 正在加载 ' + appNames[app] + ' 实时日志...</div>';
                 
-                // 重置行计数
+                // 重置行计数并立即触发加载
                 lastLineCount[app] = 0;
                 loadConsoleOutput(app);
             }
@@ -1273,7 +1388,11 @@
             
             for (const [app, port] of Object.entries(ports)) {
                 const iframe = document.createElement('iframe');
-                iframe.src = `http://${window.location.hostname}:${port}`;
+                let src = `http://${window.location.hostname}:${port}`;
+                if (window.location.hostname.includes('manus.computer')) {
+                    src = `https://${port}-${window.location.hostname.split('-').slice(1).join('-')}`;
+                }
+                iframe.src = src;
                 iframe.style.width = '100%';
                 iframe.style.height = '100%';
                 iframe.style.border = 'none';

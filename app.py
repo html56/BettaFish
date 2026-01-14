@@ -530,6 +530,7 @@ def read_process_output(process, app_name):
                 break
             
             # 使用非阻塞读取
+            output = None
             if sys.platform == 'win32':
                 # Windows下使用不同的方法
                 output = process.stdout.readline()
@@ -572,7 +573,7 @@ def read_process_output(process, app_name):
                             
         except Exception as e:
             logger.exception(f"Error reading output for {app_name}: {e}")
-            write_log_to_file(app_name, f"[{datetime.now().strftime('%H:%M:%S')}] {error_msg}")
+            write_log_to_file(app_name, f"[{datetime.now().strftime('%H:%M:%S')}] 错误: {str(e)}")
             break
 
 def start_streamlit_app(app_name, script_path, port):

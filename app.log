@@ -1,0 +1,22 @@
+2026-01-14 06:18:05.107 | INFO     | __main__:<module>:53 - ReportEngine接口已注册
+2026-01-14 06:18:05.108 | INFO     | __main__:init_forum_log:328 - ForumEngine: forum.log 已初始化
+2026-01-14 06:18:05.113 | INFO     | __main__:<module>:1053 - 等待配置确认，系统将在前端指令后启动组件...
+2026-01-14 06:18:05.113 | INFO     | __main__:<module>:1054 - Flask服务器已启动，访问地址: http://0.0.0.0:5000
+2026-01-14 06:18:05.638 | INFO     | MindSpider.main:__init__:44 - MindSpider AI爬虫项目
+2026-01-14 06:18:05.638 | INFO     | MindSpider.main:__init__:45 - 项目路径: /home/ubuntu/BettaFish/MindSpider
+2026-01-14 06:18:05.638 | INFO     | MindSpider.main:initialize_database:141 - 初始化数据库...
+2026-01-14 06:18:07.610 | INFO     | MindSpider.main:initialize_database:158 - 数据库初始化成功
+2026-01-14 06:18:07.610 | INFO     | __main__:initialize_system_components:246 - 数据库初始化成功
+2026-01-14 06:18:07.612 | INFO     | __main__:stop_forum_engine:352 - ForumEngine: 停止论坛...
+2026-01-14 06:18:07.612 | INFO     | ForumEngine.monitor:stop_monitoring:727 - ForumEngine: 论坛未运行
+2026-01-14 06:18:07.612 | INFO     | __main__:stop_forum_engine:354 - ForumEngine: 论坛已停止
+2026-01-14 06:18:20.009 | INFO     | __main__:start_forum_engine:340 - ForumEngine: 启动论坛...
+2026-01-14 06:18:20.010 | INFO     | ForumEngine.monitor:monitor_logs:586 - ForumEngine: 论坛创建中...
+2026-01-14 06:18:20.010 | INFO     | ForumEngine.monitor:start_monitoring:716 - ForumEngine: 论坛已启动
+2026-01-14 06:18:20.174 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 06:18:20.175 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 06:18:20.175 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 06:18:20.175 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 06:19:10.061 | INFO     | ForumEngine.monitor:monitor_logs:621 - ForumEngine: 在insight中检测到第一次论坛发表内容
+2026-01-14 06:19:10.062 | INFO     | ForumEngine.monitor:clear_forum_log:91 - ForumEngine: forum.log 已清空并初始化
+2026-01-14 06:22:29.263 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...

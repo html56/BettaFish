@@ -238,3 +238,82 @@
 2026-01-14 14:23:42.886 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
 2026-01-14 14:23:42.886 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
 2026-01-14 14:23:42.886 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 03:54:56.426 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 03:54:56.427 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 03:54:56.427 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 03:54:56.427 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:00:18.309 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:00:18.309 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:00:18.309 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:00:18.309 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:00:55.807 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:00:55.807 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:00:55.807 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:00:55.807 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:03:43.733 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:03:43.733 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:03:43.733 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:03:43.733 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:05:33.174 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:05:33.174 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:05:33.174 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:05:33.174 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:07:14.235 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:07:14.235 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:07:14.235 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:07:14.235 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:13:19.832 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:13:19.832 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:13:19.832 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:13:19.832 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:15:43.912 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:15:43.913 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:15:43.913 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:15:43.913 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:20:13.601 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:20:13.602 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:20:13.602 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:20:13.602 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:22:14.465 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:22:14.465 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:22:14.465 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:22:14.465 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:22:52.861 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:22:52.861 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:22:52.861 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:22:52.861 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:24:30.920 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:24:30.920 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:24:30.920 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:24:30.921 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:25:49.696 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:25:49.696 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:25:49.696 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:25:49.696 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 04:37:54.289 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 04:37:54.290 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 04:37:54.290 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 04:37:54.290 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 05:33:23.659 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 05:33:23.659 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 05:33:23.660 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 05:33:23.660 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 06:09:17.418 | INFO     | ForumEngine.monitor:monitor_logs:621 - ForumEngine: 在insight中检测到第一次论坛发表内容
+2026-01-14 06:09:17.418 | INFO     | ForumEngine.monitor:clear_forum_log:91 - ForumEngine: forum.log 已清空并初始化
+2026-01-14 06:10:25.074 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 06:10:25.075 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 06:10:25.075 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 06:10:25.075 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 06:11:16.971 | INFO     | ForumEngine.monitor:monitor_logs:621 - ForumEngine: 在insight中检测到第一次论坛发表内容
+2026-01-14 06:11:16.971 | INFO     | ForumEngine.monitor:clear_forum_log:91 - ForumEngine: forum.log 已清空并初始化
+2026-01-14 06:13:37.111 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
+2026-01-14 06:15:09.825 | INFO     | ForumEngine.monitor:_trigger_host_speech:547 - ForumEngine: 主持人发言已记录
+2026-01-14 06:16:35.967 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
+2026-01-14 06:17:02.377 | INFO     | ForumEngine.monitor:_trigger_host_speech:547 - ForumEngine: 主持人发言已记录
+2026-01-14 06:18:20.174 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-14 06:18:20.175 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-14 06:18:20.175 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-14 06:18:20.175 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-14 06:19:10.061 | INFO     | ForumEngine.monitor:monitor_logs:621 - ForumEngine: 在insight中检测到第一次论坛发表内容
+2026-01-14 06:19:10.062 | INFO     | ForumEngine.monitor:clear_forum_log:91 - ForumEngine: forum.log 已清空并初始化
+2026-01-14 06:22:29.263 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...

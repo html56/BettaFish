@@ -1,0 +1,4 @@
+2026-01-14 04:21:49.824 | INFO     | __main__:<module>:53 - ReportEngine接口已注册
+2026-01-14 04:21:49.824 | INFO     | __main__:init_forum_log:328 - ForumEngine: forum.log 已初始化
+2026-01-14 04:21:49.829 | INFO     | __main__:<module>:1053 - 等待配置确认，系统将在前端指令后启动组件...
+2026-01-14 04:21:49.829 | INFO     | __main__:<module>:1054 - Flask服务器已启动，访问地址: http://0.0.0.0:5000
