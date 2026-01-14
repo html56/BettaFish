@@ -28,7 +28,24 @@ except ImportError as e:
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Dedicated-to-creating-a-concise-and-versatile-public-opinion-analysis-platform'
-socketio = SocketIO(app, cors_allowed_origins="*")
+
+# On Windows, eventlet can be unstable for WebSocket handling. Use threading mode there.
+if sys.platform == 'win32':
+    socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
+    logger.info("Detected Windows platform - initializing SocketIO with async_mode='threading'")
+else:
+    socketio = SocketIO(app, cors_allowed_origins="*")
+
+
+def safe_emit(event, data=None, *args, **kwargs):
+    """Emit Socket.IO events safely, catching and logging any exceptions to avoid crashing the server."""
+    try:
+        if data is None:
+            socketio.emit(event, *args, **kwargs)
+        else:
+            socketio.emit(event, data, *args, **kwargs)
+    except Exception as exc:
+        logger.exception(f"Safe emit failed for event '{event}': {exc}")
 
 # 注册ReportEngine Blueprint
 if REPORT_ENGINE_AVAILABLE:
@@ -413,12 +430,12 @@ def monitor_forum_log():
                                 # 解析日志行并发送forum消息
                                 parsed_message = parse_forum_log_line(line)
                                 if parsed_message:
-                                    socketio.emit('forum_message', parsed_message)
+                                    safe_emit('forum_message', parsed_message)
                                 
                                 # 只有在控制台显示forum时才发送控制台消息
                                 timestamp = datetime.now().strftime('%H:%M:%S')
                                 formatted_line = f"[{timestamp}] {line}"
-                                socketio.emit('console_output', {
+                                safe_emit('console_output', {
                                     'app': 'forum',
                                     'line': formatted_line
                                 })
@@ -506,7 +523,7 @@ def read_process_output(process, app_name):
                             timestamp = datetime.now().strftime('%H:%M:%S')
                             formatted_line = f"[{timestamp}] {line}"
                             write_log_to_file(app_name, formatted_line)
-                            socketio.emit('console_output', {
+                            safe_emit('console_output', {
                                 'app': app_name,
                                 'line': formatted_line
                             })
@@ -526,7 +543,7 @@ def read_process_output(process, app_name):
                         write_log_to_file(app_name, formatted_line)
                         
                         # 发送到前端
-                        socketio.emit('console_output', {
+                        safe_emit('console_output', {
                             'app': app_name,
                             'line': formatted_line
                         })
@@ -538,20 +555,20 @@ def read_process_output(process, app_name):
                 ready, _, _ = select.select([process.stdout], [], [], 0.1)
                 if ready:
                     output = process.stdout.readline()
-                    if output:
-                        line = output.decode('utf-8', errors='replace').strip()
-                        if line:
-                            timestamp = datetime.now().strftime('%H:%M:%S')
-                            formatted_line = f"[{timestamp}] {line}"
-                            
-                            # 写入日志文件
-                            write_log_to_file(app_name, formatted_line)
-                            
-                            # 发送到前端
-                            socketio.emit('console_output', {
-                                'app': app_name,
-                                'line': formatted_line
-                            })
+                if output:
+                    line = output.decode('utf-8', errors='replace').strip()
+                    if line:
+                        timestamp = datetime.now().strftime('%H:%M:%S')
+                        formatted_line = f"[{timestamp}] {line}"
+                        
+                        # 写入日志文件
+                        write_log_to_file(app_name, formatted_line)
+                        
+                        # 发送到前端
+                        safe_emit('console_output', {
+                            'app': app_name,
+                            'line': formatted_line
+                        })
                             
         except Exception as e:
             logger.exception(f"Error reading output for {app_name}: {e}")
@@ -820,8 +837,8 @@ def test_log(app_name):
     test_msg = f"[{datetime.now().strftime('%H:%M:%S')}] 测试日志消息 - {datetime.now()}"
     write_log_to_file(app_name, test_msg)
     
-    # 通过Socket.IO发送
-    socketio.emit('console_output', {
+    # 通过Socket.IO发送（使用安全封装以避免在 Windows/eventlet 环境中抛出未捕获异常）
+    safe_emit('console_output', {
         'app': app_name,
         'line': test_msg
     })

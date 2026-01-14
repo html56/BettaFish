@@ -384,6 +384,9 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
+    /* Ensure right panel sits above left content when necessary */
+    position: relative;
+    z-index: 30;
 }
 
 /* 系统控制台 */
@@ -789,14 +792,19 @@ body {
 
 /* Welcome steps card centered below the title */
 .welcome-steps-card {
-    max-width: 520px;
+    /* Slightly narrower and subtler visual so it doesn't visually cover other panels */
+    max-width: 460px;
     margin: 18px auto 0;
     background: var(--primary-surface);
     border: 1px solid var(--primary-border);
     border-radius: 10px;
     padding: 12px 16px;
-    box-shadow: var(--shadow-sm);
+    /* reduce shadow intensity to avoid heavy visual blocking */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     text-align: left;
+    /* keep it in normal flow but under the right panel by default */
+    position: relative;
+    z-index: 5;
 }
 .welcome-steps-title {
     margin: 0 0 8px 0;
