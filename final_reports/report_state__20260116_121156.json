@@ -1,0 +1,15 @@
+{
+  "task_id": "report_20260116_113836",
+  "query": "",
+  "status": "completed",
+  "progress": 100.0,
+  "selected_template": "",
+  "has_html_content": true,
+  "html_content_length": 12935,
+  "metadata": {
+    "query": "",
+    "template_used": "特定政策或行业动态舆情分析报告",
+    "generation_time": 0.0,
+    "timestamp": "2026-01-16T11:38:36.830541"
+  }
+}

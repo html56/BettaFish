@@ -374,9 +374,17 @@ def parse_forum_log_line(line):
         if source not in ['QUERY', 'INSIGHT', 'MEDIA']:
             return None
         
-        # 根据来源确定消息类型和发送者
+        # 根据来源确定消息类型和发送者（统一人类可读的名称）
         message_type = 'agent'
-        sender = f'{source} Engine'
+        source_upper = source.upper()
+        sender_map = {
+            'INSIGHT': 'Insight Engine',
+            'MEDIA': 'Media Engine',
+            'QUERY': 'Query Engine',
+            'HOST': 'Forum Host',
+            'REPORT': 'Report Agent'
+        }
+        sender = sender_map.get(source_upper, f'{source.title()} Engine')
         
         return {
             'type': message_type,
@@ -433,8 +441,17 @@ def monitor_forum_log():
                                     safe_emit('forum_message', parsed_message)
                                 
                                 # 只有在控制台显示forum时才发送控制台消息
-                                timestamp = datetime.now().strftime('%H:%M:%S')
-                                formatted_line = f"[{timestamp}] {line}"
+                                # 如果行已经以时间戳开头（例如 "[22:45:59] [QUERY] ..."），则直接发送原始行
+                                try:
+                                    timestamp = datetime.now().strftime('%H:%M:%S')
+                                    if re.match(r'^\[\d{2}:\d{2}:\d{2}\]', line):
+                                        formatted_line = line
+                                    else:
+                                        formatted_line = f"[{timestamp}] {line}"
+                                except Exception:
+                                    # 回退到简单拼接，防止意外错误中断监控线程
+                                    formatted_line = line
+
                                 safe_emit('console_output', {
                                     'app': 'forum',
                                     'line': formatted_line

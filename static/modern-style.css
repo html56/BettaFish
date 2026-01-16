@@ -138,12 +138,16 @@ body {
     border: 1px solid rgba(102, 126, 234, 0.3);
     border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease;
+	/* keep background unchanged by focus; only animate border and shadow */
+	transition: box-shadow 0.25s ease, border-color 0.25s ease;
+	box-shadow: none;
 }
 
 .search-box:focus-within {
-    border-color: var(--accent-cyan);
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+	border-color: var(--accent-cyan);
+	/* subtle blue glow on focus, without changing the box background (avoid gray fill) */
+	box-shadow: 0 10px 30px rgba(0, 212, 255, 0.18);
+	outline: none;
 }
 
 .search-input {

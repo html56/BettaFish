@@ -25,19 +25,25 @@
         .search-card {
             max-width: 800px !important;
             padding: 6px !important;
-            background: #f5f5f7 !important;
+            /* use solid white by default (remove the pale gray fill) */
+            background: #ffffff !important;
             border-radius: 20px !important;
-            border: 1px solid #d2d2d7 !important;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            /* deepen the border color for better contrast */
+            border: 1px solid #c2c2c6 !important;
+            /* only animate border-color and shadow so background stays stable */
+            transition: box-shadow 0.25s ease, border-color 0.25s ease !important;
             margin: 0 auto !important;
             display: flex !important;
             align-items: center !important;
+            box-shadow: none !important;
         }
 
         .search-card:focus-within {
+            /* keep the card white on focus, but add a subtle blue glow */
             background: #ffffff !important;
             border-color: #0071e3 !important;
-            box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1) !important;
+            box-shadow: 0 10px 30px rgba(0, 113, 227, 0.12) !important;
+            outline: none !important;
         }
 
         .search-card-inner {
@@ -163,17 +169,35 @@
             line-height: 1.6;
         }
         
-        /* 报告内容样式 */
+        /* 报告内容样式 (基本保留，但增加兼容性的覆盖以恢复历史版底部显示行为) */
         .report-content {
             padding: 1rem;
         }
-        
-        .report-content iframe {
-            width: 100%;
-            height: 600px;
-            border: 1px solid var(--primary-border);
-            border-radius: 8px;
+
+        /* 默认 iframe 预览样式（历史版行为）：让报告 iframe 在文档流中展示、自动适应高度并允许父容器滚动 */
+        #reportPreview {
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            min-height: 400px;
         }
+
+        /* 针对 report iframe 的强制覆盖，恢复为非绝对定位、块级展示和自动高度 */
+        #reportPreview iframe,
+        #report-iframe,
+        .report-content iframe {
+            width: 100% !important;
+            height: auto !important;
+            min-height: 800px !important;
+            border: none !important;
+            border-radius: 8px;
+            display: block !important;
+            position: static !important;
+            overflow: auto !important;
+            scrollbar-width: auto !important;
+            -ms-overflow-style: auto !important;
+        }
+
+        /* 保留对 report iframe 的覆盖，但不更改 embeddedContent 下预加载 iframe 的布局（避免影响其他应用） */
         
         /* 控制台输出样式 */
         .console-line {
@@ -298,6 +322,64 @@
                 </div>
                 <!-- 嵌入页面头部（供JS读取标题显示） -->
                 <div class="embedded-header" id="embeddedHeader">嵌入的页面</div>
+                <style>
+                    .embedded-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px 16px;
+                        background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.9));
+                        border-radius: 10px;
+                        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+                        margin-bottom: 12px;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+                    }
+                    .embedded-header .title-left {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+                    }
+                    .embedded-header .main-title {
+                        font-size: 17px;
+                        font-weight: 700;
+                        color: #0f172a;
+                    }
+                    .embedded-header .sub-title {
+                        font-size: 13px;
+                        color: #64748b;
+                        font-weight: 400;
+                        margin-left: 6px;
+                        background: none;
+                        padding: 0;
+                        border-radius: 0;
+                        display: inline-block;
+                    }
+                    .embedded-header .desc {
+                        font-size: 13px;
+                        color: #334155;
+                        margin-top: 4px;
+                    }
+                    .embedded-header .meta {
+                        font-size: 13px;
+                        color: #64748b;
+                        white-space: nowrap;
+                        margin-left: 12px;
+                    }
+                    /* 左侧小logo风格（仿macOS） */
+                    .embedded-header .logo {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 8px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 12px;
+                        background: linear-gradient(135deg,#60a5fa,#7c3aed);
+                        color: white;
+                        font-weight: 700;
+                        box-shadow: 0 4px 10px rgba(124,58,237,0.12);
+                    }
+                </style>
                 <div class="system-panel-content" id="embeddedContent">
                     <!-- 欢迎页面 -->
                     <div class="system-card" id="welcomeContainer">
@@ -319,15 +401,18 @@
 
                     <!-- 论坛容器 -->
                     <div class="system-card" id="forumContainer" style="display: none;">
-                        <h4 style="margin-bottom: 1rem; color: var(--brand-primary);">🤖 论坛引擎</h4>
-                        <div class="forum-chat-area" id="forumChatArea">
+                        <h4 style="margin-bottom: 1rem; color: var(--brand-primary);">
+                            <span id="forumHeaderTitle" style="font-weight:600;">🤖 多智能体对话 - 洞察 | 媒体 | 情报 | 主持人</span>
+                            <span id="forumMeta" style="float:right;font-size:0.9em;color:#666;">--:--:--</span>
+                        </h4>
+                    <div class="forum-chat-area" id="forumChatArea" style="max-height:60vh; overflow-y:auto; padding:1rem;">
                             <!-- 动态添加的Engine对话消息将在这里显示 -->
                         </div>
                     </div>
 
                     <!-- 报告容器 -->
                     <div class="system-card" id="reportContainer" style="display: none;">
-                        <h4 style="margin-bottom: 1rem; color: var(--brand-primary);">📈 分析报告</h4>
+                        <h4 style="margin-bottom: 1rem; color: var(--brand-primary);">📈 报告 Agent - 最终报告生成</h4>
                         <div class="report-content" id="reportContent">
                             <!-- 报告内容将在这里显示 -->
                         </div>
@@ -352,23 +437,38 @@
                         <div class="system-app-switcher">
                             <button class="system-app-tab app-button active" data-app="insight">
                                 <div class="system-status-indicator" id="status-insight"></div>
-                                Insight Agent
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">洞察分析师</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Insight Agent</div>
+                                </div>
                             </button>
                             <button class="system-app-tab app-button" data-app="media">
                                 <div class="system-status-indicator" id="status-media"></div>
-                                Media Agent
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">媒体分析师</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Media Agent</div>
+                                </div>
                             </button>
                             <button class="system-app-tab app-button" data-app="query">
                                 <div class="system-status-indicator" id="status-query"></div>
-                                Query Agent
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">情报搜集员</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Query Agent</div>
+                                </div>
                             </button>
                             <button class="system-app-tab app-button" data-app="forum">
                                 <div class="system-status-indicator running" id="status-forum"></div>
-                                Forum Host
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">论坛主持人</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Forum Host</div>
+                                </div>
                             </button>
                             <button class="system-app-tab app-button locked" data-app="report" title="需等待其余三个Agent工作完毕">
                                 <div class="system-status-indicator" id="status-report"></div>
-                                Report Agent
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">报告撰写员</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Report Agent</div>
+                                </div>
                             </button>
                         </div>
 
@@ -462,7 +562,7 @@
                 ]
             },
             {
-                title: 'Insight Agent',
+                title: '洞察分析师 (Insight Agent)',
                 subtitle: '负责洞察分析的模型配置',
                 fields: [
                     { key: 'INSIGHT_ENGINE_API_KEY', label: 'API Key' },
@@ -471,7 +571,7 @@
                 ]
             },
             {
-                title: 'Media Agent',
+                title: '媒体分析师 (Media Agent)',
                 subtitle: '媒体内容理解与生成模型',
                 fields: [
                     { key: 'MEDIA_ENGINE_API_KEY', label: 'API Key' },
@@ -480,7 +580,7 @@
                 ]
             },
             {
-                title: 'Query Agent',
+                title: '情报搜集员 (Query Agent)',
                 subtitle: '负责搜索与信息汇总的模型配置',
                 fields: [
                     { key: 'QUERY_ENGINE_API_KEY', label: 'API Key' },
@@ -489,7 +589,7 @@
                 ]
             },
             {
-                title: 'Report Agent',
+                title: '报告撰写员 (Report Agent)',
                 subtitle: '报告生成使用的模型配置',
                 fields: [
                     { key: 'REPORT_ENGINE_API_KEY', label: 'API Key' },
@@ -498,7 +598,7 @@
                 ]
             },
             {
-                title: 'Forum Host',
+                title: '论坛主持人 (Forum Host)',
                 subtitle: '多智能体协同使用的模型配置',
                 fields: [
                     { key: 'FORUM_HOST_API_KEY', label: 'API Key' },
@@ -527,21 +627,74 @@
 
         // 应用名称映射
         const appNames = {
-            insight: 'Insight Engine',
-            media: 'Media Engine', 
-            query: 'Query Engine',
-            forum: 'Forum Engine',
-            report: 'Report Engine'
+            insight: '洞察引擎 (Insight Engine)',
+            media: '媒体引擎 (Media Engine)', 
+            query: '情报引擎 (Query Engine)',
+            forum: '论坛引擎 (Forum Engine)',
+            report: '报告引擎 (Report Engine)'
         };
 
         // 页面头部显示的完整Agent介绍
         const agentTitles = {
-            insight: 'Insight Agent - 私有数据库挖掘',
-            media: 'Media Agent - 多模态内容分析', 
-            query: 'Query Agent - 精准信息搜索',
-            forum: 'Forum Engine - 多智能体交流',
-            report: 'Report Agent - 最终报告生成'
+            insight: '洞察分析师 (Insight Agent) - 私有数据库挖掘',
+            media: '媒体分析师 (Media Agent) - 多模态内容分析',
+            query: '情报搜集员 (Query Agent) - 精准信息搜索',
+            forum: '论坛主持人 (Forum Host) - 多智能体交流',
+            report: '报告撰写员 (Report Agent) - 最终报告生成'
         };
+
+        // 统一渲染嵌入页面顶部标题的函数
+        function renderEmbeddedHeader(app) {
+            const headerEl = document.getElementById('embeddedHeader');
+            if (!headerEl) return;
+            // logo 首字母映射
+            const logoInitials = {
+                insight: 'IA',
+                media: 'MA',
+                query: 'QA',
+                forum: 'FH',
+                report: 'RA'
+            };
+            if (app === 'forum') {
+                const initials = logoInitials[app] || 'FH';
+                headerEl.innerHTML = `
+                    <div style="display:flex;align-items:center;">
+                        <div class="logo">${initials}</div>
+                        <div class="title-left">
+                            <div style="display:flex;align-items:baseline;gap:6px;">
+                                <div class="main-title">多智能体对话</div>
+                                <div class="sub-title" style="font-size:13px;color:#64748b;">Forum Engine</div>
+                            </div>
+                            <div class="desc">洞察 | 媒体 | 情报 | 主持人</div>
+                        </div>
+                    </div>
+                `;
+                if (typeof updateForumMeta === 'function') updateForumMeta();
+                return;
+            }
+
+            const full = agentTitles[app] || appNames[app] || app;
+            const chinese = full.split(' (')[0] || full;
+            const englishMatch = full.match(/\(([^)]+)\)/);
+            const english = englishMatch ? englishMatch[1] : '';
+            const descMatch = full.match(/\)\s*-\s*(.*)$/);
+            const desc = descMatch ? descMatch[1] : '';
+            const initials = logoInitials[app] || 'BF';
+
+            headerEl.innerHTML = `
+                <div style="display:flex;align-items:center;">
+                    <div class="logo">${initials}</div>
+                    <div class="title-left">
+                        <div style="display:flex;align-items:baseline;gap:8px;">
+                            <div class="main-title">${chinese}</div>
+                            ${english ? `<div class="sub-title" style="font-size:13px;color:#64748b;">${english}</div>` : ''}
+                        </div>
+                        ${desc ? `<div class="desc">${desc}</div>` : ''}
+                    </div>
+                </div>
+                <div class="meta" id="embeddedMeta"></div>
+            `;
+        }
 
         // 初始化
         document.addEventListener('DOMContentLoaded', function() {
@@ -578,6 +731,10 @@
                     loadConsoleOutput(currentApp);
                 }
             }, 3000);
+            // 渲染统一头部
+            if (typeof renderEmbeddedHeader === 'function') {
+                renderEmbeddedHeader(currentApp || 'insight');
+            }
         });
 
         // Socket.IO连接
@@ -603,7 +760,7 @@
                 if (data.app === 'forum') {
                     const parsed = parseForumMessage(data.line);
                     if (parsed) {
-                        // addForumMessage(parsed);
+                        addForumMessage(parsed);
                     }
                 }
             });
@@ -631,11 +788,35 @@
             document.getElementById('templateFileInput').addEventListener('change', handleTemplateUpload);
 
             // 应用切换按钮
+            // 对 report 按钮做特殊处理：点击时先检查后端状态，只有准备好才切换/生成
             document.querySelectorAll('.app-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const app = this.dataset.app;
-                    switchToApp(app);
-                });
+                const app = button.dataset.app;
+                if (app === 'report') {
+                    button.addEventListener('click', async function (e) {
+                        e.preventDefault();
+                        try {
+                            const resp = await fetch('/api/report/status');
+                            const data = await resp.json();
+                            if (data && data.success && data.engines_ready) {
+                                // 确保按钮解锁，再切换到 report
+                                const reportButton = document.querySelector('[data-app="report"]');
+                                if (reportButton) reportButton.classList.remove('locked');
+                                switchToApp('report');
+                            } else {
+                                const missing = data && data.missing_files ? data.missing_files.join(', ') : '';
+                                showMessage(missing ? ('等待新文件: ' + missing) : '需等待其余三个Agent工作完毕', 'error');
+                            }
+                        } catch (err) {
+                            console.error('检查 Report Engine 状态失败:', err);
+                            showMessage('检查Report状态失败，请稍候重试', 'error');
+                        }
+                    });
+                } else {
+                    button.addEventListener('click', function() {
+                        const app = this.dataset.app;
+                        switchToApp(app);
+                    });
+                }
             });
 
             // LLM 配置弹窗
@@ -1215,7 +1396,28 @@
             // 根据应用类型处理不同的显示逻辑
             if (app === 'forum') {
                 // 切换到论坛模式
-                document.getElementById('embeddedHeader').textContent = 'Forum Engine - 多智能体交流';
+                // 显示标题与元信息（时间 + forum id）
+                // 使用统一渲染函数
+                renderEmbeddedHeader('forum');
+                // 更新论坛元信息（时间与可用的forum id）
+                if (typeof updateForumMeta === 'function') updateForumMeta();
+                // 每秒更新时间部分
+                if (window._forumMetaInterval) clearInterval(window._forumMetaInterval);
+                window._forumMetaInterval = setInterval(() => {
+                    if (typeof updateForumMeta === 'function') updateForumMeta();
+                }, 1000);
+                // 获取后端的 forum info（包含 session id）
+                fetch('/api/forum/info')
+                .then(resp => resp.json())
+                .then(info => {
+                    if (info && info.success) {
+                        if (info.forum_id) currentForumId = info.forum_id;
+                        if (typeof updateForumMeta === 'function') updateForumMeta();
+                    }
+                })
+                .catch(err => {
+                    console.warn('获取 forum info 失败:', err);
+                });
                 
                 // 显示论坛容器，隐藏其他内容（使用 style.display 以覆盖内联或初始样式）
                 const forumEl = document.getElementById('forumContainer');
@@ -1231,7 +1433,7 @@
                 
             } else if (app === 'report') {
                 // 切换到报告模式
-                document.getElementById('embeddedHeader').textContent = 'Report Agent - 最终报告生成';
+                renderEmbeddedHeader('report');
                 
                 // 显示报告容器，隐藏其他内容
                 const forumElR = document.getElementById('forumContainer');
@@ -1258,7 +1460,7 @@
                 
             } else {
                 // 切换到普通Engine模式
-                document.getElementById('embeddedHeader').textContent = agentTitles[app] || appNames[app];
+                renderEmbeddedHeader(app);
                 
                 // 隐藏论坛和报告容器，保留嵌入式 iframe / 占位显示
                 const forumElE = document.getElementById('forumContainer');
@@ -1418,9 +1620,9 @@
             const header = document.getElementById('embeddedHeader');
             const content = document.getElementById('embeddedContent');
             
-            // 如果是Forum Engine，直接显示论坛界面
+            // 如果是Forum Engine，直接显示论坛界面（使用统一渲染）
             if (app === 'forum') {
-                header.textContent = 'Forum Engine - 多智能体交流';
+                renderEmbeddedHeader('forum');
                 
                 // 隐藏所有iframe
                 if (typeof preloadedIframes !== 'undefined') {
@@ -1443,7 +1645,7 @@
             
             // 如果是Report Engine，显示报告界面
             if (app === 'report') {
-                header.textContent = 'Report Agent - 最终报告生成';
+                renderEmbeddedHeader('report');
                 
                 // 隐藏所有iframe
                 if (typeof preloadedIframes !== 'undefined') {
@@ -1468,7 +1670,7 @@
             document.getElementById('forumContainer').classList.remove('active');
             document.getElementById('reportContainer').classList.remove('active');
 
-            header.textContent = agentTitles[app] || appNames[app] || app;
+            renderEmbeddedHeader(app);
 
             // 如果应用正在运行，显示对应的iframe
             if (appStatus[app] === 'running') {
@@ -1554,6 +1756,19 @@
             const now = new Date();
             const timeString = now.toLocaleTimeString('zh-CN');
             document.getElementById('systemTime').textContent = timeString;
+        }
+
+        // 当前论坛元信息（forum id 可由日志或其他途径设置）
+        let currentForumId = null;
+
+        // 更新论坛标题右侧元信息（显示当前时间和forum id）
+        function updateForumMeta() {
+            const metaEl = document.getElementById('forumMeta');
+            if (!metaEl) return;
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('zh-CN');
+            const forumIdText = currentForumId ? currentForumId : '-';
+            metaEl.textContent = `${timeString}`;
         }
 
         // 显示消息
@@ -1646,6 +1861,8 @@
 
         // Forum Engine 相关函数
         let forumLogLineCount = 0;
+        // 用于防止同一 agent 重复显示相同消息（key: source 小写 => 最近消息内容）
+        const lastAgentMessageBySource = {};
         
         // Report Engine 相关函数
         let reportLogLineCount = 0;
@@ -1689,15 +1906,11 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    // 清空对话区
+                    // 清空对话区（不要插入静态的启动消息，避免与后台日志重复）
                     const chatArea = document.getElementById('forumChatArea');
-                    chatArea.innerHTML += `
-                        <div class="forum-message system">
-                            <div class="forum-message-header">SYSTEM</div>
-                            <div class="forum-message-content">ForumEngine 论坛已启动，ID：98fiaw4324dwadhsl21awhs908147</div>
-                            <div class="forum-timestamp">${new Date().toLocaleTimeString('zh-CN')}</div>
-                        </div>
-                    `;
+                    chatArea.innerHTML = '';
+                    // 清空去重记录，确保历史加载时不会因为旧记录被误过滤
+                    for (const k in lastAgentMessageBySource) delete lastAgentMessageBySource[k];
                     
                     // 加载控制台日志
                     const consoleOutput = document.getElementById('consoleOutput');
@@ -1710,11 +1923,11 @@
                             div.textContent = line;
                             consoleOutput.appendChild(div);
                             
-                            // 解析并添加到对话区
+                            // 解析并添加到对话区（仅添加被识别为 agent 的消息）
                             const parsed = parseForumMessage(line);
-                            //if (parsed) {
-                                //addForumMessage(parsed);
-                            //}
+                            if (parsed) {
+                                addForumMessage(parsed);
+                            }
                         });
                         
                         // 重置计数器以确保后续消息能正确显示
@@ -1725,13 +1938,22 @@
                     }
                     
                     // 如果有解析的消息，直接使用
+                    // 如果后端同时返回了已解析的消息对象，也渲染它们（兼容性处理）
                     if (data.parsed_messages && data.parsed_messages.length > 0) {
                         data.parsed_messages.forEach(message => {
-                            // addForumMessage(message);
+                            addForumMessage(message);
                         });
                     }
                     
                     consoleOutput.scrollTop = consoleOutput.scrollHeight;
+                    // 确保左侧对话区滚动到底部以显示最新消息
+                    try {
+                        if (chatArea) {
+                            chatArea.scrollTop = chatArea.scrollHeight;
+                        }
+                    } catch (err) {
+                        console.error('滚动对话区失败:', err);
+                    }
                 }
             })
             .catch(error => {
@@ -1755,7 +1977,7 @@
                         div.textContent = line;
                         consoleOutput.appendChild(div);
                         
-                        // 如果是论坛对话内容，也显示到左侧对话区
+                        // 如果是论坛对话内容，也显示到左侧对话区（仅 agent 消息）
                         const parsed = parseForumMessage(line);
                         if (parsed) {
                             addForumMessage(parsed);
@@ -1919,7 +2141,7 @@
                         break;
                     case 'HOST':
                         messageType = 'host';
-                        displayName = 'Forum Host';
+                        displayName = '论坛主持人 (Forum Host)';
                         break;
                 }
                 
@@ -1943,6 +2165,24 @@
         // 添加论坛消息到对话区
         function addForumMessage(data) {
             const chatArea = document.getElementById('forumChatArea');
+            
+            // 去重：如果同一 agent（来源）上一次显示的内容与当前完全一致，则跳过显示
+            try {
+                const sourceKey = (data.source || data.sender || '').toString().toLowerCase().trim();
+                const messageType = data.type || 'system';
+                if (sourceKey && (messageType === 'agent' || messageType === 'host')) {
+                    const contentNormalized = (data.content || '').toString().trim();
+                    if (lastAgentMessageBySource[sourceKey] === contentNormalized) {
+                        // 已经显示过相同内容，跳过
+                        return;
+                    }
+                    // 记录最新内容
+                    lastAgentMessageBySource[sourceKey] = contentNormalized;
+                }
+            } catch (e) {
+                // 若出错不阻止消息显示
+                console.error('去重检查失败:', e);
+            }
             const messageDiv = document.createElement('div');
             
             const messageType = data.type || 'system';
@@ -1965,8 +2205,28 @@
                 }
             }
             
-            // 构建消息头部，显示来源名称
-            const headerText = data.sender || data.source || getMessageHeader(messageType);
+            // 构建消息头部，显示来源名称（统一显示角色 + 引擎）
+            const rawSender = data.sender || data.source || getMessageHeader(messageType);
+            // 简单根据 source/ sender 文本推断短键
+            const sourceKey = (data.source || data.sender || '').toString().toLowerCase();
+            let shortKey = '';
+            if (sourceKey.includes('insight')) shortKey = 'insight';
+            else if (sourceKey.includes('media')) shortKey = 'media';
+            else if (sourceKey.includes('query')) shortKey = 'query';
+            else if (sourceKey.includes('host')) shortKey = 'host';
+            else if (sourceKey.includes('report')) shortKey = 'report';
+
+            const roleLabelMap = {
+                'insight': '洞察分析师 (Insight Agent)',
+                'media': '媒体分析师 (Media Agent)',
+                'query': '情报搜集员 (Query Agent)',
+                'host': '论坛主持人 (Forum Host)',
+                'report': '报告撰写员 (Report Agent)'
+            };
+
+            const headerText = roleLabelMap[shortKey]
+                ? `${roleLabelMap[shortKey]} (${rawSender})`
+                : rawSender;
             
             messageDiv.innerHTML = `
                 <div class="forum-message-header">${headerText}</div>
@@ -1978,6 +2238,26 @@
             
             // 自动滚动到底部
             chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        // 当控制台有原始日志行时也将其显示到论坛对话区（保留原始格式）
+        function addRawForumLine(rawLine) {
+            try {
+                const chatArea = document.getElementById('forumChatArea');
+                if (!chatArea) return;
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'forum-message system';
+                const headerText = 'LOG';
+                messageDiv.innerHTML = `
+                    <div class="forum-message-header">${headerText}</div>
+                    <div class="forum-message-content">${formatMessageContent(rawLine)}</div>
+                    <div class="forum-timestamp">${new Date().toLocaleTimeString('zh-CN')}</div>
+                `;
+                chatArea.appendChild(messageDiv);
+                chatArea.scrollTop = chatArea.scrollHeight;
+            } catch (e) {
+                console.error('添加原始论坛日志失败:', e);
+            }
         }
 
         // 格式化消息内容
@@ -2363,6 +2643,15 @@
                 reportPreview.innerHTML = '';
                 reportPreview.appendChild(iframe);
                 
+                // 确保报告预览区域可滚动并把 iframe 滚动到可见位置（解决生成后内容被下方遮挡的问题）
+                try {
+                    reportPreview.style.overflowY = 'auto';
+                    // 平滑滚动到 iframe 位置
+                    iframe.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } catch (e) {
+                    console.warn('设置报告预览滚动或滚动到 iframe 失败:', e);
+                }
+                
                 // 将HTML内容写入iframe
                 iframe.contentDocument.open();
                 iframe.contentDocument.write(htmlContent);
@@ -2373,26 +2662,22 @@
                 if (iframeDoc) {
                     // 设置body样式
                     if (iframeDoc.body) {
-                        iframeDoc.body.style.overflow = 'hidden';
-                        iframeDoc.body.style.scrollbarWidth = 'none';
-                        iframeDoc.body.style.msOverflowStyle = 'none';
+                        // 允许 iframe 内部滚动（恢复为 auto），以便在某些浏览器中可以滚动查看报告内容
+                        iframeDoc.body.style.overflow = 'auto';
+                        iframeDoc.body.style.scrollbarWidth = 'auto';
+                        iframeDoc.body.style.msOverflowStyle = 'auto';
                     }
-                    // 设置html样式
+                    // 设置html样式为可滚动
                     if (iframeDoc.documentElement) {
-                        iframeDoc.documentElement.style.overflow = 'hidden';
-                        iframeDoc.documentElement.style.scrollbarWidth = 'none';
-                        iframeDoc.documentElement.style.msOverflowStyle = 'none';
+                        iframeDoc.documentElement.style.overflow = 'auto';
+                        iframeDoc.documentElement.style.scrollbarWidth = 'auto';
+                        iframeDoc.documentElement.style.msOverflowStyle = 'auto';
                     }
-                    // 添加CSS规则隐藏webkit滚动条
+                    // 不再隐藏 webkit 滚动条；保留 minimal CSS placeholder（可扩展）
                     const style = iframeDoc.createElement('style');
                     style.textContent = `
-                        body::-webkit-scrollbar, html::-webkit-scrollbar {
-                            display: none !important;
-                        }
                         body, html {
-                            overflow: hidden !important;
-                            scrollbar-width: none !important;
-                            -ms-overflow-style: none !important;
+                            overflow: auto !important;
                         }
                     `;
                     iframeDoc.head.appendChild(style);
@@ -2434,6 +2719,8 @@
                             
                             // 确保父容器也能正确显示
                             reportPreview.style.minHeight = finalHeight + 'px';
+                            // 确保预览区域滚动到顶部以显示报告开头
+                            try { reportPreview.scrollTop = 0; } catch (e) {}
                             
                         } catch (error) {
                             console.error('调整iframe高度失败:', error);

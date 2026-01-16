@@ -1,0 +1,693 @@
+/* 现代科技风格样式 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --dark-bg: #0f0f23;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --border-glow: rgba(102, 126, 234, 0.5);
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --accent-cyan: #00d4ff;
+    --accent-purple: #667eea;
+    --accent-pink: #f5576c;
+    --success-green: #10b981;
+    --warning-yellow: #fbbf24;
+    --error-red: #ef4444;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--dark-bg);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(102, 126, 234, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(245, 87, 108, 0.15) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 搜索框区域 */
+.search-section {
+    padding: 30px 20px;
+    background: rgba(15, 15, 35, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+.search-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+}
+
+.search-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+}
+
+.search-row {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto 15px;
+}
+
+.config-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 28px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 12px;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 130px;
+    position: relative;
+    overflow: hidden;
+}
+
+.config-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--primary-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.config-button:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.config-button:hover::before {
+    opacity: 1;
+}
+
+.config-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.search-box {
+    display: flex;
+    flex: 1;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+	/* keep background unchanged by focus; only animate border and shadow */
+	transition: box-shadow 0.25s ease, border-color 0.25s ease;
+	box-shadow: none;
+}
+
+.search-box:focus-within {
+	border-color: var(--accent-cyan);
+	/* subtle blue glow on focus, without changing the box background (avoid gray fill) */
+	box-shadow: 0 10px 30px rgba(0, 212, 255, 0.18);
+	outline: none;
+}
+
+.search-input {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: transparent;
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+.search-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.search-button {
+    padding: 16px 35px;
+    border: none;
+    background: var(--primary-gradient);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-button:hover::before {
+    opacity: 1;
+}
+
+.search-button:hover {
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.search-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.search-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.upload-button {
+    padding: 16px 24px;
+    border: none;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(245, 87, 108, 0.3);
+    border-radius: 12px;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-button:hover {
+    border-color: var(--accent-pink);
+    box-shadow: 0 0 20px rgba(245, 87, 108, 0.3);
+    transform: translateY(-2px);
+}
+
+.upload-button input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-status {
+    font-size: 13px;
+    margin: 10px auto 0;
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 1000px;
+}
+
+.upload-status.success {
+    color: var(--success-green);
+}
+
+.upload-status.error {
+    color: var(--error-red);
+}
+
+/* 主内容区域 */
+.main-content {
+    flex: 1;
+    display: flex;
+    height: calc(100vh - 180px);
+    min-height: 0;
+    gap: 1px;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+/* 嵌入页面区域 */
+.embedded-section {
+    flex: 1.8;
+    background: rgba(15, 15, 35, 0.6);
+    backdrop-filter: blur(10px);
+    position: relative;
+    border-radius: 0;
+}
+
+.embedded-header {
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.embedded-content {
+    height: calc(100% - 60px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 控制台输出区域 */
+.console-section {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    background: rgba(15, 15, 35, 0.6);
+    backdrop-filter: blur(10px);
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* 应用切换按钮 */
+.app-switcher {
+    display: flex;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+    gap: 1px;
+}
+
+.app-button {
+    flex: 1;
+    padding: 16px 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.app-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--primary-gradient);
+    transition: width 0.3s ease;
+}
+
+.app-button.active {
+    color: var(--text-primary);
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.app-button.active::after {
+    width: 80%;
+}
+
+.app-button:not(.active):not(.locked):hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.app-button.locked {
+    color: rgba(160, 174, 192, 0.4);
+    cursor: not-allowed;
+}
+
+.status-indicator {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--error-red);
+    box-shadow: 0 0 10px currentColor;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.status-indicator.running {
+    background-color: var(--success-green);
+}
+
+.status-indicator.starting {
+    background-color: var(--warning-yellow);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* 控制台输出 */
+.console-output {
+    flex: 1;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--accent-cyan);
+    font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+    font-size: 13px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-break: break-all;
+    min-height: 0;
+    line-height: 1.6;
+}
+
+.console-line {
+    margin-bottom: 4px;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* 状态栏 */
+.status-bar {
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(102, 126, 234, 0.2);
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-secondary);
+}
+
+/* 配置模态框 */
+.config-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 20px;
+}
+
+.config-modal-overlay.visible {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.config-modal {
+    background: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 20px;
+    width: 750px;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 100px rgba(102, 126, 234, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.config-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 28px;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.config-modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.config-modal-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.config-refresh-button {
+    padding: 8px 16px;
+    background: var(--glass-bg);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 8px;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.config-refresh-button:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.config-close-button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(245, 87, 108, 0.3);
+    background: var(--glass-bg);
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.config-close-button:hover {
+    border-color: var(--accent-pink);
+    background: rgba(245, 87, 108, 0.2);
+    box-shadow: 0 0 15px rgba(245, 87, 108, 0.3);
+}
+
+.config-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 28px;
+}
+
+.config-section {
+    margin-bottom: 32px;
+}
+
+.config-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.config-section-subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.config-field {
+    margin-bottom: 20px;
+}
+
+.config-field-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.config-field-input,
+.config-field-select {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.config-field-input:focus,
+.config-field-select:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.config-field-input::placeholder {
+    color: rgba(160, 174, 192, 0.5);
+}
+
+.config-password-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.config-password-wrapper .config-field-input {
+    flex: 1;
+}
+
+.config-password-toggle {
+    padding: 12px 20px;
+    background: var(--glass-bg);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.config-password-toggle:hover,
+.config-password-toggle.revealed {
+    border-color: var(--accent-cyan);
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.config-modal-footer {
+    padding: 20px 28px;
+    border-top: 1px solid rgba(102, 126, 234, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.config-save-button,
+.config-start-button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.config-save-button {
+    background: var(--glass-bg);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    color: var(--text-primary);
+}
+
+.config-save-button:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.config-start-button {
+    background: var(--primary-gradient);
+    color: var(--text-primary);
+    border: 1px solid transparent;
+}
+
+.config-start-button:hover {
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+}
+
+/* 滚动条样式 */
+:::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+:::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+:::-webkit-scrollbar-thumb {
+    background: rgba(102, 126, 234, 0.3);
+    border-radius: 4px;
+}
+
+:::-webkit-scrollbar-thumb:hover {
+    background: rgba(102, 126, 234, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .embedded-section,
+    .console-section {
+        flex: 1;
+    }
+}
+

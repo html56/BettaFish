@@ -1,0 +1,15 @@
+{
+  "task_id": "report_20260115_223755",
+  "query": "",
+  "status": "completed",
+  "progress": 100.0,
+  "selected_template": "",
+  "has_html_content": true,
+  "html_content_length": 22398,
+  "metadata": {
+    "query": "",
+    "template_used": "社会公共热点事件分析报告模板",
+    "generation_time": 137.834791,
+    "timestamp": "2026-01-15T22:37:55.519751"
+  }
+}

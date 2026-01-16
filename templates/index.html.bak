@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微舆 - AI舆情分析平台</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/modern_style_new.css?v=3.2">
+    <style>
+        /* 自定义样式覆盖 */
+        .system-main-content {
+            height: calc(100vh - 180px - 40px) !important;
+        }
+
+        /* 搜索区域极致美化 - Apple 风格极简设计 */
+        .system-search-section {
+            padding: 3.5rem 1.5rem !important;
+            background: #ffffff !important;
+            position: relative;
+        }
+
+        .search-card {
+            max-width: 800px !important;
+            padding: 6px !important;
+            /* use solid white by default (remove the pale gray fill) */
+            background: #ffffff !important;
+            border-radius: 20px !important;
+            /* deepen the border color for better contrast */
+            border: 1px solid #c2c2c6 !important;
+            /* only animate border-color and shadow so background stays stable */
+            transition: box-shadow 0.25s ease, border-color 0.25s ease !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            align-items: center !important;
+            box-shadow: none !important;
+        }
+
+        .search-card:focus-within {
+            /* keep the card white on focus, but add a subtle blue glow */
+            background: #ffffff !important;
+            border-color: #0071e3 !important;
+            box-shadow: 0 10px 30px rgba(0, 113, 227, 0.12) !important;
+            outline: none !important;
+        }
+
+        .search-card-inner {
+            display: flex !important;
+            align-items: center !important;
+            width: 100% !important;
+            gap: 8px !important;
+        }
+
+        .search-left {
+            flex: 1 !important;
+            padding-left: 16px !important;
+        }
+
+        .system-search-input {
+            width: 100% !important;
+            height: 48px !important;
+            font-size: 1.05rem !important;
+            font-weight: 400 !important;
+            color: #1d1d1f !important;
+            background: transparent !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        .system-search-input::placeholder {
+            color: #86868b !important;
+        }
+
+        .search-actions {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            padding-right: 6px !important;
+        }
+
+        .system-btn.primary#searchButton {
+            height: 40px !important;
+            padding: 0 20px !important;
+            border-radius: 12px !important;
+            font-size: 0.95rem !important;
+            font-weight: 500 !important;
+            background: #0071e3 !important;
+            color: #ffffff !important;
+            border: none !important;
+            transition: all 0.2s ease !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            white-space: nowrap !important;
+        }
+
+        .system-btn.primary#searchButton:hover {
+            background: #0077ed !important;
+            transform: scale(1.02) !important;
+        }
+
+        .upload-button {
+            height: 40px !important;
+            padding: 0 16px !important;
+            background: #ffffff !important;
+            border: 1px solid #d2d2d7 !important;
+            border-radius: 12px !important;
+            font-weight: 500 !important;
+            color: #1d1d1f !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+            white-space: nowrap !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        .upload-button:hover {
+            background: #f5f5f7 !important;
+            border-color: #86868b !important;
+            color: #0071e3 !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .upload-label {
+            font-size: 0.9rem !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 4px !important;
+        }
+
+        .search-divider {
+            display: none !important;
+        }
+
+        /* 强制设置左右面板比例为 6:4 */
+        .system-left-panel {
+            flex: 3 !important;
+        }
+
+        .system-right-panel {
+            flex: 2 !important;
+        }
+
+        .system-panel-content {
+            height: calc(100% - 70px) !important;
+        }
+        
+        /* 论坛消息样式 */
+        .forum-message {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: var(--primary-surface);
+            border: 1px solid var(--primary-border);
+            border-radius: 8px;
+        }
+        
+        .forum-message-header {
+            font-weight: 600;
+            color: var(--brand-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .forum-message-content {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* 报告内容样式 */
+        .report-content {
+            padding: 1rem;
+        }
+        
+        .report-content iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid var(--primary-border);
+            border-radius: 8px;
+        }
+        
+        /* 控制台输出样式 */
+        .console-line {
+            margin-bottom: 0.25rem;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            font-size: 0.8125rem;
+            line-height: 1.4;
+        }
+        
+        /* 配置表单样式 */
+        .config-form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .config-form-group-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .config-form-group-subtitle {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .config-form-field {
+            margin-bottom: 1rem;
+        }
+        
+        .config-form-label {
+            display: block;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .config-form-input {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            background: var(--primary-surface);
+            border: 1px solid var(--primary-border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            transition: var(--transition-fast);
+        }
+        
+        .config-form-input:focus {
+            outline: none;
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+        }
+        
+        .config-form-select {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            background: var(--primary-surface);
+            border: 1px solid var(--primary-border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="system-container">
+        <!-- 顶部导航栏 -->
+        <header class="system-header">
+            <div class="system-logo">
+                <img src="/static/image/logo_compressed.png" alt="BettaFish Logo" onerror="this.style.display='none'">
+                <h1>微舆</h1>
+            </div>
+            <nav class="system-nav">
+                <button class="system-btn" id="openConfigButton">
+                    <span>⚙️</span> 配置
+                </button>
+
+            </nav>
+        </header>
+
+        <!-- 搜索区域 -->
+        <section class="system-search-section">
+            <div class="system-search-title">
+                <h2>AI舆情分析平台</h2>
+                <p>24小时全自动从多个社媒平台深度爬取舆情数据，提供专业的情感分析和智能报告生成</p>
+            </div>
+
+            <!-- 大胆美化的搜索控件 -->
+            <div class="search-card" role="search" aria-label="搜索舆情">
+                <form class="system-search-form search-card-inner" onsubmit="return false;">
+                    <div class="search-left">
+                        <input type="text" class="system-search-input" id="searchInput" placeholder="探索全球舆情，输入关键词开启 AI 深度洞察..." aria-label="搜索关键词" autocomplete="off">
+                    </div>
+
+                    <div class="search-actions">
+                        <button type="button" class="system-btn primary" id="searchButton" aria-label="开始分析">
+                            <span>🚀</span> 开启分析
+                        </button>
+                        
+                        <label class="upload-button">
+                            <input type="file" id="templateFileInput" accept=".md,.txt" title="上传自定义报告模板">
+                            <span class="upload-label"><span>📄</span> 上传模板</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="upload-status" id="uploadStatus" aria-live="polite" style="text-align: center; margin-top: 10px; font-size: 0.85rem; color: var(--text-tertiary);"></div>
+
+            <div class="search-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- 主内容区域 -->
+        <main class="system-main-content">
+            <!-- 左侧面板 - 主要内容 -->
+            <div class="system-left-panel">
+                <div class="system-panel-header">
+                    <h3>📊 分析结果</h3>
+                </div>
+                <!-- 嵌入页面头部（供JS读取标题显示） -->
+                <div class="embedded-header" id="embeddedHeader">嵌入的页面</div>
+                <style>
+                    .embedded-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px 16px;
+                        background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.9));
+                        border-radius: 10px;
+                        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+                        margin-bottom: 12px;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+                    }
+                    .embedded-header .title-left {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+                    }
+                    .embedded-header .main-title {
+                        font-size: 17px;
+                        font-weight: 700;
+                        color: #0f172a;
+                    }
+                    .embedded-header .sub-title {
+                        font-size: 13px;
+                        color: #64748b;
+                        font-weight: 400;
+                        margin-left: 6px;
+                        background: none;
+                        padding: 0;
+                        border-radius: 0;
+                        display: inline-block;
+                    }
+                    .embedded-header .desc {
+                        font-size: 13px;
+                        color: #334155;
+                        margin-top: 4px;
+                    }
+                    .embedded-header .meta {
+                        font-size: 13px;
+                        color: #64748b;
+                        white-space: nowrap;
+                        margin-left: 12px;
+                    }
+                    /* 左侧小logo风格（仿macOS） */
+                    .embedded-header .logo {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 8px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 12px;
+                        background: linear-gradient(135deg,#60a5fa,#7c3aed);
+                        color: white;
+                        font-weight: 700;
+                        box-shadow: 0 4px 10px rgba(124,58,237,0.12);
+                    }
+                </style>
+                <div class="system-panel-content" id="embeddedContent">
+                    <!-- 欢迎页面 -->
+                    <div class="system-card" id="welcomeContainer">
+                        <div class="system-welcome-content">
+                            <div class="system-welcome-icon">🚀</div>
+                            <h3 class="system-welcome-title">欢迎使用微舆平台</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 2rem;">专业的AI舆情分析解决方案</p>
+                            <div class="welcome-steps-card" aria-label="使用步骤卡片">
+                                <h4 class="welcome-steps-title">使用步骤</h4>
+                                <ol class="welcome-steps-list" aria-hidden="false">
+                                    <li>点击右上角配置按钮，设置 LLM 参数</li>
+                                    <li>在搜索框输入要分析的话题或关键词</li>
+                                    <li>点击"分析"按钮启动分析流程</li>
+                                    <li>实时查看右侧控制台的分析进度和结果</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 论坛容器 -->
+                    <div class="system-card" id="forumContainer" style="display: none;">
+                        <h4 style="margin-bottom: 1rem; color: var(--brand-primary);">
+                            <span id="forumHeaderTitle" style="font-weight:600;">🤖 多智能体对话 - 洞察 | 媒体 | 情报 | 主持人</span>
+                            <span id="forumMeta" style="float:right;font-size:0.9em;color:#666;">--:--:--</span>
+                        </h4>
+                    <div class="forum-chat-area" id="forumChatArea" style="max-height:60vh; overflow-y:auto; padding:1rem;">
+                            <!-- 动态添加的Engine对话消息将在这里显示 -->
+                        </div>
+                    </div>
+
+                    <!-- 报告容器 -->
+                    <div class="system-card" id="reportContainer" style="display: none;">
+                        <h4 style="margin-bottom: 1rem; color: var(--brand-primary);">📈 报告 Agent - 最终报告生成</h4>
+                        <div class="report-content" id="reportContent">
+                            <!-- 报告内容将在这里显示 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧面板 - 控制台和引擎状态（恢复带标题栏和窗口控制样式） -->
+            <div class="system-right-panel">
+                <div class="system-console">
+                    <div class="system-console-header">
+                        <div class="system-console-title">系统控制台</div>
+                        <div class="system-console-controls">
+                            <span class="window-control red"></span>
+                            <span class="window-control yellow"></span>
+                            <span class="window-control green"></span>
+                        </div>
+                    </div>
+
+                    <div class="system-panel-content" style="padding: 1rem;">
+                        <!-- 引擎切换器 -->
+                        <div class="system-app-switcher">
+                            <button class="system-app-tab app-button active" data-app="insight">
+                                <div class="system-status-indicator" id="status-insight"></div>
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">洞察分析师</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Insight Agent</div>
+                                </div>
+                            </button>
+                            <button class="system-app-tab app-button" data-app="media">
+                                <div class="system-status-indicator" id="status-media"></div>
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">媒体分析师</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Media Agent</div>
+                                </div>
+                            </button>
+                            <button class="system-app-tab app-button" data-app="query">
+                                <div class="system-status-indicator" id="status-query"></div>
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">情报搜集员</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Query Agent</div>
+                                </div>
+                            </button>
+                            <button class="system-app-tab app-button" data-app="forum">
+                                <div class="system-status-indicator running" id="status-forum"></div>
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">论坛主持人</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Forum Host</div>
+                                </div>
+                            </button>
+                            <button class="system-app-tab app-button locked" data-app="report" title="需等待其余三个Agent工作完毕">
+                                <div class="system-status-indicator" id="status-report"></div>
+                                <div style="display:flex;flex-direction:column;align-items:center;line-height:1;">
+                                    <div style="font-weight:600;">报告撰写员</div>
+                                    <div style="font-size:0.85em;color:#666;margin-top:4px;">Report Agent</div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <!-- 控制台输出 -->
+                        <div class="console-divider" aria-hidden="true"></div>
+                        <div class="system-console-output" id="consoleOutput">
+                            <div class="console-line" style="color: var(--brand-primary);">[系统] 初始化完成，等待用户操作...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 系统状态栏 -->
+        <footer class="system-status-bar">
+            <div class="system-status-left">
+                <span id="systemStatus">系统就绪</span>
+                <span id="lastUpdateTime">--:--:--</span>
+            </div>
+            <div class="system-status-right">
+                <span>微舆 v1.1.2</span>
+                <span id="connectionStatus">● 已连接</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 配置模态框 -->
+    <div class="config-modal-overlay" id="configModal">
+        <div class="config-modal-inner">
+            <div class="config-modal">
+                <div class="config-modal-header">
+                    <div class="config-modal-title">LLM 配置 - 与.env文件双向同步</div>
+                    <div class="config-modal-actions">
+                        <button class="config-secondary-button" id="refreshConfigButton">🔄 刷新</button>
+                        <button class="config-close-button" id="closeConfigModal" aria-label="关闭配置窗口">×</button>
+                    </div>
+                </div>
+                <div class="config-modal-body" id="configFormContainer">
+                    <!-- 配置表单将在这里动态生成 -->
+                </div>
+                <div class="config-modal-footer">
+                    <div class="config-status-message" id="configStatusMessage"></div>
+                    <div class="config-modal-footer-actions">
+                        <button class="config-save-button" id="saveConfigButton">💾 保存</button>
+                        <button class="config-start-button" id="startSystemButton">🚀 保存并启动系统</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 消息提示 -->
+    <div id="message" class="message"></div>
+
+    <script>
+        // 全局变量
+        let socket;
+        let currentApp = 'insight';
+        let appStatus = {
+            insight: 'stopped',
+            media: 'stopped',
+            query: 'stopped',
+            forum: 'stopped',  // 前端启动后再标记为 running
+            report: 'stopped'  // Report Engine
+        };
+        let customTemplate = ''; // 存储用户上传的自定义模板内容
+        let configValues = {};
+        let configDirty = false;
+        let configAutoRefreshTimer = null;
+        let systemStarted = false;
+        let systemStarting = false;
+        let configModalLocked = false;
+
+        const CONFIG_ENDPOINT = '/api/config';
+        const SYSTEM_STATUS_ENDPOINT = '/api/system/status';
+        const SYSTEM_START_ENDPOINT = '/api/system/start';
+        const START_BUTTON_DEFAULT_TEXT = '保存并启动系统';
+
+        const configFieldGroups = [
+            {
+                title: '数据库连接',
+                subtitle: '用于连接业务数据库的基本配置',
+                fields: [
+                    { key: 'DB_DIALECT', label: '数据库类型', type: 'select', options: ['mysql', 'postgresql'] },
+                    { key: 'DB_HOST', label: '主机地址' },
+                    { key: 'DB_PORT', label: '端口' },
+                    { key: 'DB_USER', label: '用户名' },
+                    { key: 'DB_PASSWORD', label: '密码', type: 'password' },
+                    { key: 'DB_NAME', label: '数据库名称' },
+                    { key: 'DB_CHARSET', label: '字符集' }
+                ]
+            },
+            {
+                title: '洞察分析师 (Insight Agent)',
+                subtitle: '负责洞察分析的模型配置',
+                fields: [
+                    { key: 'INSIGHT_ENGINE_API_KEY', label: 'API Key' },
+                    { key: 'INSIGHT_ENGINE_BASE_URL', label: 'Base URL' },
+                    { key: 'INSIGHT_ENGINE_MODEL_NAME', label: '模型名称' }
+                ]
+            },
+            {
+                title: '媒体分析师 (Media Agent)',
+                subtitle: '媒体内容理解与生成模型',
+                fields: [
+                    { key: 'MEDIA_ENGINE_API_KEY', label: 'API Key' },
+                    { key: 'MEDIA_ENGINE_BASE_URL', label: 'Base URL' },
+                    { key: 'MEDIA_ENGINE_MODEL_NAME', label: '模型名称' }
+                ]
+            },
+            {
+                title: '情报搜集员 (Query Agent)',
+                subtitle: '负责搜索与信息汇总的模型配置',
+                fields: [
+                    { key: 'QUERY_ENGINE_API_KEY', label: 'API Key' },
+                    { key: 'QUERY_ENGINE_BASE_URL', label: 'Base URL' },
+                    { key: 'QUERY_ENGINE_MODEL_NAME', label: '模型名称' }
+                ]
+            },
+            {
+                title: '报告撰写员 (Report Agent)',
+                subtitle: '报告生成使用的模型配置',
+                fields: [
+                    { key: 'REPORT_ENGINE_API_KEY', label: 'API Key' },
+                    { key: 'REPORT_ENGINE_BASE_URL', label: 'Base URL' },
+                    { key: 'REPORT_ENGINE_MODEL_NAME', label: '模型名称' }
+                ]
+            },
+            {
+                title: '论坛主持人 (Forum Host)',
+                subtitle: '多智能体协同使用的模型配置',
+                fields: [
+                    { key: 'FORUM_HOST_API_KEY', label: 'API Key' },
+                    { key: 'FORUM_HOST_BASE_URL', label: 'Base URL' },
+                    { key: 'FORUM_HOST_MODEL_NAME', label: '模型名称' }
+                ]
+            },
+            {
+                title: 'Keyword Optimizer',
+                subtitle: 'SQL / 关键词优化模型配置',
+                fields: [
+                    { key: 'KEYWORD_OPTIMIZER_API_KEY', label: 'API Key' },
+                    { key: 'KEYWORD_OPTIMIZER_BASE_URL', label: 'Base URL' },
+                    { key: 'KEYWORD_OPTIMIZER_MODEL_NAME', label: '模型名称' }
+                ]
+            },
+            {
+                title: '外部检索工具',
+                subtitle: '联动搜索引擎、网站抓取等在线服务',
+                fields: [
+                    { key: 'TAVILY_API_KEY', label: 'Tavily API Key' },
+                    { key: 'BOCHA_WEB_SEARCH_API_KEY', label: 'Bocha API Key' }
+                ]
+            }
+        ];
+
+        // 应用名称映射
+        const appNames = {
+            insight: '洞察引擎 (Insight Engine)',
+            media: '媒体引擎 (Media Engine)', 
+            query: '情报引擎 (Query Engine)',
+            forum: '论坛引擎 (Forum Engine)',
+            report: '报告引擎 (Report Engine)'
+        };
+
+        // 页面头部显示的完整Agent介绍
+        const agentTitles = {
+            insight: '洞察分析师 (Insight Agent) - 私有数据库挖掘',
+            media: '媒体分析师 (Media Agent) - 多模态内容分析',
+            query: '情报搜集员 (Query Agent) - 精准信息搜索',
+            forum: '论坛主持人 (Forum Host) - 多智能体交流',
+            report: '报告撰写员 (Report Agent) - 最终报告生成'
+        };
+
+        // 统一渲染嵌入页面顶部标题的函数
+        function renderEmbeddedHeader(app) {
+            const headerEl = document.getElementById('embeddedHeader');
+            if (!headerEl) return;
+            // logo 首字母映射
+            const logoInitials = {
+                insight: 'IA',
+                media: 'MA',
+                query: 'QA',
+                forum: 'FH',
+                report: 'RA'
+            };
+            if (app === 'forum') {
+                const initials = logoInitials[app] || 'FH';
+                headerEl.innerHTML = `
+                    <div style="display:flex;align-items:center;">
+                        <div class="logo">${initials}</div>
+                        <div class="title-left">
+                            <div style="display:flex;align-items:baseline;gap:6px;">
+                                <div class="main-title">多智能体对话</div>
+                                <div class="sub-title" style="font-size:13px;color:#64748b;">Forum Engine</div>
+                            </div>
+                            <div class="desc">洞察 | 媒体 | 情报 | 主持人</div>
+                        </div>
+                    </div>
+                `;
+                if (typeof updateForumMeta === 'function') updateForumMeta();
+                return;
+            }
+
+            const full = agentTitles[app] || appNames[app] || app;
+            const chinese = full.split(' (')[0] || full;
+            const englishMatch = full.match(/\(([^)]+)\)/);
+            const english = englishMatch ? englishMatch[1] : '';
+            const descMatch = full.match(/\)\s*-\s*(.*)$/);
+            const desc = descMatch ? descMatch[1] : '';
+            const initials = logoInitials[app] || 'BF';
+...

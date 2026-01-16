@@ -1,319 +1,43 @@
-2026-01-13 18:29:04.034 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 18:29:04.034 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 18:29:04.035 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 18:29:04.035 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 18:53:26.066 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 18:53:26.068 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 18:53:26.068 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 18:53:26.068 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 19:03:46.340 | INFO     | __main__:<module>:1041 - 
-正在关闭应用...
-2026-01-13 19:03:46.340 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 19:03:46.400 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 19:03:46.400 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-13 19:03:46.402 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 19:03:46.403 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 19:03:46.403 | INFO     | ForumEngine.monitor:stop_monitoring:727 - ForumEngine: 论坛未运行
-2026-01-13 19:03:46.403 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 19:06:31.884 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 19:06:31.885 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 19:06:31.885 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 19:06:31.886 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 19:07:53.843 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 19:07:54.506 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 19:07:54.507 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-13 19:07:54.507 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 19:35:34.666 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 19:35:34.666 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 19:35:34.668 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 19:35:34.668 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 19:39:44.850 | INFO     | __main__:<module>:1041 - 
-正在关闭应用...
-2026-01-13 19:39:44.852 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 19:39:45.504 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 19:39:45.623 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 19:39:45.623 | INFO     | ForumEngine.monitor:stop_monitoring:727 - ForumEngine: 论坛未运行
-2026-01-13 19:39:45.623 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 19:44:07.150 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 19:44:07.151 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 19:44:07.151 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 19:44:07.151 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 19:45:01.509 | INFO     | __main__:<module>:1041 - 
-正在关闭应用...
-2026-01-13 19:45:01.510 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 19:45:02.331 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 19:45:02.341 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 19:45:02.341 | INFO     | ForumEngine.monitor:stop_monitoring:727 - ForumEngine: 论坛未运行
-2026-01-13 19:45:02.341 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 19:47:00.794 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 19:47:00.796 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 19:47:00.796 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 19:47:00.796 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:01:56.000 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:01:56.001 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:01:56.001 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:01:56.001 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:03:24.706 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:03:24.708 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:03:24.708 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:03:24.708 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:08:38.394 | INFO     | __main__:<module>:1041 - 
-正在关闭应用...
-2026-01-13 20:08:38.485 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 20:08:38.539 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 20:08:38.553 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-13 20:08:38.553 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 20:08:38.554 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 20:08:38.554 | INFO     | ForumEngine.monitor:stop_monitoring:727 - ForumEngine: 论坛未运行
-2026-01-13 20:08:38.554 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 20:09:23.005 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:09:23.005 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:09:23.005 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:09:23.006 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:11:11.844 | INFO     | __main__:<module>:1041 - 
-正在关闭应用...
-2026-01-13 20:11:11.935 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 20:11:12.785 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 20:11:12.801 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-13 20:11:12.801 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 20:11:12.801 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 20:11:12.802 | INFO     | ForumEngine.monitor:stop_monitoring:727 - ForumEngine: 论坛未运行
-2026-01-13 20:11:12.802 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 20:13:42.741 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:13:42.741 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:13:42.743 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:13:42.743 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:18:22.738 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:18:22.740 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:18:22.740 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:18:22.740 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:28:27.846 | INFO     | __main__:<module>:1041 - 
-正在关闭应用...
-2026-01-13 20:28:27.942 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 20:28:28.043 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 20:28:28.057 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-13 20:28:28.059 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 20:28:28.059 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-13 20:28:28.059 | INFO     | ForumEngine.monitor:stop_monitoring:727 - ForumEngine: 论坛未运行
-2026-01-13 20:28:28.060 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-13 20:32:27.756 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:32:27.758 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:32:27.758 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:32:27.758 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:36:10.879 | INFO     | __main__:stop_forum_engine:350 - ForumEngine: 停止论坛...
-2026-01-13 20:36:11.733 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 20:36:11.734 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-13 20:36:11.734 | INFO     | __main__:stop_forum_engine:352 - ForumEngine: 论坛已停止
-2026-01-13 20:37:08.186 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:37:08.188 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:37:08.188 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:37:08.188 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:39:47.867 | INFO     | __main__:stop_forum_engine:350 - ForumEngine: 停止论坛...
-2026-01-13 20:39:47.977 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 20:39:47.978 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-13 20:39:47.978 | INFO     | __main__:stop_forum_engine:352 - ForumEngine: 论坛已停止
-2026-01-13 20:42:06.435 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:42:06.435 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:42:06.435 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:42:06.435 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:44:27.140 | INFO     | __main__:stop_forum_engine:350 - ForumEngine: 停止论坛...
-2026-01-13 20:44:27.323 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 20:45:28.362 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:45:28.362 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:45:28.362 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:45:28.364 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 20:50:44.392 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 20:50:44.394 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 20:50:44.394 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 20:50:44.394 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 21:01:10.975 | INFO     | __main__:stop_forum_engine:350 - ForumEngine: 停止论坛...
-2026-01-13 21:01:11.745 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 21:02:07.434 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 21:02:07.434 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 21:02:07.434 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 21:02:07.435 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 21:08:49.731 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 21:08:49.731 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 21:08:49.731 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 21:08:49.732 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 21:11:43.861 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 21:11:43.863 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 21:11:43.863 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 21:11:43.863 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 21:16:53.586 | INFO     | __main__:stop_forum_engine:350 - ForumEngine: 停止论坛...
-2026-01-13 21:16:53.750 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-13 21:17:29.725 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 21:17:29.727 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 21:17:29.727 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 21:17:29.727 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-13 21:35:15.521 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-13 21:35:15.522 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-13 21:35:15.523 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-13 21:35:15.523 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 08:17:24.356 | INFO     | __main__:stop_forum_engine:350 - ForumEngine: 停止论坛...
-2026-01-14 08:17:24.994 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-14 10:56:41.782 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 10:56:41.797 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 10:56:41.798 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 10:56:41.798 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 11:12:00.687 | INFO     | __main__:<module>:1041 - 
-正在关闭应用...
-2026-01-14 11:12:00.940 | INFO     | __main__:stop_forum_engine:335 - ForumEngine: 停止论坛...
-2026-01-14 11:12:01.648 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-14 11:12:01.649 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-14 11:12:01.649 | INFO     | __main__:stop_forum_engine:337 - ForumEngine: 论坛已停止
-2026-01-14 11:21:22.291 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 11:21:22.291 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 11:21:22.291 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 11:21:22.293 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 11:27:16.140 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 11:27:16.142 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 11:27:16.142 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 11:27:16.142 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 11:32:25.800 | INFO     | __main__:stop_forum_engine:352 - ForumEngine: 停止论坛...
-2026-01-14 11:32:25.976 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-14 11:32:25.976 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-14 11:32:25.976 | INFO     | __main__:stop_forum_engine:354 - ForumEngine: 论坛已停止
-2026-01-14 11:34:19.488 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 11:34:19.489 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 11:34:19.489 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 11:34:19.489 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 11:37:27.213 | INFO     | __main__:stop_forum_engine:352 - ForumEngine: 停止论坛...
-2026-01-14 11:37:27.276 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-14 11:37:27.277 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-14 11:37:27.277 | INFO     | __main__:stop_forum_engine:354 - ForumEngine: 论坛已停止
-2026-01-14 11:38:38.504 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 11:38:38.506 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 11:38:38.507 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 11:38:38.507 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 12:10:17.790 | INFO     | ForumEngine.monitor:monitor_logs:621 - ForumEngine: 在media中检测到第一次论坛发表内容
-2026-01-14 12:10:17.793 | INFO     | ForumEngine.monitor:clear_forum_log:91 - ForumEngine: forum.log 已清空并初始化
-2026-01-14 12:17:11.351 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
-2026-01-14 12:17:18.526 | ERROR    | ForumEngine.monitor:_trigger_host_speech:552 - ForumEngine: 主持人发言生成失败
-2026-01-14 12:18:47.946 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
-2026-01-14 12:18:54.772 | ERROR    | ForumEngine.monitor:_trigger_host_speech:552 - ForumEngine: 主持人发言生成失败
-2026-01-14 12:20:30.233 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
-2026-01-14 12:20:33.033 | ERROR    | ForumEngine.monitor:_trigger_host_speech:552 - ForumEngine: 主持人发言生成失败
-2026-01-14 12:22:40.627 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
-2026-01-14 12:22:43.273 | ERROR    | ForumEngine.monitor:_trigger_host_speech:552 - ForumEngine: 主持人发言生成失败
-2026-01-14 12:24:06.796 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
-2026-01-14 12:24:10.914 | ERROR    | ForumEngine.monitor:_trigger_host_speech:552 - ForumEngine: 主持人发言生成失败
-2026-01-14 12:25:27.413 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
-2026-01-14 12:25:31.561 | ERROR    | ForumEngine.monitor:_trigger_host_speech:552 - ForumEngine: 主持人发言生成失败
-2026-01-14 12:26:57.148 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
-2026-01-14 12:26:59.631 | ERROR    | ForumEngine.monitor:_trigger_host_speech:552 - ForumEngine: 主持人发言生成失败
-2026-01-14 13:46:04.917 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 13:46:04.918 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 13:46:04.918 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 13:46:04.918 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 13:49:44.572 | INFO     | __main__:stop_forum_engine:420 - ForumEngine: 停止论坛...
-2026-01-14 13:49:44.912 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-14 13:50:18.822 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 13:50:18.823 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 13:50:18.824 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 13:50:18.824 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 14:07:27.599 | INFO     | __main__:stop_forum_engine:435 - ForumEngine: 停止论坛...
-2026-01-14 14:07:28.036 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-14 14:07:58.991 | INFO     | __main__:stop_forum_engine:435 - ForumEngine: 停止论坛...
-2026-01-14 14:07:59.103 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 14:07:59.103 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 14:07:59.103 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 14:07:59.104 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 14:07:59.805 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-14 14:07:59.808 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
-2026-01-14 14:07:59.808 | INFO     | __main__:stop_forum_engine:437 - ForumEngine: 论坛已停止
-2026-01-14 14:09:21.994 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 14:09:21.996 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 14:09:21.996 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 14:09:21.996 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 14:12:56.631 | INFO     | __main__:stop_forum_engine:435 - ForumEngine: 停止论坛...
-2026-01-14 14:12:56.865 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-14 14:13:24.288 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 14:13:24.289 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 14:13:24.289 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 14:13:24.289 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 14:19:47.491 | INFO     | __main__:stop_forum_engine:435 - ForumEngine: 停止论坛...
-2026-01-14 14:19:47.979 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
-2026-01-14 14:23:42.885 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 14:23:42.886 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 14:23:42.886 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 14:23:42.886 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 03:54:56.426 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 03:54:56.427 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 03:54:56.427 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 03:54:56.427 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:00:18.309 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:00:18.309 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:00:18.309 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:00:18.309 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:00:55.807 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:00:55.807 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:00:55.807 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:00:55.807 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:03:43.733 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:03:43.733 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:03:43.733 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:03:43.733 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:05:33.174 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:05:33.174 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:05:33.174 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:05:33.174 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:07:14.235 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:07:14.235 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:07:14.235 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:07:14.235 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:13:19.832 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:13:19.832 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:13:19.832 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:13:19.832 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:15:43.912 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:15:43.913 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:15:43.913 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:15:43.913 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:20:13.601 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:20:13.602 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:20:13.602 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:20:13.602 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:22:14.465 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:22:14.465 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:22:14.465 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:22:14.465 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:22:52.861 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:22:52.861 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:22:52.861 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:22:52.861 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:24:30.920 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:24:30.920 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:24:30.920 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:24:30.921 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:25:49.696 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:25:49.696 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:25:49.696 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:25:49.696 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 04:37:54.289 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 04:37:54.290 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 04:37:54.290 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 04:37:54.290 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 05:33:23.659 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 05:33:23.659 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 05:33:23.660 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 05:33:23.660 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 06:09:17.418 | INFO     | ForumEngine.monitor:monitor_logs:621 - ForumEngine: 在insight中检测到第一次论坛发表内容
-2026-01-14 06:09:17.418 | INFO     | ForumEngine.monitor:clear_forum_log:91 - ForumEngine: forum.log 已清空并初始化
-2026-01-14 06:10:25.074 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 06:10:25.075 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 06:10:25.075 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 06:10:25.075 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 06:11:16.971 | INFO     | ForumEngine.monitor:monitor_logs:621 - ForumEngine: 在insight中检测到第一次论坛发表内容
-2026-01-14 06:11:16.971 | INFO     | ForumEngine.monitor:clear_forum_log:91 - ForumEngine: forum.log 已清空并初始化
-2026-01-14 06:13:37.111 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
-2026-01-14 06:15:09.825 | INFO     | ForumEngine.monitor:_trigger_host_speech:547 - ForumEngine: 主持人发言已记录
-2026-01-14 06:16:35.967 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
-2026-01-14 06:17:02.377 | INFO     | ForumEngine.monitor:_trigger_host_speech:547 - ForumEngine: 主持人发言已记录
-2026-01-14 06:18:20.174 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
-2026-01-14 06:18:20.175 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
-2026-01-14 06:18:20.175 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-long-latest', 'model': 'qwen-long-latest', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
-2026-01-14 06:18:20.175 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
-2026-01-14 06:19:10.061 | INFO     | ForumEngine.monitor:monitor_logs:621 - ForumEngine: 在insight中检测到第一次论坛发表内容
-2026-01-14 06:19:10.062 | INFO     | ForumEngine.monitor:clear_forum_log:91 - ForumEngine: forum.log 已清空并初始化
-2026-01-14 06:22:29.263 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
+2026-01-16 13:13:14.132 | INFO     | ReportEngine.flask_interface:clear_report_log:431 - 已清空日志文件: logs/report.log
+2026-01-16 13:13:14.139 | INFO     | ReportEngine.agent:load_input_files:466 - 已加载 query 报告: 6538 字符
+2026-01-16 13:13:14.139 | INFO     | ReportEngine.agent:load_input_files:466 - 已加载 media 报告: 4427 字符
+2026-01-16 13:13:14.140 | INFO     | ReportEngine.agent:load_input_files:466 - 已加载 insight 报告: 6149 字符
+2026-01-16 13:13:14.140 | INFO     | ReportEngine.agent:load_input_files:476 - 已加载论坛日志: 92818 字符
+2026-01-16 13:13:14.141 | INFO     | ReportEngine.agent:generate_report:197 - 开始生成报告: 智能舆情分析报告
+2026-01-16 13:13:14.141 | INFO     | ReportEngine.agent:generate_report:198 - 输入数据 - 报告数量: 3, 论坛日志长度: 92818
+2026-01-16 13:13:14.141 | INFO     | ReportEngine.agent:_select_template:226 - 选择报告模板...
+2026-01-16 13:13:14.141 | INFO     | ReportEngine.nodes.template_selection_node:run:42 - 开始模板选择...
+2026-01-16 13:13:14.142 | INFO     | ReportEngine.nodes.template_selection_node:_llm_template_selection:71 - 尝试使用LLM进行模板选择...
+2026-01-16 13:13:18.402 | INFO     | ReportEngine.nodes.template_selection_node:_llm_template_selection:125 - LLM原始响应: {
+  "template_name": "特定政策或行业动态舆情分析报告",
+  "selection_reason": "报告内容涉及的是2025年至2026年程序员职业发展趋势、技术趋势与编程语言需求分析，以及就业市场民意分析，这些都是针对特定行业动态的深入研究。因此，选择特定政策或行业动态舆情分析报告模板最为合适，因为它能够深度解读行业趋势、预判未来发展方向及对相关机构的影响。"
+}
+2026-01-16 13:13:18.402 | INFO     | ReportEngine.nodes.template_selection_node:_llm_template_selection:137 - LLM选择模板: 特定政策或行业动态舆情分析报告
+2026-01-16 13:13:18.402 | INFO     | ReportEngine.agent:_select_template:249 - 选择模板: 特定政策或行业动态舆情分析报告
+2026-01-16 13:13:18.403 | INFO     | ReportEngine.agent:_select_template:250 - 选择理由: 报告内容涉及的是2025年至2026年程序员职业发展趋势、技术趋势与编程语言需求分析，以及就业市场民意分析，这些都是针对特定行业动态的深入研究。因此，选择特定政策或行业动态舆情分析报告模板最为合适，因为它能够深度解读行业趋势、预判未来发展方向及对相关机构的影响。
+2026-01-16 13:13:18.403 | INFO     | ReportEngine.agent:_generate_html_report:266 - 多轮生成HTML报告...
+2026-01-16 13:13:18.403 | INFO     | ReportEngine.nodes.html_generation_node:run:46 - 开始生成HTML报告...
+2026-01-16 13:13:21.218 | INFO     | __main__:stop_forum_engine:352 - ForumEngine: 停止论坛...
+2026-01-16 13:13:21.994 | INFO     | ForumEngine.monitor:monitor_logs:702 - ForumEngine: 停止论坛日志文件
+2026-01-16 13:13:21.995 | INFO     | ForumEngine.monitor:stop_monitoring:740 - ForumEngine: 论坛已停止
+2026-01-16 13:13:21.995 | INFO     | __main__:stop_forum_engine:354 - ForumEngine: 论坛已停止
+2026-01-16 13:22:34.796 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 13, 'media': 15, 'query': 15}
+2026-01-16 13:22:34.797 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-16 13:22:34.797 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-coder-plus-1106', 'model': 'qwen-coder-plus-1106', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-16 13:22:34.797 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
+2026-01-16 13:23:50.162 | INFO     | ForumEngine.monitor:monitor_logs:621 - ForumEngine: 在media中检测到第一次论坛发表内容
+2026-01-16 13:23:50.165 | INFO     | ForumEngine.monitor:clear_forum_log:91 - ForumEngine: forum.log 已清空并初始化
+2026-01-16 13:24:42.292 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
+2026-01-16 13:25:23.147 | INFO     | ForumEngine.monitor:_trigger_host_speech:547 - ForumEngine: 主持人发言已记录
+2026-01-16 13:25:38.182 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
+2026-01-16 13:26:07.465 | INFO     | ForumEngine.monitor:_trigger_host_speech:547 - ForumEngine: 主持人发言已记录
+2026-01-16 13:26:39.538 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
+2026-01-16 13:27:24.634 | INFO     | ForumEngine.monitor:_trigger_host_speech:547 - ForumEngine: 主持人发言已记录
+2026-01-16 13:27:34.661 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
+2026-01-16 13:28:19.828 | INFO     | ForumEngine.monitor:_trigger_host_speech:547 - ForumEngine: 主持人发言已记录
+2026-01-16 13:28:58.945 | INFO     | ForumEngine.monitor:_trigger_host_speech:539 - ForumEngine: 正在生成主持人发言...
+2026-01-16 13:29:01.052 | INFO     | __main__:stop_forum_engine:352 - ForumEngine: 停止论坛...
+2026-01-16 13:30:40.528 | INFO     | ReportEngine.agent:initialize_baseline:62 - 文件数量基准已初始化: {'insight': 13, 'media': 15, 'query': 15}
+2026-01-16 13:30:40.528 | INFO     | ReportEngine.agent:__init__:143 - Report Agent已初始化
+2026-01-16 13:30:40.528 | INFO     | ReportEngine.agent:__init__:144 - 使用LLM: {'provider': 'qwen-coder-plus-1106', 'model': 'qwen-coder-plus-1106', 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1'}
+2026-01-16 13:30:40.529 | INFO     | ReportEngine.flask_interface:initialize_report_engine:32 - Report Engine初始化成功
